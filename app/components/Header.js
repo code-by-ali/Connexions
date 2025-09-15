@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Logo from "../../public/assets/connextions-logo-black-cropped.png";
+import Logo from "@/public/assets/connextions-logo-black-cropped.png";
 import { ChevronDown, Grid2x2, Search, Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -53,21 +53,74 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Bottom Nav */}
-      <div
-        className={`flex-col md:flex md:flex-row md:items-center md:justify-between text-sm gap-4 md:gap-0 ${
-          menuOpen ? "flex" : "hidden"
-        }`}
-      >
-        {/* Left */}
-        <div className="flex items-center gap-2 px-2 md:px-0">
-          <Grid2x2 size={14} />
-          <span>BROWSE ALL CATEGORIES</span>
+      {/* =========================
+          Bottom Nav
+      ========================== */}
+      <div className="hidden md:block text-sm">
+        {/* Tablet Only (768–1024px): Two Rows */}
+        <div className="block lg:hidden">
+          {/* Row 1: Browse + Buy */}
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-2">
+              <Grid2x2 size={14} />
+              <span>BROWSE ALL CATEGORIES</span>
+            </div>
+            <div>
+              <span className="underline cursor-pointer">Buy and Try</span>
+            </div>
+          </div>
+
+          {/* Row 2: Navigation */}
+          <div className="flex justify-center">
+            <ul className="flex gap-6 flex-wrap">
+              {[
+                { label: "Home" },
+                { label: "Services", dropdown: ["Consulting", "Support", "Cloud"] },
+                { label: "Apple", dropdown: ["Mac", "iPhone", "iPad"] },
+                { label: "Partners", dropdown: ["Microsoft", "AWS", "Google"] },
+                { label: "Resources", dropdown: ["Blog", "Case Studies", "Docs"] },
+                { label: "Sustainability" },
+              ].map((item) => (
+                <li
+                  key={item.label}
+                  className="relative flex flex-col cursor-pointer"
+                >
+                  <div
+                    className="flex items-center gap-1"
+                    onClick={() => item.dropdown && toggleDropdown(item.label)}
+                  >
+                    <span>{item.label}</span>
+                    {item.dropdown && <ChevronDown size={14} />}
+                  </div>
+
+                  {item.dropdown && openDropdown === item.label && (
+                    <ul className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg text-sm p-2 w-40 z-50">
+                      {item.dropdown.map((sub) => (
+                        <li
+                          key={sub}
+                          className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
+                        >
+                          {sub}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Middle Nav */}
-        <div>
-          <ul className="flex flex-col md:flex-row gap-4 md:gap-8 relative">
+        {/* Desktop Only (>1024px): One Row */}
+        <div className="hidden lg:flex items-center justify-between">
+          {/* Left */}
+          <div className="flex items-center gap-2">
+            <Grid2x2 size={14} />
+            <span>BROWSE ALL CATEGORIES</span>
+          </div>
+
+          {/* Center */}
+          <ul className="flex gap-8 flex-wrap">
             {[
               { label: "Home" },
               { label: "Services", dropdown: ["Consulting", "Support", "Cloud"] },
@@ -82,15 +135,72 @@ const Header = () => {
               >
                 <div
                   className="flex items-center gap-1"
-                  onClick={() =>
-                    item.dropdown && toggleDropdown(item.label)
-                  }
+                  onClick={() => item.dropdown && toggleDropdown(item.label)}
                 >
                   <span>{item.label}</span>
                   {item.dropdown && <ChevronDown size={14} />}
                 </div>
 
-                {/* Dropdown */}
+                {item.dropdown && openDropdown === item.label && (
+                  <ul className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg text-sm p-2 w-40 z-50">
+                    {item.dropdown.map((sub) => (
+                      <li
+                        key={sub}
+                        className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
+                      >
+                        {sub}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          {/* Right */}
+          <div>
+            <span className="underline cursor-pointer">Buy and Try</span>
+          </div>
+        </div>
+      </div>
+
+      {/* =========================
+          Mobile Nav
+      ========================== */}
+      <div
+        className={`md:hidden flex-col text-sm gap-4 ${
+          menuOpen ? "flex" : "hidden"
+        }`}
+      >
+        {/* Browse Categories */}
+        <div className="flex items-center gap-2 px-2">
+          <Grid2x2 size={14} />
+          <span>BROWSE ALL CATEGORIES</span>
+        </div>
+
+        {/* Mobile Nav Menu */}
+        <div>
+          <ul className="flex flex-col gap-4 relative">
+            {[
+              { label: "Home" },
+              { label: "Services", dropdown: ["Consulting", "Support", "Cloud"] },
+              { label: "Apple", dropdown: ["Mac", "iPhone", "iPad"] },
+              { label: "Partners", dropdown: ["Microsoft", "AWS", "Google"] },
+              { label: "Resources", dropdown: ["Blog", "Case Studies", "Docs"] },
+              { label: "Sustainability" },
+            ].map((item) => (
+              <li
+                key={item.label}
+                className="relative flex flex-col cursor-pointer"
+              >
+                <div
+                  className="flex items-center gap-1"
+                  onClick={() => item.dropdown && toggleDropdown(item.label)}
+                >
+                  <span>{item.label}</span>
+                  {item.dropdown && <ChevronDown size={14} />}
+                </div>
+
                 {item.dropdown && openDropdown === item.label && (
                   <ul className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg text-sm p-2 w-40 z-50">
                     {item.dropdown.map((sub) => (
@@ -108,8 +218,8 @@ const Header = () => {
           </ul>
         </div>
 
-        {/* Right */}
-        <div className="px-2 md:px-0">
+        {/* Buy and Try */}
+        <div className="px-2">
           <span className="underline cursor-pointer">Buy and Try</span>
         </div>
       </div>
