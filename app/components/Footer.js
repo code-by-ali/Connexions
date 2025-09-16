@@ -8,7 +8,7 @@ import linkedInLogo from "@/public/assets/linkedin-icon.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FAFAFA] px-4 sm:px-8 lg:px-20 py-12">
+    <footer className="bg-[#FAFAFA] px-4 sm:px-8 lg:px-20 py-12 mt-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Section - Brand and Newsletter */}
@@ -151,13 +151,31 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex space-x-4">
             <a href="#">
-              <Image unoptimized height={20} width={20} src={xLogo} />
+              <Image
+                unoptimized
+                height={20}
+                width={20}
+                src={xLogo}
+                alt="x-logo"
+              />
             </a>
             <a href="#">
-              <Image unoptimized height={20} width={20} src={metaLogo} />
+              <Image
+                unoptimized
+                height={20}
+                width={20}
+                src={metaLogo}
+                alt="meta-logo"
+              />
             </a>
             <a href="#">
-              <Image unoptimized height={20} width={20} src={linkedInLogo} />
+              <Image
+                unoptimized
+                height={20}
+                width={20}
+                src={linkedInLogo}
+                alt="linkedin-logo"
+              />
             </a>
           </div>
         </div>

@@ -4,6 +4,8 @@ import Stats from "../components/contact-us/Stats";
 import FormSection from "../components/contact-us/FormSection";
 import ContactTimeline from "../components/contact-us/ContactTimeline";
 import AboutUs from "../components/contact-us/AboutUs";
+import Rating from "../components/contact-us/Rating";
+import ConnectBanner from "../components/contact-us/ConnectBanner";
 
 const Page = () => {
   return (
@@ -13,6 +15,8 @@ const Page = () => {
       <FormSection />
       <ContactTimeline />
       <AboutUs />
+      <Rating />
+      <ConnectBanner />
     </div>
   );
 };

@@ -25,3 +25,10 @@
 body {
   font-weight: 500;
 }
+
+.custom-iframe {
+  border-radius: 12px;
+  iframe {
+    border-radius: 12px;
+  }
+}

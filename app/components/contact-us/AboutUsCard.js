@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Avatar from "@/public/assets/contact-about-avatar.png";
-import ReviewIcon1 from "@/public/assets/contact-about-review-1.png";
+import ReviewIcon1 from "@/public/assets/contact-about-review-1-svg.svg";
 
 const AboutUsCard = () => {
   return (
