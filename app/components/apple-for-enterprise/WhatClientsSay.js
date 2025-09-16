@@ -3,34 +3,14 @@ import questionIcon from "@/public/assets/contact-about-que-icon.png";
 import Image from "next/image";
 import AboutUsCard from "../common/AboutUsCard";
 
-const AboutUs = () => {
+const WhatClientsSay = () => {
   return (
     <div className="px-4 md:px-10 lg:px-20">
       {/* Top Section */}
       <div className="flex flex-col gap-8 items-center">
         <div className="flex gap-4 items-center">
-          <span className="p-4 bg-primary rounded-full">
-            <Image
-              unoptimized
-              alt="question-icon"
-              height={14}
-              width={14}
-              src={questionIcon}
-            />
-          </span>
-          <span className="text-base text-primary">About us</span>
-        </div>
-
-        <div className="text-center flex flex-col gap-6 max-w-3xl">
-          <p className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug">
-            <span className="text-primary">Real results, real teams:</span>{" "}
-            <span className="text-[#717680]">
-              How sales leaders use connexions to close.
-            </span>
-          </p>
-          <p className="text-base text-[#717680]">
-            See what real users are saying about connexions — across G2,
-            Trustpilot and X. We don't filter. We just ship.
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary">
+            What our Client Say
           </p>
         </div>
       </div>
@@ -63,4 +43,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default WhatClientsSay;
