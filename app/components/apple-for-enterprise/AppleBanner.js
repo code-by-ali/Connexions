@@ -9,7 +9,7 @@ const AppleBanner = () => {
   return (
     <div className="bg-[#E5E7EB] px-4 sm:px-8 md:px-20 py-8 sm:py-12 md:py-20 flex items-center justify-center relative">
       <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 items-center justify-center h-auto lg:h-[400px] w-full max-w-[600px]">
-        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary text-center">
+        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary text-center font-bold">
           Apple devices for Enterprise
         </p>
         <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center">
@@ -26,7 +26,7 @@ const AppleBanner = () => {
           </button>
         </div>
       </div>
-      
+
       {/* Hide images on screens smaller than lg (1024px) */}
       <Image
         className="absolute bottom-[0px] right-[0px] hidden lg:block"

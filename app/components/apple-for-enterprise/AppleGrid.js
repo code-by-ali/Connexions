@@ -12,7 +12,7 @@ const AppleGrid = () => {
     <div className="mt-12 sm:mt-16 md:mt-20">
       {/* Header Section */}
       <div className="flex flex-col gap-3 sm:gap-4 px-4 sm:px-6 md:px-8">
-        <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-medium">
+        <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold">
           Why Choose Apple for Enterprise
         </h2>
         <p className="text-[#4B5563] text-sm sm:text-base md:text-xl text-center max-w-4xl mx-auto">
@@ -23,7 +23,6 @@ const AppleGrid = () => {
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 gap-6 sm:gap-8 lg:gap-10">
-        
         {/* First Large Card - Seamless Integration */}
         <div className="lg:col-span-2 flex flex-col lg:flex-row justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
           <div className="flex justify-center lg:justify-start">
@@ -66,7 +65,8 @@ const AppleGrid = () => {
               Enhanced Security
             </h3>
             <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] leading-relaxed">
-              Built-in security features protect your data with advanced encryption and privacy controls
+              Built-in security features protect your data with advanced
+              encryption and privacy controls
             </p>
           </div>
         </div>
@@ -88,7 +88,8 @@ const AppleGrid = () => {
               Enterprise Mobility
             </h3>
             <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] leading-relaxed">
-              Enable your workforce to be productive anywhere with powerful mobile solutions
+              Enable your workforce to be productive anywhere with powerful
+              mobile solutions
             </p>
           </div>
         </div>
