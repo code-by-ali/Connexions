@@ -7,7 +7,7 @@ import AppleSupport from "@/public/assets/apple-support.svg";
 const AppleAuthorised = () => {
   return (
     <div className="flex flex-col items-center gap-6 sm:gap-8 px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-10">
-      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-center text-gray-800">
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-center text-primary">
         Apple Authorised Enterprise Reseller
       </h2>
       

@@ -7,8 +7,16 @@ import Image from "next/image";
 
 const AppleBanner = () => {
   return (
-    <div className="bg-[#E5E7EB] px-4 sm:px-8 md:px-20 py-8 sm:py-12 md:py-20 flex items-center justify-center relative">
-      <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 items-center justify-center h-auto lg:h-[400px] w-full max-w-[600px]">
+    <div
+      className="
+        bg-[#E5E7EB] 
+        px-4 sm:px-8 md:px-20 
+        py-20 sm:py-12 md:py-20  /* extra padding on mobile */
+        flex items-center justify-center relative
+        min-h-[500px] sm:min-h-[auto]  /* force taller height only on mobile */
+      "
+    >
+      <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 items-center justify-center h-auto lg:h-[400px] w-full max-w-[600px] z-10">
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary text-center font-bold">
           Apple devices for Enterprise
         </p>
@@ -27,34 +35,30 @@ const AppleBanner = () => {
         </div>
       </div>
 
-      {/* Hide images on screens smaller than lg (1024px) */}
+      {/* Images positioned responsively */}
       <Image
-        className="absolute bottom-[0px] right-[0px] hidden lg:block"
+        className="absolute bottom-0 right-0 w-32 sm:w-32 md:w-36 lg:w-auto"
         src={BannerIpad}
-        objectFit="contain"
-        unoptimized
         alt="ipad-img"
+        unoptimized
       />
       <Image
-        className="absolute top-[0px] right-[0px] hidden lg:block"
+        className="absolute top-0 right-0 w-36 sm:w-36 md:w-40 lg:w-auto"
         src={BannerMac}
-        objectFit="contain"
-        unoptimized
         alt="mac-img"
+        unoptimized
       />
       <Image
-        className="absolute top-[0px] left-[80px] hidden lg:block"
+        className="absolute top-0 left-[20px] sm:left-[60px] md:left-[20px] w-32 sm:w-32 md:w-32 lg:w-auto"
         src={BannerWatch}
-        objectFit="contain"
-        unoptimized
         alt="watch-img"
+        unoptimized
       />
       <Image
-        className="absolute bottom-[0px] left-[0px] hidden lg:block"
+        className="absolute bottom-0 left-0 w-40 sm:w-40 md:w-40 lg:w-auto"
         src={BannerIphone}
-        objectFit="contain"
-        unoptimized
         alt="iphone-img"
+        unoptimized
       />
     </div>
   );

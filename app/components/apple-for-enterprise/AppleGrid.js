@@ -36,14 +36,14 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex items-center justify-center flex-1 lg:pr-10">
-            <div className="text-center lg:text-left max-w-[400px]">
-              <h3 className="text-lg sm:text-xl lg:text-2xl text-[#1D1D1F] font-semibold mb-2 sm:mb-3">
+            <div className="text-center lg:text-left max-w-[400px] text-lg sm:text-xl font-bold">
+              <span className="text-primary mb-2 sm:mb-3">
                 Seamless Integration
-              </h3>
-              <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] leading-relaxed">
+              </span>
+              <span className="text-[#4B5563] ml-2">
                 Perfect ecosystem integration across all Apple devices for a
                 unified experience.
-              </p>
+              </span>
             </div>
           </div>
         </div>
@@ -57,17 +57,17 @@ const AppleGrid = () => {
               width={72}
               src={AppleGridKey}
               alt="apple-key"
-              className="w-12 h-12 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[70px]"
+              className="w-12 h-12 sm:w-16 sm:h-16 lg:w-[80px] lg:h-[80px]"
             />
           </div>
-          <div className="flex flex-col text-center sm:text-left">
-            <h3 className="text-lg sm:text-xl lg:text-2xl text-[#1D1D1F] font-semibold mb-2 sm:mb-3">
+          <div className="text-lg sm:text-xl text-center sm:text-left font-bold">
+            <span className="text-[#1D1D1F] mb-2 sm:mb-3">
               Enhanced Security
-            </h3>
-            <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] leading-relaxed">
+            </span>
+            <span className="text-[#4B5563] ml-2">
               Built-in security features protect your data with advanced
               encryption and privacy controls
-            </p>
+            </span>
           </div>
         </div>
 
@@ -80,17 +80,17 @@ const AppleGrid = () => {
               width={72}
               src={AppleGridBook}
               alt="apple-book"
-              className="w-12 h-12 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[70px]"
+              className="w-12 h-12 sm:w-16 sm:h-16 lg:w-[80px] lg:h-[80px]"
             />
           </div>
-          <div className="flex flex-col text-center sm:text-left">
-            <h3 className="text-lg sm:text-xl lg:text-2xl text-[#1D1D1F] font-semibold mb-2 sm:mb-3">
+          <div className="text-lg sm:text-xl text-center sm:text-left font-bold">
+            <span className="text-primary mb-2 sm:mb-3">
               Enterprise Mobility
-            </h3>
-            <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] leading-relaxed">
+            </span>
+            <span className="text-[#4B5563] ml-2">
               Enable your workforce to be productive anywhere with powerful
               mobile solutions
-            </p>
+            </span>
           </div>
         </div>
 
@@ -107,14 +107,14 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex items-center justify-center flex-1 lg:pl-10">
-            <div className="text-center lg:text-left max-w-[400px]">
-              <h3 className="text-lg sm:text-xl lg:text-2xl text-[#1D1D1F] font-semibold mb-2 sm:mb-3">
+            <div className="text-lg sm:text-xl text-center lg:text-left max-w-[400px] font-bold">
+              <span className="text-primary mb-2 sm:mb-3">
                 Seamless Integration
-              </h3>
-              <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] leading-relaxed">
+              </span>
+              <span className="text-[#4B5563] ml-2">
                 Perfect ecosystem integration across all Apple devices for a
                 unified experience.
-              </p>
+              </span>
             </div>
           </div>
         </div>

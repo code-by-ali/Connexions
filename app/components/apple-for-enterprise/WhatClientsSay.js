@@ -9,7 +9,7 @@ const WhatClientsSay = () => {
       {/* Top Section */}
       <div className="flex flex-col gap-8 items-center">
         <div className="flex gap-4 items-center">
-          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary font-bold">
             What our Client Say
           </p>
         </div>
@@ -21,7 +21,7 @@ const WhatClientsSay = () => {
         <div className="flex flex-col gap-6 items-center w-full">
           <AboutUsCard />
           <AboutUsCard />
-          <AboutUsCard />
+          {/* <AboutUsCard /> */}
         </div>
 
         {/* Second Column - 4 cards */}
@@ -29,14 +29,14 @@ const WhatClientsSay = () => {
           <AboutUsCard />
           <AboutUsCard />
           <AboutUsCard />
-          <AboutUsCard />
+          {/* <AboutUsCard /> */}
         </div>
 
         {/* Third Column - 3 cards */}
         <div className="flex flex-col gap-6 items-center w-full">
           <AboutUsCard />
           <AboutUsCard />
-          <AboutUsCard />
+          {/* <AboutUsCard /> */}
         </div>
       </div>
     </div>

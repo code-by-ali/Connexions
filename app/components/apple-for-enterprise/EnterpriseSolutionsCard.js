@@ -7,7 +7,7 @@ const EnterpriseSolutionsCard = ({ card }) => {
   return (
     <div className="bg-white shadow-[2px_4px_12px_0px_#00000014] px-4 py-6 flex flex-col gap-4 w-full h-[400px] mx-auto max-w-sm">
       <div className="flex flex-col gap-2">
-        <p className="text-lg sm:text-xl md:text-2xl text-primary">
+        <p className="text-lg sm:text-xl md:text-2xl text-primary font-bold">
           {card?.title ? card?.title : "Macbook"}
         </p>
         <p className="text-sm sm:text-base text-primary">

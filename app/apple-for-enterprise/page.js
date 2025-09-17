@@ -9,7 +9,7 @@ import WhatClientsSay from "../components/apple-for-enterprise/WhatClientsSay";
 
 const page = () => {
   return (
-    <div>
+    <div className="font-sfpro">
       <AppleBanner />
       <AppleAuthorised />
       <AppleGrid />

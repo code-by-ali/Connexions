@@ -1,19 +1,74 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "@/public/assets/connextions-logo-black-cropped.png";
 import { ChevronDown, Grid2x2, Search, Menu, X } from "lucide-react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const navRef = useRef(null);
 
   const toggleDropdown = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
   };
 
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const navItems = [
+    { label: "Home", href: "#" },
+    {
+      label: "Services",
+      dropdown: [
+        { label: "Consulting", href: "#" },
+        { label: "Support", href: "#" },
+        { label: "Cloud", href: "#" },
+      ],
+    },
+    {
+      label: "Apple",
+      dropdown: [
+        { label: "Apple for Enterprise", href: "/apple-for-enterprise" },
+        { label: "iPhone", href: "#" },
+        { label: "iPad", href: "#" },
+      ],
+    },
+    {
+      label: "Partners",
+      dropdown: [
+        { label: "Microsoft", href: "#" },
+        { label: "AWS", href: "#" },
+        { label: "Google", href: "#" },
+      ],
+    },
+    {
+      label: "Resources",
+      dropdown: [
+        { label: "Blog", href: "#" },
+        { label: "Case Studies", href: "#" },
+        { label: "Docs", href: "#" },
+      ],
+    },
+    { label: "Sustainability", href: "#" },
+  ];
+
   return (
-    <div className="px-4 sm:px-8 lg:px-20 py-6 flex flex-col gap-4 border-b border-gray-200">
+    <div
+      ref={navRef}
+      className="px-4 sm:px-8 lg:px-20 py-6 flex flex-col gap-4 border-b border-gray-200"
+    >
       {/* Top Row */}
       <div className="flex items-center justify-between">
         {/* Logo */}
@@ -66,21 +121,16 @@ const Header = () => {
               <span>BROWSE ALL CATEGORIES</span>
             </div>
             <div>
-              <span className="underline cursor-pointer">Buy and Try</span>
+              <Link href="#" className="underline cursor-pointer">
+                Buy and Try
+              </Link>
             </div>
           </div>
 
           {/* Row 2: Navigation */}
           <div className="flex justify-center">
             <ul className="flex gap-6 flex-wrap">
-              {[
-                { label: "Home" },
-                { label: "Services", dropdown: ["Consulting", "Support", "Cloud"] },
-                { label: "Apple", dropdown: ["Mac", "iPhone", "iPad"] },
-                { label: "Partners", dropdown: ["Microsoft", "AWS", "Google"] },
-                { label: "Resources", dropdown: ["Blog", "Case Studies", "Docs"] },
-                { label: "Sustainability" },
-              ].map((item) => (
+              {navItems.map((item) => (
                 <li
                   key={item.label}
                   className="relative flex flex-col cursor-pointer"
@@ -89,18 +139,22 @@ const Header = () => {
                     className="flex items-center gap-1"
                     onClick={() => item.dropdown && toggleDropdown(item.label)}
                   >
-                    <span>{item.label}</span>
+                    <Link href={item.href || "#"}>{item.label}</Link>
                     {item.dropdown && <ChevronDown size={14} />}
                   </div>
 
                   {item.dropdown && openDropdown === item.label && (
-                    <ul className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg text-sm p-2 w-40 z-50">
-                      {item.dropdown.map((sub) => (
+                    <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded shadow-lg text-sm p-2 w-40 z-50">
+                      {item.dropdown.map((sub, index) => (
                         <li
-                          key={sub}
-                          className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
+                          key={sub.label}
+                          className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${
+                            index !== item.dropdown.length - 1
+                              ? "border-b border-gray-100"
+                              : ""
+                          }`}
                         >
-                          {sub}
+                          <Link href={sub.href}>{sub.label}</Link>
                         </li>
                       ))}
                     </ul>
@@ -121,14 +175,7 @@ const Header = () => {
 
           {/* Center */}
           <ul className="flex gap-8 flex-wrap">
-            {[
-              { label: "Home" },
-              { label: "Services", dropdown: ["Consulting", "Support", "Cloud"] },
-              { label: "Apple", dropdown: ["Mac", "iPhone", "iPad"] },
-              { label: "Partners", dropdown: ["Microsoft", "AWS", "Google"] },
-              { label: "Resources", dropdown: ["Blog", "Case Studies", "Docs"] },
-              { label: "Sustainability" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <li
                 key={item.label}
                 className="relative flex flex-col cursor-pointer"
@@ -137,18 +184,22 @@ const Header = () => {
                   className="flex items-center gap-1"
                   onClick={() => item.dropdown && toggleDropdown(item.label)}
                 >
-                  <span>{item.label}</span>
+                  <Link href={item.href || "#"}>{item.label}</Link>
                   {item.dropdown && <ChevronDown size={14} />}
                 </div>
 
                 {item.dropdown && openDropdown === item.label && (
-                  <ul className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg text-sm p-2 w-40 z-50">
-                    {item.dropdown.map((sub) => (
+                  <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg text-sm p-2 w-40 z-50">
+                    {item.dropdown.map((sub, index) => (
                       <li
-                        key={sub}
-                        className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
+                        key={sub.label}
+                        className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${
+                          index !== item.dropdown.length - 1
+                            ? "border-b border-gray-100"
+                            : ""
+                        }`}
                       >
-                        {sub}
+                        <Link href={sub.href}>{sub.label}</Link>
                       </li>
                     ))}
                   </ul>
@@ -159,7 +210,9 @@ const Header = () => {
 
           {/* Right */}
           <div>
-            <span className="underline cursor-pointer">Buy and Try</span>
+            <Link href="#" className="underline cursor-pointer">
+              Buy and Try
+            </Link>
           </div>
         </div>
       </div>
@@ -181,14 +234,7 @@ const Header = () => {
         {/* Mobile Nav Menu */}
         <div>
           <ul className="flex flex-col gap-4 relative">
-            {[
-              { label: "Home" },
-              { label: "Services", dropdown: ["Consulting", "Support", "Cloud"] },
-              { label: "Apple", dropdown: ["Mac", "iPhone", "iPad"] },
-              { label: "Partners", dropdown: ["Microsoft", "AWS", "Google"] },
-              { label: "Resources", dropdown: ["Blog", "Case Studies", "Docs"] },
-              { label: "Sustainability" },
-            ].map((item) => (
+            {navItems.map((item) => (
               <li
                 key={item.label}
                 className="relative flex flex-col cursor-pointer"
@@ -197,18 +243,22 @@ const Header = () => {
                   className="flex items-center gap-1"
                   onClick={() => item.dropdown && toggleDropdown(item.label)}
                 >
-                  <span>{item.label}</span>
+                  <Link href={item.href || "#"}>{item.label}</Link>
                   {item.dropdown && <ChevronDown size={14} />}
                 </div>
 
                 {item.dropdown && openDropdown === item.label && (
-                  <ul className="absolute top-full left-0 mt-2 bg-white border rounded shadow-lg text-sm p-2 w-40 z-50">
-                    {item.dropdown.map((sub) => (
+                  <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded shadow-lg text-sm p-2 w-40 z-50">
+                    {item.dropdown.map((sub, index) => (
                       <li
-                        key={sub}
-                        className="px-3 py-1 hover:bg-gray-100 cursor-pointer"
+                        key={sub.label}
+                        className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${
+                          index !== item.dropdown.length - 1
+                            ? "border-b border-gray-100"
+                            : ""
+                        }`}
                       >
-                        {sub}
+                        <Link href={sub.href}>{sub.label}</Link>
                       </li>
                     ))}
                   </ul>
@@ -220,7 +270,9 @@ const Header = () => {
 
         {/* Buy and Try */}
         <div className="px-2">
-          <span className="underline cursor-pointer">Buy and Try</span>
+          <Link href="#" className="underline cursor-pointer">
+            Buy and Try
+          </Link>
         </div>
       </div>
     </div>
