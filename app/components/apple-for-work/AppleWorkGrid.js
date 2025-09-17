@@ -7,18 +7,18 @@ import AppleGrid3 from "@/public/assets/apple-grid-3.svg";
 
 import Image from "next/image";
 
-const AppleGrid = () => {
+const AppleWorkGrid = () => {
   return (
     <div className="mt-12 sm:mt-16 md:mt-20">
       {/* Header Section */}
       <div className="flex flex-col gap-3 sm:gap-4 px-4 sm:px-6 md:px-8">
         <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold">
-          Why Choose Apple for Enterprise
+          Built for Every Team, Trusted by IT
         </h2>
-        <p className="text-[#4B5563] text-sm sm:text-base md:text-xl text-center max-w-4xl mx-auto">
+        {/* <p className="text-[#4B5563] text-sm sm:text-base md:text-xl text-center max-w-4xl mx-auto">
           Discover the advantages that make Apple the preferred choice for
           forward-thinking businesses worldwide.
-        </p>
+        </p> */}
       </div>
 
       {/* Grid Section */}
@@ -37,12 +37,9 @@ const AppleGrid = () => {
           </div>
           <div className="flex items-center justify-center flex-1 lg:pr-10">
             <div className="text-center lg:text-left max-w-[400px] text-lg sm:text-xl font-bold">
-              <span className="text-primary mb-2 sm:mb-3">
-                Seamless Integration
-              </span>
+              <span className="text-primary mb-2 sm:mb-3">CXOs</span>
               <span className="text-[#4B5563] ml-2">
-                Perfect ecosystem integration across all Apple devices for a
-                unified experience.
+                Seamless remote work, top-tier performance.
               </span>
             </div>
           </div>
@@ -61,12 +58,9 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
-            <span className="text-[#1D1D1F] mb-2 sm:mb-3 block">
-              Enhanced Security
-            </span>
+            <span className="text-[#1D1D1F] mb-2 sm:mb-3 block">IT Heads.</span>
             <span className="text-[#4B5563] block">
-              Built-in security features protect your data with advanced
-              encryption and privacy controls
+              Zero-trust security, scalable deployment
             </span>
           </div>
         </div>
@@ -84,12 +78,9 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
-            <span className="text-primary mb-2 sm:mb-3 block">
-              Enterprise Mobility
-            </span>
+            <span className="text-primary mb-2 sm:mb-3 block">Finance.</span>
             <span className="text-[#4B5563] block">
-              Enable your workforce to be productive anywhere with powerful
-              mobile solutions
+              Lower TCO, longer product lifecycle, high resale value
             </span>
           </div>
         </div>
@@ -108,12 +99,9 @@ const AppleGrid = () => {
           </div>
           <div className="flex items-center justify-center flex-1 lg:pl-10">
             <div className="text-lg sm:text-xl text-center lg:text-left max-w-[400px] font-bold">
-              <span className="text-primary mb-2 sm:mb-3">
-                Enhanced Productivity.
-              </span>
+              <span className="text-primary mb-2 sm:mb-3">Employees.</span>
               <span className="text-[#4B5563] ml-2">
-                Streamline workflows with intuitive Apple devices that boosts
-                team efficiency and collabration.
+                Familiar, intuitive interfaces with powerful capabilities
               </span>
             </div>
           </div>
@@ -123,4 +111,4 @@ const AppleGrid = () => {
   );
 };
 
-export default AppleGrid;
+export default AppleWorkGrid;

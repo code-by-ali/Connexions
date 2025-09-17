@@ -41,7 +41,7 @@ const Header = () => {
       label: "Apple",
       dropdown: [
         { label: "Apple for Enterprise", href: "/apple-for-enterprise" },
-        { label: "iPhone", href: "#" },
+        { label: "Apple for Work", href: "/apple-for-work" },
         { label: "iPad", href: "#" },
       ],
     },

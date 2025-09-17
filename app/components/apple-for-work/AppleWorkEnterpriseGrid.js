@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import EnterpriseGridImg from "@/public/assets/enterprise-grid-image.svg";
 import Image from "next/image";
 
-const EnterpriseGrid = () => {
+const AppleWorkEnterpriseGrid = () => {
   return (
     <div className="flex flex-col gap-6 sm:gap-8 py-8 sm:py-10 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-30 bg-[#F5F5F7] mb-10">
       {/* First Section - Enterprise Mobility */}
@@ -23,11 +23,10 @@ const EnterpriseGrid = () => {
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
           <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Enterprise Mobility
+            Apple for Work & MDM
           </h2>
-          <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-relaxed">
-            Empower your workforce with secure, flexible mobile solutions that
-            enable productivity from anywhere.
+          <p className="text-[#4B5563 ] text-sm sm:text-base md:text-lg leading-relaxed">
+            Supported MDM Platforms:
           </p>
 
           {/* Feature List */}
@@ -37,7 +36,7 @@ const EnterpriseGrid = () => {
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
-                Remote work capabilities
+                Remote Wipe Capabilities
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
@@ -45,7 +44,7 @@ const EnterpriseGrid = () => {
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
-                Secure data access
+                Enforced security & Policy deployment at scale
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
@@ -53,7 +52,7 @@ const EnterpriseGrid = () => {
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
-                Real-time collaboration
+                App whitelisting & management
               </span>
             </div>
           </div>
@@ -84,11 +83,10 @@ const EnterpriseGrid = () => {
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
           <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-            Zero-Touch Deployment
+            Apple Business Manager
           </h2>
-          <p className="text-[#4B5563  ] text-sm sm:text-base md:text-lg leading-relaxed">
-            Streamline device management with automated deployment and
-            configuration solutions.
+          <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-relaxed">
+            Empowering IT Companies:
           </p>
 
           {/* Feature List */}
@@ -98,7 +96,7 @@ const EnterpriseGrid = () => {
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
-                Automated Setup
+                Automated device enrollment
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
@@ -106,7 +104,7 @@ const EnterpriseGrid = () => {
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
-                Centralized management
+                Bulk provisioning capabilities
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
@@ -114,7 +112,15 @@ const EnterpriseGrid = () => {
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
-                Reduced IT overhead
+                Centralized app licensing
+              </span>
+            </div>
+            <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
+              <span className="text-green-500 flex-shrink-0">
+                <Check size={16} className="sm:w-4 sm:h-4" />
+              </span>
+              <span className="text-sm sm:text-base text-[#4B5563]">
+                Role based user management
               </span>
             </div>
           </div>
@@ -131,4 +137,4 @@ const EnterpriseGrid = () => {
   );
 };
 
-export default EnterpriseGrid;
+export default AppleWorkEnterpriseGrid;
