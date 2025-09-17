@@ -33,7 +33,8 @@ const RefreshEnterprise = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
+      {/* Cards */}
+      <div className="flex flex-wrap justify-center items-center gap-2">
         {cards.map((card, idx) => (
           <div
             key={idx}
