@@ -3,7 +3,6 @@ import AppleGrid1 from "@/public/assets/apple-grid-1.svg";
 import AppleGridKey from "@/public/assets/apple-grid-key.svg";
 import AppleGridBook from "@/public/assets/apple-grid-book.svg";
 import AppleGrid2 from "@/public/assets/apple-grid-2.svg";
-import AppleGrid3 from "@/public/assets/apple-grid-3.svg";
 
 import Image from "next/image";
 
@@ -61,10 +60,10 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
-            <span className="text-[#1D1D1F] mb-2 sm:mb-3 block">
+            <span className="text-[#1D1D1F] mb-2 sm:mb-3">
               Enhanced Security
             </span>
-            <span className="text-[#4B5563] block">
+            <span className="text-[#4B5563] ml-2">
               Built-in security features protect your data with advanced
               encryption and privacy controls
             </span>
@@ -84,10 +83,10 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
-            <span className="text-primary mb-2 sm:mb-3 block">
+            <span className="text-primary mb-2 sm:mb-3">
               Enterprise Mobility
             </span>
-            <span className="text-[#4B5563] block">
+            <span className="text-[#4B5563] ml-2">
               Enable your workforce to be productive anywhere with powerful
               mobile solutions
             </span>
@@ -99,7 +98,7 @@ const AppleGrid = () => {
           <div className="flex justify-center lg:justify-end">
             <Image
               className="rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-tl-none lg:rounded-bl-none w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
-              src={AppleGrid3}
+              src={AppleGrid2}
               height={400}
               width={550}
               unoptimized

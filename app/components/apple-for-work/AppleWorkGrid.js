@@ -1,9 +1,8 @@
 import React from "react";
-import AppleGrid1 from "@/public/assets/apple-grid-1.svg";
-import AppleGridKey from "@/public/assets/apple-grid-key.svg";
-import AppleGridBook from "@/public/assets/apple-grid-book.svg";
-import AppleGrid2 from "@/public/assets/apple-grid-2.svg";
-import AppleGrid3 from "@/public/assets/apple-grid-3.svg";
+import AppleWorkGrid1 from "@/public/assets/apple-grid-1.svg";
+import AppleWorkGridIcon1 from "@/public/assets/apple-work-grid-1.svg";
+import AppleWorkGridIcon2 from "@/public/assets/apple-work-grid-2.svg";
+import AppleWorkGrid2 from "@/public/assets/apple-grid-2.svg";
 
 import Image from "next/image";
 
@@ -27,7 +26,7 @@ const AppleWorkGrid = () => {
         <div className="lg:col-span-2 flex flex-col lg:flex-row justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
           <div className="flex justify-center lg:justify-start">
             <Image
-              src={AppleGrid1}
+              src={AppleWorkGrid1}
               height={400}
               width={550}
               unoptimized
@@ -50,7 +49,7 @@ const AppleWorkGrid = () => {
           <div className="flex-shrink-0 flex justify-center sm:justify-start w-full sm:w-auto">
             <Image
               unoptimized
-              src={AppleGridKey}
+              src={AppleWorkGridIcon1}
               alt="apple-key"
               width={80}
               height={80}
@@ -58,8 +57,8 @@ const AppleWorkGrid = () => {
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
-            <span className="text-[#1D1D1F] mb-2 sm:mb-3 block">IT Heads.</span>
-            <span className="text-[#4B5563] block">
+            <span className="text-[#1D1D1F] mb-2 sm:mb-3">IT Heads.</span>
+            <span className="text-[#4B5563] ml-2">
               Zero-trust security, scalable deployment
             </span>
           </div>
@@ -70,7 +69,7 @@ const AppleWorkGrid = () => {
           <div className="flex-shrink-0 flex justify-center sm:justify-start w-full sm:w-auto">
             <Image
               unoptimized
-              src={AppleGridBook}
+              src={AppleWorkGridIcon2}
               alt="apple-book"
               width={80}
               height={80}
@@ -78,8 +77,8 @@ const AppleWorkGrid = () => {
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
-            <span className="text-primary mb-2 sm:mb-3 block">Finance.</span>
-            <span className="text-[#4B5563] block">
+            <span className="text-primary mb-2 sm:mb-3">Finance.</span>
+            <span className="text-[#4B5563] ml-2">
               Lower TCO, longer product lifecycle, high resale value
             </span>
           </div>
@@ -90,7 +89,7 @@ const AppleWorkGrid = () => {
           <div className="flex justify-center lg:justify-end">
             <Image
               className="rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-tl-none lg:rounded-bl-none w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
-              src={AppleGrid3}
+              src={AppleWorkGrid2}
               height={400}
               width={550}
               unoptimized
