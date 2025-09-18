@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/assets/connextions-logo-black-cropped.png";
 import { ChevronDown, Grid2x2, Search, Menu, X } from "lucide-react";
+import CommonImage from "./CommonImage";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -73,11 +73,10 @@ const Header = () => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Image
-            unoptimized
+          <CommonImage
             width={180}
             height={80}
-            src={Logo}
+            src={Logo.src || Logo}
             alt="Logo"
             className="h-auto w-auto max-h-[50px]"
           />

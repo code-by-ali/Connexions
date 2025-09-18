@@ -3,8 +3,7 @@ import AppleGrid1 from "@/public/assets/apple-grid-1.svg";
 import AppleGridKey from "@/public/assets/apple-grid-key.svg";
 import AppleGridBook from "@/public/assets/apple-grid-book.svg";
 import AppleGrid2 from "@/public/assets/apple-grid-2.svg";
-
-import Image from "next/image";
+import CommonImage from "../common/CommonImage";
 
 const AppleGrid = () => {
   return (
@@ -25,11 +24,10 @@ const AppleGrid = () => {
         {/* First Large Card - Seamless Integration */}
         <div className="lg:col-span-2 flex flex-col lg:flex-row justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
           <div className="flex justify-center lg:justify-start">
-            <Image
-              src={AppleGrid1}
+            <CommonImage
+              src={AppleGrid1.src || AppleGrid1}
               height={400}
               width={550}
-              unoptimized
               alt="apple-grid-img-1"
               className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
             />
@@ -50,13 +48,13 @@ const AppleGrid = () => {
         {/* Enhanced Security Card */}
         <div className="py-6 sm:py-8 lg:py-10 px-6 sm:px-10 lg:px-14 bg-[#F5F5F7] flex flex-col sm:flex-row items-start gap-4 sm:gap-6 rounded-2xl">
           <div className="flex-shrink-0 flex justify-center sm:justify-start w-full sm:w-auto">
-            <Image
-              unoptimized
-              src={AppleGridKey}
+            <CommonImage
+              src={AppleGridKey.src || AppleGridKey}
               alt="apple-key"
               width={80}
               height={80}
-              className="w-12 sm:w-12 lg:w-16 h-12 sm:h-12 lg:h-16 object-contain"
+              className="w-12 sm:w-12 lg:w-16 h-12 sm:h-12 lg:h-16"
+              style={{ objectFit: "contain" }}
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
@@ -73,13 +71,13 @@ const AppleGrid = () => {
         {/* Enterprise Mobility Card */}
         <div className="py-6 sm:py-8 lg:py-10 px-6 sm:px-10 lg:px-14 bg-[#F5F5F7] flex flex-col sm:flex-row items-start gap-4 sm:gap-6 rounded-2xl">
           <div className="flex-shrink-0 flex justify-center sm:justify-start w-full sm:w-auto">
-            <Image
-              unoptimized
-              src={AppleGridBook}
+            <CommonImage
+              src={AppleGridBook.src || AppleGridBook}
               alt="apple-book"
               width={80}
               height={80}
-              className="w-12 sm:w-12 lg:w-16 h-12 sm:h-12 lg:h-16 object-contain"
+              className="w-12 sm:w-12 lg:w-16 h-12 sm:h-12 lg:h-16"
+              style={{ objectFit: "contain" }}
             />
           </div>
           <div className="flex-1 text-lg sm:text-xl text-left font-bold">
@@ -96,12 +94,11 @@ const AppleGrid = () => {
         {/* Second Large Card - Right Image */}
         <div className="lg:col-span-2 flex flex-col lg:flex-row-reverse justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
           <div className="flex justify-center lg:justify-end">
-            <Image
+            <CommonImage
               className="rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-tl-none lg:rounded-bl-none w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
-              src={AppleGrid2}
+              src={AppleGrid2.src || AppleGrid2}
               height={400}
               width={550}
-              unoptimized
               alt="apple-grid-img-2"
             />
           </div>

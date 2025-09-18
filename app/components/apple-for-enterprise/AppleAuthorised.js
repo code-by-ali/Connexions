@@ -1,8 +1,8 @@
-import Image from "next/image";
 import React from "react";
 import AppleLogo from "@/public/assets/apple-logo.svg";
 import AppleSecurity from "@/public/assets/apple-security.svg";
 import AppleSupport from "@/public/assets/apple-support.svg";
+import CommonImage from "../common/CommonImage";
 
 const AppleAuthorised = () => {
   return (
@@ -14,12 +14,11 @@ const AppleAuthorised = () => {
       <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 items-center justify-center w-full max-w-6xl">
         {/* Certified Partner Card */}
         <div className="w-full sm:w-[270px] h-[140px] sm:h-[150px] rounded-2xl flex flex-col gap-3 sm:gap-4 justify-center items-center bg-white shadow-[2px_4px_12px_0px_rgba(0,0,0,0.08)] hover:shadow-[2px_8px_20px_0px_rgba(0,0,0,0.12)] transition-shadow duration-300">
-          <Image
-            unoptimized
+          <CommonImage
             alt="apple-logo"
             width={46}
             height={55}
-            src={AppleLogo}
+            src={AppleLogo.src || AppleLogo}
             className="w-10 h-12 sm:w-[46px] sm:h-[55px]"
           />
           <span className="text-sm sm:text-sm md:text-base text-[#0066CC] font-medium">
@@ -29,12 +28,11 @@ const AppleAuthorised = () => {
 
         {/* Enterprise Security Card */}
         <div className="w-full sm:w-[240px] h-[140px] sm:h-[150px] rounded-2xl flex flex-col gap-3 sm:gap-4 justify-center items-center bg-white shadow-[2px_4px_12px_0px_rgba(0,0,0,0.08)] hover:shadow-[2px_8px_20px_0px_rgba(0,0,0,0.12)] transition-shadow duration-300">
-          <Image
-            unoptimized
+          <CommonImage
             alt="apple-security"
             width={46}
             height={46}
-            src={AppleSecurity}
+            src={AppleSecurity.src || AppleSecurity}
             className="w-10 h-10 sm:w-[46px] sm:h-[46px]"
           />
           <span className="text-sm sm:text-sm md:text-base text-[#0066CC] font-medium">
@@ -44,12 +42,11 @@ const AppleAuthorised = () => {
 
         {/* 24/7 Support Card */}
         <div className="w-full sm:w-[240px] h-[140px] sm:h-[150px] rounded-2xl flex flex-col gap-3 sm:gap-4 justify-center items-center bg-white shadow-[2px_4px_12px_0px_rgba(0,0,0,0.08)] hover:shadow-[2px_8px_20px_0px_rgba(0,0,0,0.12)] transition-shadow duration-300">
-          <Image
-            unoptimized
+          <CommonImage
             alt="apple-support"
             width={60}
             height={60}
-            src={AppleSupport}
+            src={AppleSupport.src || AppleSupport}
             className="w-12 h-12 sm:w-[60px] sm:h-[60px]"
           />
           <span className="text-sm sm:text-sm md:text-base text-[#0066CC] font-medium">

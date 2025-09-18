@@ -3,8 +3,8 @@ import BannerIpad from "@/public/assets/apple-banner-ipad.svg";
 import BannerIphone from "@/public/assets/apple-banner-iphone.svg";
 import BannerMac from "@/public/assets/apple-banner-mac.svg";
 import BannerWatch from "@/public/assets/apple-banner-watch.svg";
-import Image from "next/image";
 import { MoveRight } from "lucide-react";
+import CommonImage from "../common/CommonImage";
 
 const AppleWorkBanner = () => {
   return (
@@ -45,29 +45,25 @@ const AppleWorkBanner = () => {
       </div>
 
       {/* Images positioned responsively */}
-      <Image
+      <CommonImage
         className="absolute bottom-0 right-0 w-32 sm:w-32 md:w-36 lg:w-48 xl:w-auto"
-        src={BannerIpad}
+        src={BannerIpad.src || BannerIpad}
         alt="ipad-img"
-        unoptimized
       />
-      <Image
+      <CommonImage
         className="absolute top-0 right-0 w-36 sm:w-36 md:w-40 lg:w-48 xl:w-auto"
-        src={BannerMac}
+        src={BannerMac.src || BannerMac}
         alt="mac-img"
-        unoptimized
       />
-      <Image
+      <CommonImage
         className="absolute top-0 left-[20px] sm:left-[60px] md:left-[20px] w-32 sm:w-32 md:w-32 lg:w-48 xl:w-auto"
-        src={BannerWatch}
+        src={BannerWatch.src || BannerWatch}
         alt="watch-img"
-        unoptimized
       />
-      <Image
+      <CommonImage
         className="absolute bottom-0 left-0 w-40 sm:w-40 md:w-40 lg:w-48 xl:w-auto"
-        src={BannerIphone}
+        src={BannerIphone.src || BannerIphone}
         alt="iphone-img"
-        unoptimized
       />
     </div>
   );

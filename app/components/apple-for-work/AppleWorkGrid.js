@@ -3,8 +3,7 @@ import AppleWorkGrid1 from "@/public/assets/apple-grid-1.svg";
 import AppleWorkGridIcon1 from "@/public/assets/apple-work-grid-1.svg";
 import AppleWorkGridIcon2 from "@/public/assets/apple-work-grid-2.svg";
 import AppleWorkGrid2 from "@/public/assets/apple-grid-2.svg";
-
-import Image from "next/image";
+import CommonImage from "../common/CommonImage";
 
 const AppleWorkGrid = () => {
   return (
@@ -25,11 +24,10 @@ const AppleWorkGrid = () => {
         {/* First Large Card - Seamless Integration */}
         <div className="lg:col-span-2 flex flex-col lg:flex-row justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
           <div className="flex justify-center lg:justify-start">
-            <Image
-              src={AppleWorkGrid1}
+            <CommonImage
+              src={AppleWorkGrid1.src || AppleWorkGrid1}
               height={400}
               width={550}
-              unoptimized
               alt="apple-grid-img-1"
               className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
             />
@@ -47,9 +45,8 @@ const AppleWorkGrid = () => {
         {/* Enhanced Security Card */}
         <div className="py-6 sm:py-8 lg:py-10 px-6 sm:px-10 lg:px-14 bg-[#F5F5F7] flex flex-col sm:flex-row items-start gap-4 sm:gap-6 rounded-2xl">
           <div className="flex-shrink-0 flex justify-center sm:justify-start w-full sm:w-auto">
-            <Image
-              unoptimized
-              src={AppleWorkGridIcon1}
+            <CommonImage
+              src={AppleWorkGridIcon1.src || AppleWorkGridIcon1}
               alt="apple-key"
               width={80}
               height={80}
@@ -67,9 +64,8 @@ const AppleWorkGrid = () => {
         {/* Enterprise Mobility Card */}
         <div className="py-6 sm:py-8 lg:py-10 px-6 sm:px-10 lg:px-14 bg-[#F5F5F7] flex flex-col sm:flex-row items-start gap-4 sm:gap-6 rounded-2xl">
           <div className="flex-shrink-0 flex justify-center sm:justify-start w-full sm:w-auto">
-            <Image
-              unoptimized
-              src={AppleWorkGridIcon2}
+            <CommonImage
+              src={AppleWorkGridIcon2.src || AppleWorkGridIcon2}
               alt="apple-book"
               width={80}
               height={80}
@@ -87,12 +83,11 @@ const AppleWorkGrid = () => {
         {/* Second Large Card - Right Image */}
         <div className="lg:col-span-2 flex flex-col lg:flex-row-reverse justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
           <div className="flex justify-center lg:justify-end">
-            <Image
+            <CommonImage
               className="rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-tl-none lg:rounded-bl-none w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
-              src={AppleWorkGrid2}
+              src={AppleWorkGrid2.src || AppleWorkGrid2}
               height={400}
               width={550}
-              unoptimized
               alt="apple-grid-img-2"
             />
           </div>

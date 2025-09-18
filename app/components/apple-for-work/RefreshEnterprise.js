@@ -1,7 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import RefreshEnterpriseIcon1 from "@/public/assets/refresh-enterprise-icon-1.svg";
 import RefreshEnterpriseIcon2 from "@/public/assets/refresh-enterprise-icon-2.svg";
+import CommonImage from "../common/CommonImage";
 
 const RefreshEnterprise = () => {
   const cards = [
@@ -40,11 +40,10 @@ const RefreshEnterprise = () => {
             key={idx}
             className="flex flex-col gap-2 items-center justify-center w-full sm:w-[300px] md:w-[340px] lg:w-[400px] min-h-[140px] lg:min-h-[160px] shadow-lg rounded-xl bg-white p-4"
           >
-            <Image
-              src={card.icon}
+            <CommonImage
+              src={card.icon.src || card.icon}
               height={36}
               width={36}
-              unoptimized
               alt={card.alt}
             />
             <p className="text-base sm:text-lg md:text-xl text-primary font-bold text-center">

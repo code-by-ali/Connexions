@@ -2,6 +2,7 @@ import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import EnterpriseMacbook from "@/public/assets/enterprise-macbook.svg";
+import CommonImage from "../common/CommonImage";
 
 const EnterpriseSolutionsCard = ({ card }) => {
   return (
@@ -17,8 +18,8 @@ const EnterpriseSolutionsCard = ({ card }) => {
         </p>
       </div>
       <div className="flex items-center justify-center flex-1">
-        <Image
-          src={card?.img ? card?.img : EnterpriseMacbook}
+        <CommonImage
+          src={card?.img ? card?.img?.src : EnterpriseMacbook.src}
           height={200}
           width={150}
           alt="img"

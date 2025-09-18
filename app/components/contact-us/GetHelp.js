@@ -2,17 +2,17 @@ import React from "react";
 import ContactUsBg from "../../../public/assets/contact-us-bg.png";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import CommonImage from "../common/CommonImage";
 
 const GetHelp = () => {
   return (
     <div className="relative w-full">
       {/* Background Image */}
-      <Image
-        unoptimized
-        src={ContactUsBg}
+      <CommonImage
+        src={ContactUsBg.src || ContactUsBg} // Handle both static imports and direct paths
         alt="Contact Us Background"
-        className="w-full h-auto object-contain"
-        priority
+        className="w-full h-auto"
+        style={{ objectFit: "contain" }}
       />
 
       {/* Overlay Content */}

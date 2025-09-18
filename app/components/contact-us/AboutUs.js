@@ -1,7 +1,7 @@
 import React from "react";
 import questionIcon from "@/public/assets/contact-about-que-icon.png";
-import Image from "next/image";
 import AboutUsCard from "../common/AboutUsCard";
+import CommonImage from "../common/CommonImage";
 
 const AboutUs = () => {
   return (
@@ -10,12 +10,11 @@ const AboutUs = () => {
       <div className="flex flex-col gap-8 items-center">
         <div className="flex gap-4 items-center">
           <span className="p-4 bg-primary rounded-full">
-            <Image
-              unoptimized
+            <CommonImage
               alt="question-icon"
               height={14}
               width={14}
-              src={questionIcon}
+              src={questionIcon.src || questionIcon}
             />
           </span>
           <span className="text-base text-primary">About us</span>
@@ -41,7 +40,7 @@ const AboutUs = () => {
         <div className="flex flex-col gap-6 items-center w-full">
           <AboutUsCard />
           <AboutUsCard />
-          <AboutUsCard />
+          {/* <AboutUsCard /> */}
         </div>
 
         {/* Second Column - 4 cards */}
@@ -49,14 +48,14 @@ const AboutUs = () => {
           <AboutUsCard />
           <AboutUsCard />
           <AboutUsCard />
-          <AboutUsCard />
+          {/* <AboutUsCard /> */}
         </div>
 
         {/* Third Column - 3 cards */}
         <div className="flex flex-col gap-6 items-center w-full">
           <AboutUsCard />
           <AboutUsCard />
-          <AboutUsCard />
+          {/* <AboutUsCard /> */}
         </div>
       </div>
     </div>

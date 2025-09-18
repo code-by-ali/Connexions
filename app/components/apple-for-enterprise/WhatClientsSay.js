@@ -1,6 +1,4 @@
 import React from "react";
-import questionIcon from "@/public/assets/contact-about-que-icon.png";
-import Image from "next/image";
 import AboutUsCard from "../common/AboutUsCard";
 
 const WhatClientsSay = () => {

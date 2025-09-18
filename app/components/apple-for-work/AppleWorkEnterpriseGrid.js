@@ -1,7 +1,7 @@
 import React from "react";
 import { Check } from "lucide-react";
 import EnterpriseGridImg from "@/public/assets/enterprise-grid-image.svg";
-import Image from "next/image";
+import CommonImage from "../common/CommonImage";
 
 const AppleWorkEnterpriseGrid = () => {
   return (
@@ -10,11 +10,10 @@ const AppleWorkEnterpriseGrid = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-12">
         {/* Image */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-start">
-          <Image
-            src={EnterpriseGridImg}
+          <CommonImage
+            src={EnterpriseGridImg.src || EnterpriseGridImg}
             width={600}
             height={400}
-            unoptimized
             alt="enterprise mobility"
             className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[600px] h-auto"
           />
@@ -70,11 +69,10 @@ const AppleWorkEnterpriseGrid = () => {
       <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-6 sm:gap-8 lg:gap-12">
         {/* Image */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-end">
-          <Image
-            src={EnterpriseGridImg}
+          <CommonImage
+            src={EnterpriseGridImg.src || EnterpriseGridImg}
             width={600}
             height={400}
-            unoptimized
             alt="zero-touch deployment"
             className="w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[600px] h-auto"
           />

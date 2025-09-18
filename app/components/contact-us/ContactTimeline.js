@@ -1,9 +1,9 @@
 import { MoveRight } from "lucide-react";
 import React from "react";
-import Image from "next/image";
 import timelineImg1 from "../../../public/assets/contact-page-timeline-1.png";
 import timelineImg2 from "../../../public/assets/contact-page-timeline-2.png";
 import timelineImg3 from "../../../public/assets/contact-page-timeline-3.png";
+import CommonImage from "../common/CommonImage";
 
 const steps = [
   {
@@ -66,19 +66,22 @@ const ContactTimeline = () => {
                   idx % 2 === 0 ? "order-1 md:order-1" : "order-1 md:order-2"
                 }`}
               >
-                <Image
-                  src={step.img}
+                <CommonImage
+                  src={step.img.src || step.img}
                   alt={step.title}
                   width={420}
                   height={280}
-                  className="rounded-lg w-full max-w-md object-cover"
+                  className="rounded-lg w-full max-w-md"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
 
               {/* Text */}
               <div
                 className={`flex flex-col gap-4 max-w-md ${
-                  idx % 2 === 0 ? "order-2 md:order-2 text-left" : "order-2 md:order-1 md:text-right"
+                  idx % 2 === 0
+                    ? "order-2 md:order-2 text-left"
+                    : "order-2 md:order-1 md:text-right"
                 }`}
               >
                 {/* Step circle (only on larger screens to align with line) */}

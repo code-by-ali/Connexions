@@ -1,10 +1,10 @@
 import React from "react";
 import { Mail, Twitter, Facebook, Linkedin } from "lucide-react";
-import Image from "next/image";
 import Logo from "@/public/assets/connextions-logo-black-cropped.png";
 import xLogo from "@/public/assets/x-icon.png";
 import metaLogo from "@/public/assets/meta-icon.png";
 import linkedInLogo from "@/public/assets/linkedin-icon.png";
+import CommonImage from "./CommonImage";
 
 const Footer = () => {
   return (
@@ -15,11 +15,10 @@ const Footer = () => {
           <div className="space-y-6">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <Image
-                unoptimized
+              <CommonImage
                 width={180}
                 height={80}
-                src={Logo}
+                src={Logo.src || Logo}
                 alt="Logo"
                 className="h-auto w-auto max-h-[50px]"
               />
@@ -151,29 +150,26 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex space-x-4">
             <a href="#">
-              <Image
-                unoptimized
+              <CommonImage
                 height={20}
                 width={20}
-                src={xLogo}
+                src={xLogo.src || xLogo}
                 alt="x-logo"
               />
             </a>
             <a href="#">
-              <Image
-                unoptimized
+              <CommonImage
                 height={20}
                 width={20}
-                src={metaLogo}
+                src={metaLogo.src || metaLogo}
                 alt="meta-logo"
               />
             </a>
             <a href="#">
-              <Image
-                unoptimized
+              <CommonImage
                 height={20}
                 width={20}
-                src={linkedInLogo}
+                src={linkedInLogo.src || linkedInLogo}
                 alt="linkedin-logo"
               />
             </a>

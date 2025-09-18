@@ -3,7 +3,7 @@ import AppleOfferImg from "@/public/assets/apple-offers-1.svg";
 import AppleOfferIcon1 from "@/public/assets/apple-offers-icon-1.svg";
 import AppleOfferIcon2 from "@/public/assets/apple-offers-icon-2.svg";
 import AppleOfferIcon3 from "@/public/assets/apple-offers-icon-3.svg";
-import Image from "next/image";
+import CommonImage from "../common/CommonImage";
 
 const AppleOffers = () => {
   return (
@@ -23,7 +23,12 @@ const AppleOffers = () => {
         {/* Card 1 */}
         <div className="flex flex-col gap-4 px-4 py-4 shadow-2xl rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
-            <Image width={28} height={28} src={AppleOfferIcon1} unoptimized alt="icon" />
+            <CommonImage
+              width={28}
+              height={28}
+              src={AppleOfferIcon1.src || AppleOfferIcon1}
+              alt="icon"
+            />
             <p className="text-base sm:text-lg font-bold text-primary">
               End-to-End Enterprise Readiness
             </p>
@@ -40,14 +45,23 @@ const AppleOffers = () => {
             </p>
           </div>
           <div className="mt-auto">
-            <Image unoptimized src={AppleOfferImg} alt="offer-img" className="rounded-xl object-contain" />
+            <CommonImage
+              src={AppleOfferImg.src || AppleOfferImg}
+              alt="offer-img"
+              className="rounded-xl object-contain"
+            />
           </div>
         </div>
 
         {/* Card 2 */}
         <div className="flex flex-col gap-4 px-4 py-4 shadow-2xl rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
-            <Image width={28} height={28} src={AppleOfferIcon2} unoptimized alt="icon" />
+            <CommonImage
+              width={28}
+              height={28}
+              src={AppleOfferIcon2.src || AppleOfferIcon2}
+              alt="icon"
+            />
             <p className="text-base sm:text-lg font-bold text-primary">
               Security at Every Layer
             </p>
@@ -64,14 +78,23 @@ const AppleOffers = () => {
             </p>
           </div>
           <div className="mt-auto">
-            <Image unoptimized src={AppleOfferImg} alt="offer-img" className="rounded-xl object-contain" />
+            <CommonImage
+              src={AppleOfferImg.src || AppleOfferImg}
+              alt="offer-img"
+              className="rounded-xl object-contain"
+            />
           </div>
         </div>
 
         {/* Card 3 */}
         <div className="flex flex-col gap-4 px-4 py-4 shadow-2xl rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
-            <Image width={28} height={28} src={AppleOfferIcon3} unoptimized alt="icon" />
+            <CommonImage
+              width={28}
+              height={28}
+              src={AppleOfferIcon3.src || AppleOfferIcon3}
+              alt="icon"
+            />
             <p className="text-base sm:text-lg font-bold text-primary">
               Employee Centric Experience
             </p>
@@ -88,7 +111,11 @@ const AppleOffers = () => {
             </p>
           </div>
           <div className="mt-auto">
-            <Image unoptimized src={AppleOfferImg} alt="offer-img" className="rounded-xl object-contain" />
+            <CommonImage
+              src={AppleOfferImg.src || AppleOfferImg}
+              alt="offer-img"
+              className="rounded-xl object-contain"
+            />
           </div>
         </div>
       </div>

@@ -8,9 +8,6 @@ import EnterpriseIphone from "@/public/assets/enterprise-iphone.svg";
 import EnterpriseWatch from "@/public/assets/enterprise-watch.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation"; // Navigation styles
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
 
 const EnterpriseSolutions = () => {
   const cardData = [
@@ -77,9 +74,6 @@ const EnterpriseSolutions = () => {
       <div className="w-full max-w-7xl">
         <Swiper
           spaceBetween={30}
-        //   modules={[Navigation, Pagination]}
-        //   navigation={{ clickable: true }}
-        //   pagination={{ clickable: true }}
           className="w-full"
           breakpoints={{
             300: {

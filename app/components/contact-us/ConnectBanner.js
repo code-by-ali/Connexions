@@ -4,8 +4,8 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import CalendlyCard from "@/public/assets/calendly-card.svg";
 import BannerBg from "@/public/assets/connect-banner-bg.svg";
-import Image from "next/image";
 import { InlineWidget } from "react-calendly";
+import CommonImage from "../common/CommonImage";
 
 const ConnectBanner = () => {
   return (
@@ -48,13 +48,13 @@ const ConnectBanner = () => {
 
       {/* Background Image */}
       <div className="absolute hidden md:flex top-0 left-[25%] sm:left-[30%] lg:left-[35%] pointer-events-none">
-        <Image
-          src={BannerBg}
-          width={550}
+        <CommonImage
+          src={BannerBg.src || BannerBg}
+          width={500}
           height={600}
-          unoptimized
           alt="banner-bg"
-          className="max-w-[250px] sm:max-w-[300px] lg:max-w-[500px] h-auto object-fill"
+          className="max-w-[250px] sm:max-w-[300px] lg:max-w-[500px] h-auto"
+          style={{ objectFit: "fill" }}
         />
       </div>
     </div>
