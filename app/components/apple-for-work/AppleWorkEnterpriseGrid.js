@@ -31,7 +31,7 @@ const AppleWorkEnterpriseGrid = () => {
           {/* Feature List */}
           <div className="flex flex-col gap-2 sm:gap-3">
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-green-500 flex-shrink-0">
+              <span className="text-[#A6CE39] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
@@ -39,7 +39,7 @@ const AppleWorkEnterpriseGrid = () => {
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-green-500 flex-shrink-0">
+              <span className="text-[#A6CE39] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
@@ -47,7 +47,7 @@ const AppleWorkEnterpriseGrid = () => {
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-green-500 flex-shrink-0">
+              <span className="text-[#A6CE39] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
@@ -90,7 +90,7 @@ const AppleWorkEnterpriseGrid = () => {
           {/* Feature List */}
           <div className="flex flex-col gap-2 sm:gap-3">
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-green-500 flex-shrink-0">
+              <span className="text-[#A6CE39] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
@@ -98,7 +98,7 @@ const AppleWorkEnterpriseGrid = () => {
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-green-500 flex-shrink-0">
+              <span className="text-[#A6CE39] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
@@ -106,7 +106,7 @@ const AppleWorkEnterpriseGrid = () => {
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-green-500 flex-shrink-0">
+              <span className="text-[#A6CE39] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">
@@ -114,7 +114,7 @@ const AppleWorkEnterpriseGrid = () => {
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-green-500 flex-shrink-0">
+              <span className="text-[#A6CE39] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
               <span className="text-sm sm:text-base text-[#4B5563]">

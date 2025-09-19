@@ -28,7 +28,7 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
     {
       label: "Services",
       dropdown: [
@@ -42,7 +42,7 @@ const Header = () => {
       dropdown: [
         { label: "Apple for Enterprise", href: "/apple-for-enterprise" },
         { label: "Apple for Work", href: "/apple-for-work" },
-        { label: "iPad", href: "#" },
+        { label: "Apple Business Manager", href: "apple-business-manager" },
       ],
     },
     {
@@ -73,16 +73,18 @@ const Header = () => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <CommonImage
-            width={180}
-            height={80}
-            src={Logo.src || Logo}
-            alt="Logo"
-            className="h-auto w-auto max-h-[50px]"
-          />
+          <Link href={"/"} passHref>
+            <CommonImage
+              width={180}
+              height={80}
+              src={Logo.src || Logo}
+              alt="Logo"
+              className="h-auto w-auto max-h-[50px]"
+            />
+          </Link>
         </div>
 
-        {/* Search + Button (Hidden on mobile) */}
+        {/* Search + Button (Desktop Only) */}
         <div className="hidden md:flex items-center gap-6">
           <div className="flex border border-[#E7EAEE] rounded-sm">
             <input
@@ -93,19 +95,43 @@ const Header = () => {
               <Search size={14} />
             </button>
           </div>
-          <button className="bg-primary text-secondary rounded-sm px-4 lg:px-6 py-2 text-sm font-light">
-            Contact us
-          </button>
+          <Link href="/contact-us" passHref>
+            <button className="bg-primary cursor-pointer text-secondary rounded-sm px-4 lg:px-6 py-2 text-sm font-light">
+              Contact us
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          {menuOpen ? (
+            <X size={20} className="outline-none" />
+          ) : (
+            <Menu size={20} className="outline-none" />
+          )}
         </button>
       </div>
+
+      {/* Search + Button (Mobile Only) */}
+      {/* <div className="flex md:hidden flex-col gap-4 mt-4">
+        <div className="flex border border-[#E7EAEE] rounded-sm">
+          <input
+            className="rounded-tl-sm text-xs rounded-bl-sm w-full px-2 text-[#5C728E] outline-none"
+            placeholder="What are you looking for?"
+          />
+          <button className="bg-primary text-secondary rounded-tr-sm rounded-br-sm px-4 py-2">
+            <Search size={14} />
+          </button>
+        </div>
+        <Link href="/contact-us" passHref>
+          <button className="bg-primary cursor-pointer text-secondary rounded-sm px-4 py-2 text-sm font-light w-full">
+            Contact us
+          </button>
+        </Link>
+      </div> */}
 
       {/* =========================
           Bottom Nav
@@ -224,6 +250,24 @@ const Header = () => {
           menuOpen ? "flex" : "hidden"
         }`}
       >
+        {/* Search + Button (Mobile Only, now inside menu) */}
+        <div className="flex flex-col gap-4 px-2">
+          <div className="flex border border-[#E7EAEE] rounded-sm">
+            <input
+              className="rounded-tl-sm text-xs rounded-bl-sm w-full px-2 text-[#5C728E] outline-none"
+              placeholder="What are you looking for?"
+            />
+            <button className="bg-primary text-secondary rounded-tr-sm rounded-br-sm px-4 py-2">
+              <Search size={14} />
+            </button>
+          </div>
+          <Link href="/contact-us" passHref>
+            <button className="bg-primary cursor-pointer text-secondary rounded-sm px-4 py-2 text-sm font-light w-full">
+              Contact us
+            </button>
+          </Link>
+        </div>
+
         {/* Browse Categories */}
         <div className="flex items-center gap-2 px-2">
           <Grid2x2 size={14} />
