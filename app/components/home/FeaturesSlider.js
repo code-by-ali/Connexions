@@ -4,15 +4,15 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import {
-  CreditCard,
-  Smartphone,
-  Truck,
-  Smile,
   Plus,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
 import FAQIcon from "@/public/assets/faq-icon.svg";
+import FeatureIcon1 from "@/public/assets/home-features-icon-1.svg";
+import FeatureIcon2 from "@/public/assets/home-features-icon-2.svg";
+import FeatureIcon3 from "@/public/assets/home-features-icon-3.svg";
+import FeatureIcon4 from "@/public/assets/home-features-icon-4.svg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -20,26 +20,33 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import CommonImage from "../common/CommonImage";
 
-// ServiceCard Component
-const ServiceCard = ({ icon, title, description, buttonText = "+" }) => {
+// ServiceCard Component — NOTE: uses h-full and flex so it will fill slide height
+const ServiceCard = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-6 rounded-lg h-full flex flex-col justify-between min-h-[280px]">
+    <div className="bg-white p-6 rounded-3xl min-h-[320px] flex flex-col justify-between border border-[#F6F6F6]">
       <div>
         <div className="mb-6">
-          <div className="w-12 h-12 text-gray-700">{icon}</div>
+          <div className="w-12 h-12 text-gray-700">
+            <CommonImage
+              height={40}
+              width={40}
+              src={icon.src || icon}
+              alt={title}
+            />
+          </div>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
+        <h3 className="text-xl font-bold text-primary mb-4 leading-tight">
           {title}
         </h3>
 
-        <p className="text-gray-600 text-sm leading-relaxed mb-6">
+        <p className="text-primary text-base leading-relaxed mb-6">
           {description}
         </p>
       </div>
 
-      <div className="flex justify-start">
-        <button className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+      <div className="flex justify-end">
+        <button className="w-8 h-8 bg-primary rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
           <Plus className="w-4 h-4 text-white" />
         </button>
       </div>
@@ -47,46 +54,45 @@ const ServiceCard = ({ icon, title, description, buttonText = "+" }) => {
   );
 };
 
-// Main ServicesSlider Component
-const ServicesSlider = () => {
+// Main Features Slider Component
+const FeaturesSlider = () => {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = React.useState(true);
   const [isEnd, setIsEnd] = React.useState(false);
 
   const servicesData = [
     {
-      icon: <CreditCard size={48} />,
+      icon: FeatureIcon1,
       title: "Pay over time, interest-free.",
       description:
         "When you choose to check out with Apple Card Monthly Installments.",
     },
     {
-      icon: <Smartphone size={48} />,
+      icon: FeatureIcon2,
       title: "Save up to $520 with Apple Trade In.",
       description:
         "Get credit toward your next iPad when you trade in an eligible device.",
     },
     {
-      icon: <Truck size={48} />,
+      icon: FeatureIcon3,
       title: "Get flexible delivery and easy pickup.",
       description:
         "Choose two-hour delivery from an Apple Store, free delivery, or easy pickup options.",
     },
     {
-      icon: <Smile size={48} />,
+      icon: FeatureIcon4,
       title: "Personalize your iPad for free.",
       description:
         "Engrave your new iPad with a mix of emoji, names, initials, and numbers.",
     },
-    // Add more cards for demonstration
     {
-      icon: <CreditCard size={48} />,
+      icon: FeatureIcon1,
       title: "Extended Warranty Options",
       description:
         "Protect your investment with comprehensive coverage and support services.",
     },
     {
-      icon: <Smartphone size={48} />,
+      icon: FeatureIcon2,
       title: "Expert Setup Service",
       description:
         "Professional setup and configuration to get you started right away.",
@@ -111,7 +117,7 @@ const ServicesSlider = () => {
         {/* Header Section */}
         <div className="mb-12 relative">
           <div className="flex items-center mb-4">
-            <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-3">
               <CommonImage
                 height={16}
                 width={16}
@@ -119,11 +125,13 @@ const ServicesSlider = () => {
                 src={FAQIcon.src || FAQIcon}
               />
             </div>
-            <span className="text-sm font-medium text-gray-700">Services</span>
+            <span className="text-base font-medium text-primary">
+              Key Features
+            </span>
           </div>
 
           <div className="flex items-start justify-between">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-2xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary leading-tight max-w-2xl">
               Why Connexions is the best place to IT Solutions
             </h2>
           </div>
@@ -165,7 +173,8 @@ const ServicesSlider = () => {
             className="services-swiper"
           >
             {servicesData.map((service, index) => (
-              <SwiperSlide key={index}>
+              // IMPORTANT: make slide a flex container so child (ServiceCard) can stretch
+              <SwiperSlide key={index} className="h-auto flex">
                 <ServiceCard
                   icon={service.icon}
                   title={service.title}
@@ -187,9 +196,7 @@ const ServicesSlider = () => {
               }`}
             >
               <ChevronLeft
-                className={`w-5 h-5 ${
-                  isBeginning ? "text-gray-400" : "text-gray-600"
-                }`}
+                className={`w-5 h-5 ${isBeginning ? "text-gray-400" : "text-gray-600"}`}
               />
             </button>
             <button
@@ -202,25 +209,35 @@ const ServicesSlider = () => {
               }`}
             >
               <ChevronRight
-                className={`w-5 h-5 ${
-                  isEnd ? "text-gray-400" : "text-gray-600"
-                }`}
+                className={`w-5 h-5 ${isEnd ? "text-gray-400" : "text-gray-600"}`}
               />
             </button>
           </div>
         </div>
       </div>
 
-      <style jsx>{`
-        .services-swiper {
-          padding-bottom: 20px;
+      <style jsx global>{`
+        /* make swiper slides stretch to match the tallest slide in the row */
+        .services-swiper .swiper-wrapper {
+          align-items: stretch;
         }
         .services-swiper .swiper-slide {
-          height: auto;
+          display: flex;
+          align-items: stretch;
+        }
+        /* ensure the direct child of the slide fills the slide */
+        .services-swiper .swiper-slide > div {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        /* optional: ensure card content doesn't overflow - keep consistent padding */
+        .services-swiper .swiper-slide .rounded-lg {
+          box-sizing: border-box;
         }
       `}</style>
     </div>
   );
 };
 
-export default ServicesSlider;
+export default FeaturesSlider;
