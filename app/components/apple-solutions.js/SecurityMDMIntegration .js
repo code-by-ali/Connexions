@@ -85,7 +85,7 @@ const SecurityMDMIntegration = () => {
                 alt={"seamless-icon"}
               />
             </div>
-            <span className="ml-3 text-sm font-medium text-gray-700">
+            <span className="ml-3 text-base font-medium text-gray-700">
               Seamless Integration
             </span>
           </div>

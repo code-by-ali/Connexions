@@ -11,7 +11,7 @@ import AppleEcosystem from "../components/apple-solutions.js/AppleEcosystem";
 
 const page = () => {
   return (
-    <div>
+    <div className="font-sfpro">
       <AppleCTA />
       <AppleWorkSection />
       <AppleEcosystem />

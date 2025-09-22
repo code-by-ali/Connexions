@@ -46,7 +46,7 @@ const AppleCareSupport = () => {
                 alt={"seamless-icon"}
               />
             </div>
-            <span className="ml-3 text-sm font-medium text-[#1D1D1F]">
+            <span className="ml-3 text-base font-medium text-[#1D1D1F]">
               Apple Care
             </span>
           </div>
