@@ -7,7 +7,7 @@ import CommonImage from "./CommonImage";
 
 const Rating = () => {
   return (
-    <div className="flex flex-row gap-10 justify-center items-center flex-wrap py-4 px-4 sm:px-8 md:px-10 lg:px-20">
+    <div className="flex flex-row gap-10 justify-center items-center flex-wrap py-4 px-4 sm:px-8 md:px-10 lg:px-20 mb-6 md:mb-10">
       <div className="border border-[#FDFDFD] shadow-[0px_0px_2px_0px_#00000040] py-4 px-6 rounded-lg flex flex-row items-center gap-2">
         <CommonImage
           src={ReviewIcon1.src || ReviewIcon1}

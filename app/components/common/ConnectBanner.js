@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import CalendlyCard from "@/public/assets/calendly-card.svg";
 import BannerBg from "@/public/assets/connect-banner-bg.svg";
 import { InlineWidget } from "react-calendly";
-import CommonImage from "../common/CommonImage";
+import CommonImage from "./CommonImage";
 
 const ConnectBanner = () => {
   return (

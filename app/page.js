@@ -4,16 +4,20 @@ import ServicesSection from "./components/home/ServicesSection";
 import FeaturesSlider from "./components/home/FeaturesSlider";
 import AboutUsShowcase from "./components/home/AboutUsShowcase";
 import WhatYouGet from "./components/home/WhatYouGet";
+import ConnectBanner from "./components/common/ConnectBanner";
+import PhoneLaunchPartnersSection from "./components/home/PhoneLaunchPartnersSection";
 
 export default function Home() {
   return (
     <div>
-      {/* <WhatYouGet /> */}
+      <PhoneLaunchPartnersSection />
+      <WhatYouGet />
       <FeaturesSlider />
-      {/* <AboutUsShowcase /> */}
+      <AboutUsShowcase />
       <ServicesSection />
       <ClientsSection />
       <FAQ />
+      <ConnectBanner />
     </div>
   );
 }

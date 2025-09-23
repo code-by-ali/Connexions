@@ -5,7 +5,7 @@ import FormSection from "../components/contact-us/FormSection";
 import ContactTimeline from "../components/contact-us/ContactTimeline";
 import AboutUs from "../components/contact-us/AboutUs";
 import Rating from "../components/common/Rating";
-import ConnectBanner from "../components/contact-us/ConnectBanner";
+import ConnectBanner from "../components/common/ConnectBanner";
 
 const Page = () => {
   return (

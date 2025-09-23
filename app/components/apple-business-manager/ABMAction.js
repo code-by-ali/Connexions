@@ -2,6 +2,9 @@
 import React, { useState } from "react";
 import CommonImage from "../common/CommonImage";
 import ABMActionImg1 from "@/public/assets/abm-action-img-1.svg";
+import ABMActionImg2 from "@/public/assets/abm-action-img-2.svg";
+import ABMActionImg3 from "@/public/assets/abm-action-img-3.svg";
+import ABMActionImg4 from "@/public/assets/abm-action-img-4.svg";
 import ABMActionIcon1 from "@/public/assets/abm-action-icon-1.svg";
 import ABMActionIcon2 from "@/public/assets/abm-action-icon-2.svg";
 import ABMActionIcon3 from "@/public/assets/abm-action-icon-3.svg";
@@ -21,6 +24,7 @@ const ABMAction = () => {
           alt={"abm-action-icon-1"}
         />
       ),
+      actionImage: ABMActionImg1,
       title: "Procurement",
       label: "Procurement",
       description:
@@ -36,10 +40,11 @@ const ABMAction = () => {
           alt={"abm-action-icon-2"}
         />
       ),
+      actionImage: ABMActionImg2,
       title: "Enrollment",
       label: "Enrollment",
       description:
-        "Automatically enroll devices into your organization's mobile device management system",
+        "Devices automatically enrol in your MDM solution when first powered on ",
     },
     {
       id: "03",
@@ -51,10 +56,12 @@ const ABMAction = () => {
           alt={"abm-action-icon-3"}
         />
       ),
+      actionImage: ABMActionImg3,
+
       title: "Deployment",
       label: "Deployment",
       description:
-        "Deploy configured devices to end users with pre-installed apps and settings",
+        "Apps, Settings and configurations are automatically applied to each device",
     },
     {
       id: "04",
@@ -66,10 +73,11 @@ const ABMAction = () => {
           alt={"abm-action-icon-4"}
         />
       ),
+      actionImage: ABMActionImg4,
       title: "Management",
       label: "Management",
       description:
-        "Manage and monitor all devices remotely with comprehensive administrative controls",
+        "Ongoing device management, updates and compliance monitoring",
     },
   ];
 
@@ -142,7 +150,7 @@ const ABMAction = () => {
           <div className="lg:col-span-2 flex items-center justify-center">
             <div className="w-full h-full rounded-lg overflow-hidden shadow-lg flex items-center justify-center bg-[#F5F5F7]">
               <CommonImage
-                src={ABMActionImg1.src || ABMActionImg1}
+                src={currentStep.actionImage.src || currentStep.actionImage}
                 alt={`abm-action-img-${currentStep.id}`}
                 className="w-full h-full object-contain"
               />
