@@ -121,7 +121,7 @@ const PhoneLaunchPartnersSection = () => {
 
             <Swiper
               modules={[Autoplay]}
-              spaceBetween={20}
+              spaceBetween={0}
               slidesPerView={1.5}
               loop={true}
               autoplay={{
@@ -134,7 +134,7 @@ const PhoneLaunchPartnersSection = () => {
             >
               {phoneCards.map((phone, index) => (
                 <SwiperSlide key={index}>
-                  <div className="grid grid-cols-2 gap-4 w-full max-w-md mx-auto px-10">
+                  <div className="grid grid-cols-2 w-full max-w-md mx-auto px-6">
                     {/* Phone Image Placeholder */}
                     <div className="bg-gray-100 rounded-2xl  flex items-center justify-center col-span-2 mt-4">
                       {/* Replace with actual iPhone image */}
@@ -153,7 +153,7 @@ const PhoneLaunchPartnersSection = () => {
 
         {/* Partners Section with Auto-scrolling */}
         <div>
-          <h2 className="text-lg font-semibold text-gray-700 mb-8">
+          <h2 className="text-lg font-semibold text-primary mb-8">
             Our Partners
           </h2>
 

@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { Apple, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import CommonImage from "../common/CommonImage";
 import AppleEcosystemIcon from "@/public/assets/apple-ecosystem-top-icon.svg";
 import GridIcon1 from "@/public/assets/apple-ecosystem-icon-1.svg";
@@ -7,7 +8,168 @@ import GridIcon2 from "@/public/assets/apple-ecosystem-icon-2.svg";
 import GridIcon3 from "@/public/assets/apple-ecosystem-icon-3.svg";
 import GridIcon4 from "@/public/assets/apple-ecosystem-icon-4.svg";
 
+import GridCardImg1 from "@/public/assets/apple-ecosystem-card-img-1.svg";
+import GridCardImg3 from "@/public/assets/apple-ecosystem-card-img-3.svg";
+import GridCardImg4 from "@/public/assets/apple-ecosystem-card-img-4.svg";
+
+import MiniCardIcon1 from "@/public/assets/apple-ecosytem-mini-card-icon-1.svg";
+import MiniCardIcon2 from "@/public/assets/apple-ecosytem-mini-card-icon-2.svg";
+import MiniCardIcon3 from "@/public/assets/apple-ecosytem-mini-card-icon-3.svg";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
+
 const AppleEcosystem = () => {
+  // Extra data renderers
+  const AdditionalDataCard1 = () => (
+    <div>
+      <CommonImage src={GridCardImg1.src || GridCardImg1} alt={"card-1"} />
+    </div>
+  );
+
+  const AdditionalDataCard2 = () => {
+    // Dummy data for cards
+    const dummyCards = [
+      {
+        id: 1,
+        title: "Deals in Progress",
+        icon: MiniCardIcon1,
+        dataMain: "42",
+        dataChange: "+64%",
+        secondaryData: (
+          <span>
+            vs <span className="text-primary font-bold">36</span> last month
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        title: "Stalled Deals",
+        icon: MiniCardIcon2,
+        dataMain: "12",
+        dataChange: "-2",
+        secondaryData: (
+          <span>
+            vs <span className="text-primary font-bold">14</span> last week
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        title: "New Leads",
+        icon: MiniCardIcon3,
+        dataMain: "194",
+        dataChange: "+21.5%",
+        secondaryData: (
+          <span>
+            vs <span className="text-primary font-bold">160</span> last month
+          </span>
+        ),
+      },
+    ];
+
+    const CardTemplate = ({ card }) => {
+      return (
+        <div className="border border-gray-100 bg-[#FDFDFD] rounded-2xl flex flex-col p-4 gap-4">
+          <p className="flex gap-2 text=[#535862] text-xs items-center">
+            <span>
+              <CommonImage src={card.icon.src || card.icon} alt={"card-icon"} />
+            </span>
+            <span>{card.title}</span>
+          </p>
+          <div className="flex gap-2 ite">
+            <span className="text-primary text-3xl font-bold">53</span>
+            <span className="border border-gray-300 text=[#535862] rounded-full text-[10px] flex items-center py-1 px-4">
+              +64%
+            </span>
+          </div>
+          <p className="text-xs text-[#535862]">{card.secondaryData}</p>
+        </div>
+      );
+    };
+
+    return (
+      <div className="w-full flex flex-col gap-8">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={16}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="w-full"
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 2,
+            },
+            1280: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+          {dummyCards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <CardTemplate card={card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={16}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+            reverseDirection: true,
+          }}
+          loop={true}
+          className="w-full"
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 2,
+            },
+            1280: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+          {dummyCards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <CardTemplate card={card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    );
+  };
+
+  const AdditionalDataCard3 = () => (
+    <div>
+      <CommonImage src={GridCardImg3.src || GridCardImg3} alt={"card-3"} />
+    </div>
+  );
+
+  const AdditionalDataCard4 = () => (
+    <div>
+      <CommonImage src={GridCardImg4.src || GridCardImg4} alt={"card-4"} />
+    </div>
+  );
+
+  // Card data
   const ecosystemCards = [
     {
       title: "Deploy in minutes",
@@ -15,12 +177,7 @@ const AppleEcosystem = () => {
       descriptionPrimary: "Complete enterprise deployment. ",
       descriptionSecondary:
         "Solution with custom configurations and dedicated support for large organizations.",
-      // Replace with your actual image imports
-      imageItems: [
-        "placeholder-deploy-1.png", // Replace with actual image
-        "placeholder-deploy-2.png", // Replace with actual image
-        "placeholder-deploy-3.png", // Replace with actual image
-      ],
+      AdditionalData: AdditionalDataCard1,
     },
     {
       title: "Apple Business Manager",
@@ -28,36 +185,23 @@ const AppleEcosystem = () => {
       descriptionPrimary: "Streamlined device procurement, ",
       descriptionSecondary:
         "app distribution, and user management through Apple's centralized platform.",
-      imageItems: [
-        "placeholder-business-1.png", // Replace with actual image
-        "placeholder-business-2.png", // Replace with actual image
-      ],
+      AdditionalData: AdditionalDataCard2,
     },
     {
       title: "Applications",
       icon: GridIcon3,
-
-      descriptionPrimary: "Productivity-focused solutions",
+      descriptionPrimary: "Productivity-focused solutions ",
       descriptionSecondary:
-        "That integrate seamlessly with your  existing workflow and business applicants",
-      imageItems: [
-        "placeholder-app-1.png", // Replace with actual image
-        "placeholder-app-2.png", // Replace with actual image
-        "placeholder-app-3.png", // Replace with actual image
-        "placeholder-app-4.png", // Replace with actual image
-      ],
+        "that integrate seamlessly with your existing workflow and business applications.",
+      AdditionalData: AdditionalDataCard3,
     },
     {
       title: "Apple Professional Network",
       icon: GridIcon4,
-
       descriptionPrimary:
         "Access certified Apple experts for specialized consulting, ",
       descriptionSecondary: "implementation, and ongoing support services.",
-      imageItems: [
-        "placeholder-network-1.png", // Replace with actual image
-        "placeholder-network-2.png", // Replace with actual image
-      ],
+      AdditionalData: AdditionalDataCard4,
     },
   ];
 
@@ -75,7 +219,7 @@ const AppleEcosystem = () => {
                 width={16}
               />
             </div>
-            <span className="ml-3 text-base font-medium text-[#0F0F0F">
+            <span className="ml-3 text-base font-medium text-[#0F0F0F]">
               Meet Apple
             </span>
           </div>
@@ -90,35 +234,41 @@ const AppleEcosystem = () => {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {ecosystemCards.map((card, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
-            >
-              {/* Card Header */}
-              <div className="mb-8">
-                <div className="flex items-center mb-4 gap-2 text-[#A6CE39]">
-                  <CommonImage
-                    height={24}
-                    width={24}
-                    src={card.icon.src || card.icon}
-                  />
-                  <h3 className="text-base md:text-lg font-medium">
-                    {card.title}
-                  </h3>
-                  <ChevronRight size={24} />
+          {ecosystemCards.map((card, index) => {
+            const ExtraComponent = card.AdditionalData; // assign function
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+              >
+                {/* Card Header */}
+                <div className="mb-8">
+                  <div className="flex items-center mb-4 gap-2 text-[#A6CE39]">
+                    <CommonImage
+                      height={24}
+                      width={24}
+                      src={card.icon.src || card.icon}
+                    />
+                    <h3 className="text-base md:text-lg font-medium">
+                      {card.title}
+                    </h3>
+                    <ChevronRight size={24} />
+                  </div>
+                  <p className="leading-relaxed text-lg md:text-xl xl:text-2xl">
+                    <span className="text-[#1D1D1F]">
+                      {card.descriptionPrimary}
+                    </span>
+                    <span className="text-[#535862]">
+                      {card.descriptionSecondary}
+                    </span>
+                  </p>
                 </div>
-                <p className="leading-relaxed text-lg md:text-xl xl:text-2xl">
-                  <span className="text-[#1D1D1F]">
-                    {card.descriptionPrimary}
-                  </span>
-                  <span className="text-[#535862]">
-                    {card.descriptionSecondary}
-                  </span>
-                </p>
+
+                {/* Render extra data if exists */}
+                {ExtraComponent && <ExtraComponent />}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

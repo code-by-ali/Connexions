@@ -3,11 +3,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import {
-  Plus,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { Plus, ChevronLeft, ChevronRight } from "lucide-react";
 import FAQIcon from "@/public/assets/faq-icon.svg";
 import FeatureIcon1 from "@/public/assets/home-features-icon-1.svg";
 import FeatureIcon2 from "@/public/assets/home-features-icon-2.svg";
@@ -189,27 +185,31 @@ const FeaturesSlider = () => {
             <button
               onClick={slidePrev}
               disabled={isBeginning}
-              className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
                 isBeginning
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:shadow-xl hover:bg-gray-50"
               }`}
             >
               <ChevronLeft
-                className={`w-5 h-5 ${isBeginning ? "text-gray-400" : "text-gray-600"}`}
+                className={`w-8 h-8 ${
+                  isBeginning ? "text-gray-400" : "text-gray-600"
+                }`}
               />
             </button>
             <button
               onClick={slideNext}
               disabled={isEnd}
-              className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
                 isEnd
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:shadow-xl hover:bg-gray-50"
               }`}
             >
               <ChevronRight
-                className={`w-5 h-5 ${isEnd ? "text-gray-400" : "text-gray-600"}`}
+                className={`w-8 h-8 ${
+                  isEnd ? "text-gray-400" : "text-gray-600"
+                }`}
               />
             </button>
           </div>

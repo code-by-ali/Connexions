@@ -19,7 +19,7 @@ import {
 
 import BgImage from "@/public/assets/gradient-wings-bg.svg";
 
-const AppleTeamSection = () => {
+const IndustriesWeServe = () => {
   const categories = [
     { label: "Digital Marketing", icon: Briefcase },
     { label: "Software Engineering", icon: Cpu },
@@ -99,7 +99,7 @@ const AppleTeamSection = () => {
 
           {/* Title */}
           <h2 className="text-2xl md:text-3xl font-bold text-[#1D1D1F] mb-10">
-            Apple Solutions for Every Team
+            Industries We Serve
           </h2>
 
           {/* Categories Carousel */}
@@ -146,4 +146,4 @@ const AppleTeamSection = () => {
   );
 };
 
-export default AppleTeamSection;
+export default IndustriesWeServe;

@@ -9,7 +9,7 @@ import PhoneLaunchPartnersSection from "./components/home/PhoneLaunchPartnersSec
 
 export default function Home() {
   return (
-    <div>
+    <div className="font-sfpro">
       <PhoneLaunchPartnersSection />
       <WhatYouGet />
       <FeaturesSlider />

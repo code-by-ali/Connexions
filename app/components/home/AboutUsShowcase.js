@@ -6,10 +6,10 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Info, Plus, ChevronLeft, ChevronRight } from "lucide-react";
 import CommonImage from "../common/CommonImage";
 
-import CardBg1 from "@/public/assets/mdm-card-bg-1.svg";
-import CardBg2 from "@/public/assets/mdm-card-bg-2.svg";
-import CardBg3 from "@/public/assets/mdm-card-bg-3.svg";
-import CardBg4 from "@/public/assets/mdm-card-bg-4.svg";
+import CardBg1 from "@/public/assets/home-about-us-card-img-1.svg";
+import CardBg2 from "@/public/assets/home-about-us-card-img-2.svg";
+import CardBg3 from "@/public/assets/home-about-us-card-img-3.svg";
+import CardBg4 from "@/public/assets/home-about-us-card-img-4.svg";
 import TitleIcon from "@/public/assets/faq-icon.svg";
 
 // Import Swiper styles
@@ -98,14 +98,14 @@ const AboutUsShowcase = () => {
               <button
                 onClick={slidePrev}
                 disabled={isBeginning}
-                className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+                className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
                   isBeginning
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:shadow-xl hover:bg-gray-50"
                 }`}
               >
                 <ChevronLeft
-                  className={`w-5 h-5 ${
+                  className={`w-8 h-8 ${
                     isBeginning ? "text-gray-400" : "text-gray-600"
                   }`}
                 />
@@ -113,14 +113,14 @@ const AboutUsShowcase = () => {
               <button
                 onClick={slideNext}
                 disabled={isEnd}
-                className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+                className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
                   isEnd
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:shadow-xl hover:bg-gray-50"
                 }`}
               >
                 <ChevronRight
-                  className={`w-5 h-5 ${
+                  className={`w-8 h-8 ${
                     isEnd ? "text-gray-400" : "text-gray-600"
                   }`}
                 />
@@ -211,14 +211,14 @@ const AboutUsShowcase = () => {
             <button
               onClick={slidePrev}
               disabled={isBeginning}
-              className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
                 isBeginning
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:shadow-xl hover:bg-gray-50"
               }`}
             >
               <ChevronLeft
-                className={`w-5 h-5 ${
+                className={`w-8 h-8 ${
                   isBeginning ? "text-gray-400" : "text-gray-600"
                 }`}
               />
@@ -226,14 +226,14 @@ const AboutUsShowcase = () => {
             <button
               onClick={slideNext}
               disabled={isEnd}
-              className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
                 isEnd
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:shadow-xl hover:bg-gray-50"
               }`}
             >
               <ChevronRight
-                className={`w-5 h-5 ${
+                className={`w-8 h-8 ${
                   isEnd ? "text-gray-400" : "text-gray-600"
                 }`}
               />

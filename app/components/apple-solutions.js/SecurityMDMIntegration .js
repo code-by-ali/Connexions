@@ -154,7 +154,7 @@ const SecurityMDMIntegration = () => {
 
                   {/* Plus Icon - Top Right */}
                   <div className="absolute top-4 right-4 z-10">
-                    <div className="w-8 h-8 bg-black bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <div className="w-8 h-8 bg-[#333336] bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm">
                       <Plus className="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -164,13 +164,11 @@ const SecurityMDMIntegration = () => {
                     <div>
                       <p
                         className={`text-sm font-medium mb-2 text-white drop-shadow-lg`}
-                        style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
                       >
                         {card.category}
                       </p>
                       <h3
                         className={`text-xl md:text-2xl font-bold text-white leading-tight drop-shadow-lg`}
-                        style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
                       >
                         {card.title}
                       </h3>
