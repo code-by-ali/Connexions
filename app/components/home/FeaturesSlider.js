@@ -19,10 +19,10 @@ import CommonImage from "../common/CommonImage";
 // ServiceCard Component — NOTE: uses h-full and flex so it will fill slide height
 const ServiceCard = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-6 rounded-3xl min-h-[320px] flex flex-col justify-between border border-[#F6F6F6]">
+    <div className="bg-white p-6 rounded-3xl min-h-[330px] flex flex-col justify-between border border-[#F6F6F6]">
       <div>
         <div className="mb-6">
-          <div className="w-12 h-12 text-gray-700">
+          <div className="w-12 h-12">
             <CommonImage
               height={40}
               width={40}
@@ -32,17 +32,17 @@ const ServiceCard = ({ icon, title, description }) => {
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-primary mb-4 leading-tight">
+        <h3 className="text-xl lg:text-2xl font-bold text-primary mb-4 tracking-[0.2px] leading-tight">
           {title}
         </h3>
 
-        <p className="text-primary text-base leading-relaxed mb-6">
+        <p className="text-primary text-base font-normal leading-relaxed tracking-[-0.37px] mb-6">
           {description}
         </p>
       </div>
 
       <div className="flex justify-end">
-        <button className="w-8 h-8 bg-primary rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+        <button className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
           <Plus className="w-4 h-4 text-white" />
         </button>
       </div>
@@ -108,7 +108,7 @@ const FeaturesSlider = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-20">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-12 relative">
@@ -121,13 +121,13 @@ const FeaturesSlider = () => {
                 src={FAQIcon.src || FAQIcon}
               />
             </div>
-            <span className="text-base font-medium text-primary">
+            <span className="text-base font-medium text-primary tracking-tight">
               Key Features
             </span>
           </div>
 
           <div className="flex items-start justify-between">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary leading-tight max-w-2xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight max-w-2xl tracking-tight">
               Why Connexions is the best place to IT Solutions
             </h2>
           </div>
@@ -185,14 +185,12 @@ const FeaturesSlider = () => {
             <button
               onClick={slidePrev}
               disabled={isBeginning}
-              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
-                isBeginning
-                  ? "opacity-50 cursor-not-allowed"
-                  : "hover:shadow-xl hover:bg-gray-50"
+              className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center ${
+                isBeginning ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
               <ChevronLeft
-                className={`w-8 h-8 ${
+                className={`w-5 h-5 ${
                   isBeginning ? "text-gray-400" : "text-gray-600"
                 }`}
               />
@@ -200,14 +198,12 @@ const FeaturesSlider = () => {
             <button
               onClick={slideNext}
               disabled={isEnd}
-              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
-                isEnd
-                  ? "opacity-50 cursor-not-allowed"
-                  : "hover:shadow-xl hover:bg-gray-50"
+              className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center ${
+                isEnd ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
               <ChevronRight
-                className={`w-8 h-8 ${
+                className={`w-5 h-5 ${
                   isEnd ? "text-gray-400" : "text-gray-600"
                 }`}
               />

@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { Smartphone, Chrome } from "lucide-react";
 import HomeBannerImg1 from "@/public/assets/home-banner-img-1.svg";
+import HomeBannerImg2 from "@/public/assets/home-banner-img-2.svg";
+import HomeBannerImg3 from "@/public/assets/home-banner-img-3.svg";
+
 import HomeBannerLogo1 from "@/public/assets/abm-industries-logo-1.svg";
 import HomeBannerLogo2 from "@/public/assets/abm-industries-logo-2.svg";
 
@@ -16,40 +19,13 @@ import CommonImage from "../common/CommonImage";
 const PhoneLaunchPartnersSection = () => {
   const phoneCards = [
     {
-      title: "iPhone 16",
-      subtitle: "iPhone 16",
-      backgroundColor: "bg-gray-900",
-      textColor: "text-white",
-      icon: Smartphone,
-      iconColor: "text-blue-400",
+      bannerImg: HomeBannerImg2,
+    },
+    {
       bannerImg: HomeBannerImg1,
     },
     {
-      title: "iPhone 16 Pro",
-      subtitle: "iPhone 16 Pro",
-      backgroundColor: "bg-purple-900",
-      textColor: "text-white",
-      icon: Smartphone,
-      iconColor: "text-purple-400",
-      bannerImg: HomeBannerImg1,
-    },
-    {
-      title: "iPhone 16 Plus",
-      subtitle: "iPhone 16 Plus",
-      backgroundColor: "bg-blue-900",
-      textColor: "text-white",
-      icon: Smartphone,
-      iconColor: "text-blue-400",
-      bannerImg: HomeBannerImg1,
-    },
-    {
-      title: "iPhone 16 Pro Max",
-      subtitle: "iPhone 16 Pro Max",
-      backgroundColor: "bg-green-900",
-      textColor: "text-white",
-      icon: Smartphone,
-      iconColor: "text-green-400",
-      bannerImg: HomeBannerImg1,
+      bannerImg: HomeBannerImg3,
     },
   ];
 
@@ -84,31 +60,31 @@ const PhoneLaunchPartnersSection = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 pl-1 pr-3 py-1 bg-[#F0F0F0] text-primary rounded-full text-sm font-medium mb-6 w-fit">
-              <span className="bg-[#A6CE39] text-white rounded-full px-2 py-1 font-light">
+            <div className="inline-flex items-center gap-2 pl-1 pr-3 py-1 font-normal bg-[#F0F0F0] text-primary rounded-full text-sm mb-6 w-fit">
+              <span className="bg-[#A6CE39] text-white rounded-full px-2 py-1">
                 New
               </span>
               <span>Registrations are now open!</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight mb-6">
               THE NEW PHONES ARE HERE TAKE A LOOK
             </h1>
 
             {/* Description */}
-            <p className="text-[#7C7C7C] leading-relaxed mb-8 text-base md:text-lg">
+            <p className="text-[#7C7C7C] leading-relaxed mb-8 font-normal text-base md:text-lg">
               iPhone’s new line-up is going to be live on Sept 7th, Make your
               move now and register with us for new device setup.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 text-sm font-normal">
               <button className="bg-[#A6CE39] text-white px-8 py-3 rounded-full transition-colors">
-                Get Started
+                Explore Now
               </button>
               <button className="bg-primary text-white px-8 py-3 rounded-full transition-colors">
-                Learn More
+                Get Started
               </button>
             </div>
           </div>
@@ -152,8 +128,9 @@ const PhoneLaunchPartnersSection = () => {
         </div>
 
         {/* Partners Section with Auto-scrolling */}
-        <div>
-          <h2 className="text-lg font-semibold text-primary mb-8">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-6">
+          {/* Heading */}
+          <h2 className="text-lg md:text-2xl font-normal text-primary whitespace-nowrap mb-4 lg:mb-0">
             Our Partners
           </h2>
 
@@ -182,25 +159,21 @@ const PhoneLaunchPartnersSection = () => {
                 spaceBetween: 20,
               },
             }}
-            className="partners-swiper"
+            className="partners-swiper flex-1"
           >
-            {partners.map((partner, index) => {
-              const IconComponent = partner.logo;
-              return (
-                <SwiperSlide key={index}>
-                  <div className="flex items-center justify-center w-24 h-24 bg-[#F2F4F6] rounded-2xl border border-gray-100 hover:bg-gray-100 transition-colors mx-auto">
-                    {/* Replace with actual partner logos */}
-                    <div className="w-18 h-18 object-contain bg-white rounded-2xl flex items-center justify-center">
-                      <CommonImage
-                        src={partner.logo.src || partner.logo}
-                        alt={partner.name}
-                        className="w-10 h-10 object-contain rounded-2xl"
-                      />
-                    </div>
+            {partners.map((partner, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex items-center justify-center w-20 h-20 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-auto">
+                    <div className="w-16 h-16 object-contain bg-white border border-[#E6E9EE] rounded-2xl flex items-center justify-center">
+                    <CommonImage
+                      src={partner.logo.src || partner.logo}
+                      alt={partner.name}
+                      className="w-10 h-10 object-contain rounded-2xl"
+                    />
                   </div>
-                </SwiperSlide>
-              );
-            })}
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 

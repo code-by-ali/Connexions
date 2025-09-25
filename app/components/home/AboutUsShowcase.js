@@ -26,27 +26,24 @@ const AboutUsShowcase = () => {
     {
       title: "Getting Started",
       subtitle: "Easy to use. Easy to love.",
-
-      textColor: "text-white",
+      textColor: "text-[#F5F5F7]",
       backgroundImage: CardBg1,
     },
     {
       title: "Performance and Battery Life",
       subtitle: "Go fast. Go far.",
-      textColor: "text-white",
+      textColor: "text-[#F5F5F7]",
       backgroundImage: CardBg2,
     },
     {
       title: "Mac and iPhone",
       subtitle: "Dream team.",
-
       textColor: "text-primary",
       backgroundImage: CardBg3,
     },
     {
       title: "Compatibility",
       subtitle: "Mac runs your favourite apps.",
-
       textColor: "text-primary",
       backgroundImage: CardBg4,
     },
@@ -65,7 +62,7 @@ const AboutUsShowcase = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-20">
+    <div className="bg-[#F8F9FA] py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-12">
@@ -80,16 +77,16 @@ const AboutUsShowcase = () => {
                     src={TitleIcon.src || TitleIcon}
                   />
                 </div>
-                <span className="ml-3 text-base font-medium text-primary">
+                <span className="ml-3 text-base font-medium text-primary tracking-tight">
                   About us
                 </span>
               </div>
 
-              <p className="text-xl md:text-2xl text-[#4E5B6D] leading-relaxed">
+              <p className="text-xl md:text-2xl text-[#4E5B6D] leading-relaxed tracking-[-0.96px] font-medium">
                 We started as a small group of passionate creators who believed
                 that great ideas deserve the best execution. What began over
                 coffee-fueled brainstorming sessions has grown into a thriving
-                digital agency dedicated to helping brands stand out.
+                digital agency dedicated to <span className="text-primary">helping brands stand out.</span>
               </p>
             </div>
 
@@ -98,14 +95,14 @@ const AboutUsShowcase = () => {
               <button
                 onClick={slidePrev}
                 disabled={isBeginning}
-                className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+                className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center transition-all border border-gray-200 ${
                   isBeginning
                     ? "opacity-50 cursor-not-allowed"
-                    : "hover:shadow-xl hover:bg-gray-50"
+                    : ""
                 }`}
               >
                 <ChevronLeft
-                  className={`w-8 h-8 ${
+                  className={`w-5 h-5 ${
                     isBeginning ? "text-gray-400" : "text-gray-600"
                   }`}
                 />
@@ -113,14 +110,14 @@ const AboutUsShowcase = () => {
               <button
                 onClick={slideNext}
                 disabled={isEnd}
-                className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+                className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center transition-all border border-gray-200 ${
                   isEnd
                     ? "opacity-50 cursor-not-allowed"
-                    : "hover:shadow-xl hover:bg-gray-50"
+                    : ""
                 }`}
               >
                 <ChevronRight
-                  className={`w-8 h-8 ${
+                  className={`w-5 h-5 ${
                     isEnd ? "text-gray-400" : "text-gray-600"
                   }`}
                 />
@@ -179,7 +176,7 @@ const AboutUsShowcase = () => {
 
                   {/* Plus Icon - Bottom Right */}
                   <div className="absolute bottom-4 right-4 z-10">
-                    <div className="w-8 h-8 bg-primary bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm border-opacity-20">
+                    <div className="w-8 h-8 bg-[#333336] bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm border-opacity-20">
                       <Plus className="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -211,14 +208,14 @@ const AboutUsShowcase = () => {
             <button
               onClick={slidePrev}
               disabled={isBeginning}
-              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+              className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center transition-all border border-gray-200 ${
                 isBeginning
                   ? "opacity-50 cursor-not-allowed"
-                  : "hover:shadow-xl hover:bg-gray-50"
+                  : ""
               }`}
             >
               <ChevronLeft
-                className={`w-8 h-8 ${
+                className={`w-5 h-5 ${
                   isBeginning ? "text-gray-400" : "text-gray-600"
                 }`}
               />
@@ -226,14 +223,14 @@ const AboutUsShowcase = () => {
             <button
               onClick={slideNext}
               disabled={isEnd}
-              className={`w-12 h-12 bg-[#D2D2D7A3] rounded-full flex items-center justify-center shadow-lg transition-all border border-gray-200 ${
+              className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center lg transition-all border border-gray-200 ${
                 isEnd
                   ? "opacity-50 cursor-not-allowed"
-                  : "hover:shadow-xl hover:bg-gray-50"
+                  : ""
               }`}
             >
               <ChevronRight
-                className={`w-8 h-8 ${
+                className={`w-5 h-5 ${
                   isEnd ? "text-gray-400" : "text-gray-600"
                 }`}
               />

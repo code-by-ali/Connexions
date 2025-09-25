@@ -45,7 +45,7 @@ const FAQ = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4 gap-2">
-            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
               <CommonImage
                 height={16}
                 width={16}
@@ -53,12 +53,14 @@ const FAQ = () => {
                 src={FAQIcon.src || FAQIcon}
               />
             </div>
-            <p className="text-base md:text-lg text-primary font-medium">FAQ</p>
+            <p className="text-sm md:text-base text-primary font-medium tracking-tight">
+              FAQ
+            </p>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4 tracking-[-3px]">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg md:text-xl text-[#4E5B6D] font-medium">
+          <p className="text-base md:text-lg text-[#4E5B6D] font-medium tracking-[-0.36px]">
             Do you want to learn more about us, let's go the blog page.
           </p>
         </div>
@@ -68,13 +70,13 @@ const FAQ = () => {
           {faqData.map((item, index) => (
             <div
               key={index}
-              className="bg-white shadow-sm border border-gray-200 overflow-hidden rounded-2xl"
+              className={`${openIndex === index?"bg-white":"bg-transparent"} border border-[#E4E4E4] overflow-hidden rounded-2xl`}
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full outline-none px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full outline-none px-6 py-4 text-left flex items-center justify-between"
               >
-                <span className="text-lg font-medium text-primary pr-8">
+                <span className="text-base md:text-lg font-medium text-primary pr-8 tracking-[-0.36px]">
                   {item.question}
                 </span>
                 <div className="flex-shrink-0">
@@ -91,7 +93,7 @@ const FAQ = () => {
               {openIndex === index && (
                 <div className="px-6 pb-4">
                   <div className="pt-4">
-                    <p className="text-[#4E5B6D] leading-relaxed">
+                    <p className="text-[#4E5B6D] leading-relaxed text-base md:text-lg tracking-[-0.36px]">
                       {item.answer}
                     </p>
                   </div>
@@ -103,7 +105,7 @@ const FAQ = () => {
 
         {/* Help Center Button */}
         <div className="text-center mt-12">
-          <button className="bg-primary outline-none cursor-pointer text-white px-8 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors">
+          <button className="bg-primary outline-none cursor-pointer text-white px-6 py-3 rounded-xl text-base font-medium">
             Help Center
           </button>
         </div>

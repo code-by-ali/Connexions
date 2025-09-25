@@ -94,9 +94,9 @@ const ServicesSection = () => {
               src={FAQIcon.src || FAQIcon}
             />
           </div>
-          <p className="ml-2 text-base text-primary">Services</p>
+          <p className="ml-2 text-base text-primary font-medium tracking-tight">Services</p>
         </div>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-[-3px] mb-12">
           Services from connexions
         </h2>
 
@@ -125,11 +125,11 @@ const ServicesSection = () => {
                     className="text-xs font-normal flex items-center gap-1"
                   >
                     <span className="w-1 h-1 bg-[#A6CE39] rounded-full"></span>
-                    <span className="text-[#0F0F0F]">{tag}</span>
+                    <span className="text-[#0F0F0F] font-normal uppercase">{tag}</span>
                   </p>
                 ))}
               </div>
-              <p className="text-sm text-[#565F6B] ">{service.description}</p>
+              <p className="text-xs md:text-sm font-normal text-[#565F6B] ">{service.description}</p>
             </div>
           ))}
         </div>

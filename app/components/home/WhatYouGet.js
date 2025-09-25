@@ -16,7 +16,7 @@ const WhatYouGet = () => {
     <section className="bg-[#F8F9FA] py-16">
       {/* Header */}
       <div className="text-center mb-12 px-4">
-        <div className="flex items-center justify-center mb-4 gap-2">
+        <div className="inline-flex items-center justify-center mb-4 gap-2 bg-white rounded-full px-2 py-1">
           <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
             <CommonImage
               height={16}
@@ -25,27 +25,27 @@ const WhatYouGet = () => {
               src={FAQIcon.src || FAQIcon}
             />
           </div>
-          <p className="text-base md:text-lg text-primary font-medium">
+          <p className="text-sm md:text-base text-primary font-medium tracking-tight">
             Latest Updates
           </p>
         </div>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 text-primary">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-3 tracking-[-1.6px] text-primary">
           What You’ll Get From Connexions
         </h2>
-        <p className="text-[#BEBEBE] max-w-2xl mx-auto text-sm md:text-base">
+        <p className="text-[#BEBEBE] max-w-2xl mx-auto text-sm md:text-base tracking-[-0.51px] font-normal">
           Embrace a realm of possibilities and take charge of your destiny by
           honing new skills that again to there help you fulfill your ambitions.
         </p>
       </div>
 
       {/* Grid Section */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6 items-stretch">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3 px-6 items-stretch">
         {/* Column 1 - two stacked cards */}
         <div className="flex flex-col gap-6">
           {/* Top card */}
           <div className="bg-white rounded-2xl p-6 shadow-md">
             <div className="flex justify-between items-start">
-              <span className="text-3xl md:text-4xl font-medium text-primary">
+              <span className="text-3xl md:text-4xl lg:text-5xl tracking-[-2.04px] font-medium text-primary">
                 1:1
               </span>
               <div className="w-10 h-10 flex items-center justify-center rounded-full border bg-primary">
@@ -58,10 +58,10 @@ const WhatYouGet = () => {
               </div>
             </div>
             <div className="mt-6">
-              <h3 className="font-normal text-primary text-xl mb-2">
+              <h3 className="font-normal text-primary text-lg md:text-xl lg:text-2xl mb-2 tracking-tighter">
                 Get Mentorship from Senior PMs
               </h3>
-              <p className="text-primary text-sm">
+              <p className="text-primary text-sm md:text-base font-normal leading-tight tracking-[-0.51px]">
                 Work closely with expert mentors who’ll guide your growth, give
                 actionable feedback, and help you chart your PM career path.
               </p>
@@ -87,14 +87,14 @@ const WhatYouGet = () => {
               alt={"card-img-2"}
             />
           </div>
-          <h3 className="font-normal text-primary text-xl mb-2 text-center">
+          <h3 className="font-normal text-primary text-xl md:text-2xl mb-2 text-center tracking-[-1.02px]">
             Placement Support that Works
           </h3>
-          <p className="text-primary text-sm text-center">
+          <p className="text-primary text-sm md:text-base tracking-[-0.51px] text-center font-normal">
             We don’t stop at learning. Get mock interviews, optimized resumes,
             referrals, and job prep till you land the right role.
           </p>
-          <button className="mt-6 mx-auto flex items-center justify-center gap-2 bg-primary text-white px-5 py-2 rounded-full text-sm">
+          <button className="mt-6 mx-auto font-medium flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm tracking-tight">
             Join Now <ArrowRight size={16} />
           </button>
         </div>
@@ -104,7 +104,7 @@ const WhatYouGet = () => {
           {/* Top card */}
           <div className="bg-white rounded-2xl p-6 shadow-md">
             <div className="flex justify-between items-start">
-              <span className="text-3xl md:text-4xl font-medium text-primary">
+              <span className="text-3xl md:text-4xl lg:text-5xl font-medium text-primary tracking-[-2.04px]">
                 45K+
               </span>
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary">
@@ -117,10 +117,10 @@ const WhatYouGet = () => {
               </div>
             </div>
             <div className="mt-6">
-              <h3 className="font-normal text-primary text-xl mb-2">
+              <h3 className="font-normal text-primary text-xl md:text-2xl mb-2 tracking-[-1.02px]">
                 Build Real Products, Not Just Portfolios
               </h3>
-              <p className="text-primary text-sm">
+              <p className="text-primary text-sm md:text-base font-normal tracking-[-0.51px]">
                 Go beyond theory. Launch zero-to-one projects that show how you
                 think, prioritize, and ship like a Product Leader.
               </p>
@@ -140,10 +140,10 @@ const WhatYouGet = () => {
               />
             </div>
             <div className="mt-6 flex-1">
-              <h3 className="font-normal text-primary text-xl mb-2">
+              <h3 className="font-normal text-primary text-xl md:text-2xl tracking-[-1.02px] mb-2">
                 Master the AI Stack for PMs
               </h3>
-              <p className="text-primary text-sm">
+              <p className="text-primary text-sm md:text-base tracking-[-0.51px] font-normal">
                 From discovery to delivery — learn and apply AI tools to drive
                 product innovation and decision-making.
               </p>

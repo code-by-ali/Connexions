@@ -57,11 +57,11 @@ const ClientsSection = () => {
   ];
 
   return (
-    <div className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-20">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="flex items-center justify-center mb-4 sm:mb-6">
+          <div className="inline-flex items-center justify-center mb-4 sm:mb-6 bg-[#F5F5F7] pl-1 pr-2 py-1 rounded-full">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#0F0F0F] rounded-full flex items-center justify-center flex-shrink-0">
               <CommonImage
                 height={14}
@@ -71,15 +71,15 @@ const ClientsSection = () => {
                 className="sm:w-4 sm:h-4"
               />
             </div>
-            <span className="ml-2 sm:ml-3 text-sm sm:text-base font-medium text-[#0F0F0F]">
+            <span className="ml-1 sm:ml-2 text-sm sm:text-base font-medium text-[#0F0F0F]">
               Clients
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0F0F0F] mb-3 sm:mb-4 px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0F0F0F] tracking-[-3px] mb-3 sm:mb-4 px-2">
             See for whom we are working
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-[#4E5B6D] px-4">
+          <p className="text-sm sm:text-base md:text-lg text-[#4E5B6D] px-4 font-medium tracking-[-0.36px]">
             We have our network all over India.
           </p>
         </div>
