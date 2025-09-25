@@ -72,12 +72,12 @@ const SecurityMDMIntegration = () => {
   };
 
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-20">
+    <div className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-6">
-            <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#0F0F0F] rounded-full flex items-center justify-center">
               <CommonImage
                 height={16}
                 width={16}
@@ -85,15 +85,15 @@ const SecurityMDMIntegration = () => {
                 alt={"seamless-icon"}
               />
             </div>
-            <span className="ml-3 text-base font-medium text-gray-700">
+            <span className="ml-3 text-base font-medium text-[#0F0F0F] tracking-[-0.45px]">
               Seamless Integration
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1D1D1F] mb-4 tracking-[-1.5px]">
             Security and MDM Integration
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-[#535862] font-normal tracking-[-0.3px]">
             Enterprise-grade security that works seamlessly
           </p>
         </div>
@@ -163,32 +163,17 @@ const SecurityMDMIntegration = () => {
                   <div className="relative z-10 flex flex-col justify-end h-full p-8">
                     <div>
                       <p
-                        className={`text-sm font-medium mb-2 text-white drop-shadow-lg`}
+                        className={`text-sm md:text-base font-bold tracking-[-0.37px] mb-2 text-[#F5F5F7] `}
                       >
                         {card.category}
                       </p>
                       <h3
-                        className={`text-xl md:text-2xl font-bold text-white leading-tight drop-shadow-lg`}
+                        className={`text-xl md:text-2xl font-bold text-[#F5F5F7] tracking-[0.2px] leading-8`}
                       >
                         {card.title}
                       </h3>
                     </div>
                   </div>
-
-                  {/* Decorative Elements - only show when no background image */}
-                  {index === 0 && !card.backgroundImage && (
-                    <div className="absolute top-8 left-8 z-0">
-                      <div className="text-4xl font-bold text-white opacity-20 transform -rotate-12">
-                        hello
-                      </div>
-                    </div>
-                  )}
-
-                  {index === 2 && !card.backgroundImage && (
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 z-0">
-                      <div className="w-32 h-32 bg-white rounded-lg"></div>
-                    </div>
-                  )}
                 </div>
               </SwiperSlide>
             ))}
@@ -200,29 +185,27 @@ const SecurityMDMIntegration = () => {
           <button
             onClick={slidePrev}
             disabled={isBeginning}
-            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-primary ${
-              isBeginning
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:shadow-xl hover:bg-gray-50"
+            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center transition-all border border-primary ${
+              isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
             <ChevronLeft
-              className={`w-5 h-5 ${
-                isBeginning ? "text-gray-400" : "text-primary"
+              className={`w-7 h-7 ${
+                isBeginning ? "text-[#86868B]" : "text-[#1D1D1F]"
               }`}
             />
           </button>
           <button
             onClick={slideNext}
             disabled={isEnd}
-            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-primary ${
-              isEnd
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:shadow-xl hover:bg-gray-50"
+            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center transition-all border border-primary ${
+              isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
             <ChevronRight
-              className={`w-5 h-5 ${isEnd ? "text-gray-400" : "text-primary"}`}
+              className={`w-7 h-7 ${
+                isEnd ? "text-[#86868B]" : "text-[#1D1D1F]"
+              }`}
             />
           </button>
         </div>

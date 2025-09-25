@@ -8,8 +8,16 @@ const StillHaveQuestions = () => {
   const questionsData = [
     {
       question: "Is there a free trial?",
-      answer:
-        "Yes — when you sign up, you'll get instant access to a 14-day free trial of our Growth plan. You don't need a credit card, and you can explore all premium features including automations, AI call summaries, and integrations. After the trial, you'll have the option to upgrade or continue on the free Starter tier — no interruption to your account.",
+      answer: (
+        <>
+          Yes — when you sign up, you'll get instant access to a{" "}
+          <span className="font-bold">14-day</span> free trial of our Growth
+          plan. You don't need a credit card, and you can explore all premium
+          features including automations, AI call summaries, and integrations.
+          After the trial, you'll have the option to upgrade or continue on the
+          free Starter tier — no interruption to your account.
+        </>
+      ),
     },
     {
       question: "What happens after my trial ends?",
@@ -48,32 +56,32 @@ const StillHaveQuestions = () => {
   };
 
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-20">
+    <div className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-6 gap-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+          <div className="items-center justify-center mb-6 gap-2 bg-white inline-flex p-1 rounded-3xl ">
+            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
               <HelpCircle className="w-5 h-5 text-white" />
             </div>
-            <p className="text-base text-primary font-medium">
+            <p className="text-base font-medium text-primary tracking-[-0.45px]">
               Still Have Questions
             </p>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2 tracking-[-1.5px]">
             Still have questions?
           </h2>
-          <p className="text-xl md:text-2xl text-[#717680] mb-6">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#717680] mb-6 tracking-[-1.5px]">
             We've got you covered.
           </p>
-          <p className="text-base text-[#535862]">
+          <p className="text-base md:text-lg font-normal text-[#535862] tracking-[-0.3px]">
             If it's not covered here, reach out or <br />
             Just try Apple for yourself.
           </p>
         </div>
 
         {/* Questions List */}
-        <div className="space-y-1">
+        <div className="space-y-1 p-4 bg-white">
           {questionsData.map((item, index) => (
             <div
               key={index}
@@ -81,15 +89,16 @@ const StillHaveQuestions = () => {
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full outline-none py-6 px-2 text-left flex items-center justify-between hover:bg-[#FDFDFD] transition-colors group"
+                className="w-full outline-none py-6 px-2 text-left flex items-center justify-between transition-colors group"
               >
                 <div
-                  className={`flex items-center gap-4 ${
+                  className={`flex items-center gap-1 tracking-tighter ${
                     openIndex == index ? "text-[#A6CE39]" : "text-[#1D1D1F]"
                   }`}
                 >
-                  <span className="font-medium text-lg">{index + 1}.</span>
-                  <span className="text-lg font-medium">{item.question}</span>
+                  <span className="text-base font-medium">
+                    {index + 1}. {item.question}
+                  </span>
                 </div>
                 <div className="flex-shrink-0">
                   <div
@@ -104,8 +113,8 @@ const StillHaveQuestions = () => {
 
               {openIndex === index && (
                 <div className="pb-6 px-2">
-                  <div className="ml-10 pr-8">
-                    <p className="text-[#535862] leading-relaxed">
+                  <div className=" pr-8">
+                    <p className="text-[#535862] text-base font-normal leading-relaxed">
                       {item.answer}
                     </p>
                   </div>

@@ -16,7 +16,7 @@ const StartClosing = () => {
       </div>
 
       {/* Heading */}
-      <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 text-white">
+      <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 text-white tracking-[-1.5px]">
         Ready to close faster? <br />
         <span className="text-[#717680] font-bold">
           Start your free trial today.
@@ -24,29 +24,29 @@ const StartClosing = () => {
       </h1>
 
       {/* Subtext */}
-      <p className="text-white text-base max-w-xl mb-8">
+      <p className="text-white text-base md:text-lg font-normal max-w-xl mb-8 tracking-tight">
         Try it free. No contracts, no credit card.
         <br /> Just results, from day one.
       </p>
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mb-10">
-        <button className="bg-[#A6CE39] text-white  px-6 py-3 rounded-full text-sm transition">
+        <button className="bg-[#A6CE39] text-white px-6 py-3 rounded-full text-sm font-normal transition">
           Explore solution now
         </button>
-        <button className="bg-white text-[#1D1D1F]  px-6 py-3 rounded-full text-sm transition">
+        <button className="bg-white text-[#1D1D1F] px-6 py-3 rounded-full text-sm font-normal transition">
           Talk to an Expert
         </button>
       </div>
 
       {/* Stats */}
-      <div className="flex flex-wrap justify-center gap-6 text-white text-xs">
+      <div className="flex flex-wrap justify-center gap-6 text-white text-sm font-normal">
         <div className="flex items-center gap-2">
           <CommonImage
             src={StartClosingBannerIcon1.src || StartClosingBannerIcon1}
             alt={"banner-icon-1"}
-            height={16}
-            width={16}
+            height={20}
+            width={20}
           />{" "}
           Used by 2,300+ teams
         </div>
@@ -54,8 +54,8 @@ const StartClosing = () => {
           <CommonImage
             src={StartClosingBannerIcon2.src || StartClosingBannerIcon2}
             alt={"banner-icon-2"}
-            height={16}
-            width={16}
+            height={20}
+            width={20}
           />{" "}
           Cancel anytime, no risk
         </div>
@@ -63,8 +63,8 @@ const StartClosing = () => {
           <CommonImage
             src={StartClosingBannerIcon3.src || StartClosingBannerIcon3}
             alt={"banner-icon-3"}
-            height={16}
-            width={16}
+            height={20}
+            width={20}
           />{" "}
           97% user retention after 30 days
         </div>

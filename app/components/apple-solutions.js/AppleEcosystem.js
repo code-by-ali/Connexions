@@ -73,19 +73,19 @@ const AppleEcosystem = () => {
     const CardTemplate = ({ card }) => {
       return (
         <div className="border border-gray-100 bg-[#FDFDFD] rounded-2xl flex flex-col p-4 gap-4">
-          <p className="flex gap-2 text=[#535862] text-xs items-center">
+          <p className="flex gap-2 text-[#535862] text-sm font-normal items-center">
             <span>
-              <CommonImage src={card.icon.src || card.icon} alt={"card-icon"} />
+              <CommonImage src={card.icon.src || card.icon} alt={"card-icon"}  height={20} width={20}/>
             </span>
             <span>{card.title}</span>
           </p>
-          <div className="flex gap-2 ite">
+          <div className="flex gap-2 items-end">
             <span className="text-primary text-3xl font-bold">53</span>
-            <span className="border border-gray-300 text=[#535862] rounded-full text-[10px] flex items-center py-1 px-4">
+            <span className="border border-[#E9EAEB] text=[#535862] rounded-full text-sm  font-normal flex items-center py-1 px-2">
               +64%
             </span>
           </div>
-          <p className="text-xs text-[#535862]">{card.secondaryData}</p>
+          <p className="text-sm text-[#535862] font-normal">{card.secondaryData}</p>
         </div>
       );
     };
@@ -206,12 +206,12 @@ const AppleEcosystem = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-20">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-6">
-            <div className="w-10 h-10 bg-[#0F0F0F] rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#0F0F0F] rounded-full flex items-center justify-center">
               <CommonImage
                 src={AppleEcosystemIcon.src || AppleEcosystemIcon}
                 alt={"apple-ecosystem-icon"}
@@ -219,16 +219,16 @@ const AppleEcosystem = () => {
                 width={16}
               />
             </div>
-            <span className="ml-3 text-base font-medium text-[#0F0F0F]">
+            <span className="ml-3 text-base font-medium text-[#0F0F0F] tracking-tight">
               Meet Apple
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1D1D1F] mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1D1D1F] tracking-[-1.5px] mb-4">
             Our Apple Ecosystem.
           </h2>
-          <p className="text-lg text-[#535862]">
-            Our trusted Apple solutions make your businesses.
+          <p className="text-lg text-[#535862] font-normal tracking-tighter">
+            Comprehensive Apple solutions for modern businesses
           </p>
         </div>
 
@@ -239,7 +239,7 @@ const AppleEcosystem = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+                className="bg-white rounded-2xl p-8 shadow-sm border border-[#E9EAEB]"
               >
                 {/* Card Header */}
                 <div className="mb-8">
@@ -249,12 +249,12 @@ const AppleEcosystem = () => {
                       width={24}
                       src={card.icon.src || card.icon}
                     />
-                    <h3 className="text-base md:text-lg font-medium">
+                    <h3 className="text-base md:text-lg font-medium tracking-tight">
                       {card.title}
                     </h3>
-                    <ChevronRight size={24} />
+                    <ChevronRight size={20} />
                   </div>
-                  <p className="leading-relaxed text-lg md:text-xl xl:text-2xl">
+                  <p className="leading-relaxed text-lg md:text-xl xl:text-2xl tracking-[-1.01px] font-normal">
                     <span className="text-[#1D1D1F]">
                       {card.descriptionPrimary}
                     </span>

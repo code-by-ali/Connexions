@@ -40,21 +40,21 @@ const AppleCareSupport = () => {
           <div className="flex items-center justify-center mb-6">
             <div className="w-10 h-10 bg-[#1D1D1F] rounded-full flex items-center justify-center">
               <CommonImage
-                height={16}
-                width={16}
+                height={20}
+                width={20}
                 src={TitleIcon.src || TitleIcon}
                 alt={"seamless-icon"}
               />
             </div>
-            <span className="ml-3 text-base font-medium text-[#1D1D1F]">
+            <span className="ml-3 text-base font-medium text-[#1D1D1F] tracking-tight">
               Apple Care
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1D1D1F] mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1D1D1F] tracking-[-1.5px] mb-4">
             Apple Care & Support Packages
           </h2>
-          <p className="text-lg text-[#535862]">
+          <p className="text-lg text-[#535862] font-normal tracking-[-0.3px]">
             Comprehensive support for your Apple devices
           </p>
         </div>
@@ -64,9 +64,9 @@ const AppleCareSupport = () => {
           {supportPackages.map((package_, index) => (
             <div
               key={index}
-              className="bg-white p-8 shadow-sm border border-[#F4F4F4] rounded-2xl"
+              className="bg-white p-8  border border-[#F4F4F4] rounded-2xl"
             >
-              <h3 className={`text-lg font-semibold mb-8 text-[#A6CE39]`}>
+              <h3 className={`text-sm font-medium mb-4 text-[#A6CE39] rounded-lg tracking-wide bg-[#FAFAFA] inline-block px-4 py-2`}>
                 {package_.title}
               </h3>
 
@@ -74,9 +74,9 @@ const AppleCareSupport = () => {
                 {package_.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center gap-3">
                     <div className="flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-[#36B971]" />
+                      <Check className="w-5 h-5 text-[#36B971]" />
                     </div>
-                    <span className="text-[#1D1D1F] text-sm md:text-base leading-relaxed">
+                    <span className="text-[#1D1D1F] text-sm md:text-base leading-relaxed font-medium">
                       {feature}
                     </span>
                   </div>

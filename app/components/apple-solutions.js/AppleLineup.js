@@ -74,17 +74,17 @@ const AppleLineup = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-6">
             <div className="w-8 h-8 bg-[#0F0F0F] rounded-full flex items-center justify-center">
-              <Rocket className="w-4 h-4 text-white" />
+              <Rocket className="w-5 h-5 text-white" />
             </div>
-            <span className="ml-3 text-base font-medium text-[#0F0F0F]">
+            <span className="ml-3 text-base font-medium text-[#0F0F0F] tracking-tight">
               New Launch
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1D1D1F] mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1D1D1F] mb-4 tracking-[-1.5px]">
             Apple Line-up
           </h2>
-          <p className="text-lg text-[#535862]">
+          <p className="text-lg text-[#535862] font-normal tracking-[-0.3px]">
             New devices from apple this year
           </p>
         </div>
@@ -126,18 +126,18 @@ const AppleLineup = () => {
           >
             {productCards.map((product, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-2xl overflow-hidden border border-gray-200">
+                <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 ">
                   {/* Product Info */}
                   <div className="p-6 text-center">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1D1D1F] mb-3">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1D1D1F] tracking-[-0.22px] mb-3">
                       {product.title}
                     </h3>
-                    <p className="text-sm md:text-base text-[#6E6E73] mb-4 leading-relaxed">
+                    <p className="text-sm md:text-base text-[#6E6E73] mb-3 tracking-[-0.37px] font-medium leading-tight">
                       {product.description}
                     </p>
                     <a
                       href="#"
-                      className="text-[#0066CC] text-sm md:text-base font-medium hover:text-blue-700 transition-colors inline-block mb-6"
+                      className="text-[#0066CC] text-sm md:text-base tracking-[-0.37px] font-medium inline-block mb-4"
                     >
                       {product.linkText}
                     </a>
@@ -145,12 +145,12 @@ const AppleLineup = () => {
 
                   {/* Product Image */}
                   <div
-                    className={`${product.backgroundColor} h-64 flex items-center justify-center overflow-hidden`}
+                    className={`${product.backgroundColor} h-80 flex items-center justify-center overflow-hidden`}
                   >
                     <CommonImage
                       src={product.image.src || product.image}
                       alt={product.title}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full !object-cover"
                     />
                   </div>
                 </div>
@@ -164,29 +164,27 @@ const AppleLineup = () => {
           <button
             onClick={slidePrev}
             disabled={isBeginning}
-            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-primary ${
-              isBeginning
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:shadow-xl hover:bg-gray-50"
+            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center transition-all border border-primary ${
+              isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
             <ChevronLeft
-              className={`w-5 h-5 ${
-                isBeginning ? "text-gray-400" : "text-primary"
+              className={`w-7 h-7 ${
+                isBeginning ? "text-[#86868B]" : "text-[#1D1D1F]"
               }`}
             />
           </button>
           <button
             onClick={slideNext}
             disabled={isEnd}
-            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg transition-all border border-primary ${
-              isEnd
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:shadow-xl hover:bg-gray-50"
+            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center transition-all border border-primary ${
+              isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
             <ChevronRight
-              className={`w-5 h-5 ${isEnd ? "text-gray-400" : "text-primary"}`}
+              className={`w-7 h-7 ${
+                isEnd ? "text-[#86868B]" : "text-[#1D1D1F]"
+              }`}
             />
           </button>
         </div>

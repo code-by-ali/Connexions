@@ -42,13 +42,13 @@ const AppleWorkSection = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-8 md:px-16 lg:px-28">
+    <section className="bg-[#FAFAFA] py-16 px-8 md:px-16 lg:px-28">
       {/* Title + Description */}
       <div className="text-center mb-12">
-        <h2 className="text-lg md:text-xl font-semibold text-[#1D1D1F]">
+        <h2 className="text-lg font-normal tracking-[-0.3px] text-[#1D1D1F]">
           Why Choose Apple for work?
         </h2>
-        <p className="text-sm text-[#535862] mt-2">
+        <p className="text-lg font-normal tracking-[-0.3px] text-[#535862] mt-2">
           92% of top-performing companies use Apple devices.
         </p>
       </div>
@@ -99,14 +99,14 @@ const AppleWorkSection = () => {
               alt={card.title}
               className="w-full h-48 object-cover"
             />
-            <div className="p-6">
-              <h3 className="text-xs font-semibold text-[#6E6E73] uppercase mb-2">
+            <div className="p-4">
+              <h3 className="text-xs font-bold tracking-[-0.12px] text-[#6E6E73] uppercase mb-2">
                 {card.title}
               </h3>
-              <p className="text-base md:text-lg text-[#1D1D1F] font-bold mb-3">
+              <p className="text-base md:text-lg text-[#1D1D1F] font-bold mb-2">
                 {card.desc}
               </p>
-              <button className="text-sm text-[#6E6E73] font-medium hover:underline">
+              <button className="text-sm text-[#6E6E73] tracking-[-0.22px] font-medium hover:underline">
                 Learn more
               </button>
             </div>
