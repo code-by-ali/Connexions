@@ -16,11 +16,11 @@ const page = () => {
       <WhatACN />
       <ACNPartner />
       <ServicesWeOffer />
-      {/* <IndustriesWeServe />
+      <IndustriesWeServe />
       <ProcessSteps />
       <WhatClientsSayConsultant />
       <Rating />
-      <StillHaveQuestionsConsultant /> */}
+      <StillHaveQuestionsConsultant />
     </div>
   );
 };
