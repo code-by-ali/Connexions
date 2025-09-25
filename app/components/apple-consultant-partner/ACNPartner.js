@@ -43,13 +43,13 @@ const ACNPartner = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-col gap-8">
+    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-col gap-8 bg-[#F5F5F7]">
       {/* Title */}
       <div className="flex flex-col gap-4 items-center text-center">
         <p className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
           Why Choose Connexions as your ACN Partner.
         </p>
-        <p className="text-[#4B5563] text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl">
+        <p className="text-[#4B5563] text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl font-normal">
           Transform your Apple device management with powerful enterprise grade
           capabilities
         </p>
@@ -65,7 +65,7 @@ const ACNPartner = () => {
               className="flex flex-col gap-3 items-center justify-center 
                          w-full max-w-[280px] h-[200px]
                          bg-white p-4 border border-[#E9EBEF]
-                         transition-shadow duration-300"
+                          duration-300"
             >
               <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
                 <CommonImage
@@ -78,10 +78,10 @@ const ACNPartner = () => {
               </div>
 
               <div className="flex flex-col gap-2 text-center flex-1">
-                <p className="font-bold text-base text-primary leading-tight">
+                <p className="font-bold text-sm text-primary leading-tight">
                   {card.title}
                 </p>
-                <p className="text-[#4B5563] text-xs leading-relaxed">
+                <p className="text-[#4B5563] text-base leading-relaxed font-normal">
                   {card.description}
                 </p>
               </div>
@@ -97,9 +97,9 @@ const ACNPartner = () => {
               <div
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
-                           w-full max-w-[300px] h-[220px]
+                           w-full max-w-[320px] h-[240px]
                            bg-white p-4 border border-[#E9EBEF]
-                         transition-shadow duration-300"
+                          duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">
                   <CommonImage
@@ -112,10 +112,10 @@ const ACNPartner = () => {
                 </div>
 
                 <div className="flex flex-col gap-2 text-center flex-1">
-                  <p className="font-bold text-base md:text-lg text-primary leading-tight">
+                  <p className="font-bold text-base text-primary leading-tight">
                     {card.title}
                   </p>
-                  <p className="text-[#4B5563] text-sm leading-relaxed">
+                  <p className="text-[#4B5563] text-lg leading-relaxed font-normal">
                     {card.description}
                   </p>
                 </div>
@@ -129,9 +129,9 @@ const ACNPartner = () => {
               <div
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
-                           w-full max-w-[300px] h-[220px]
+                           w-full max-w-[320px] h-[240px]
                            bg-white p-4 border border-[#E9EBEF]
-                            transition-shadow duration-300"
+                             duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">
                   <CommonImage
@@ -144,10 +144,10 @@ const ACNPartner = () => {
                 </div>
 
                 <div className="flex flex-col gap-2 text-center flex-1">
-                  <p className="font-bold text-base md:text-lg text-primary leading-tight">
+                  <p className="font-bold text-base text-primary leading-tight">
                     {card.title}
                   </p>
-                  <p className="text-[#4B5563] text-sm leading-relaxed">
+                  <p className="text-[#4B5563] text-lg leading-relaxed font-normal">
                     {card.description}
                   </p>
                 </div>
@@ -159,9 +159,9 @@ const ACNPartner = () => {
           <div className="flex justify-center">
             <div
               className="flex flex-col items-center justify-center 
-                           w-full max-w-[300px] h-[220px]
+                           w-full max-w-[320px] h-[240px]
                            bg-white p-4 border border-[#E9EBEF]
-                            transition-shadow duration-300"
+                             duration-300"
             >
               <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
                 <CommonImage
@@ -174,10 +174,10 @@ const ACNPartner = () => {
               </div>
 
               <div className="flex flex-col gap-2 text-center flex-1">
-                <p className="font-bold text-base md:text-lg text-primary leading-tight">
+                <p className="font-bold text-base text-primary leading-tight">
                   {cards[4].title}
                 </p>
-                <p className="text-[#4B5563] text-sm leading-relaxed">
+                <p className="text-[#4B5563] text-lg leading-relaxed font-normal">
                   {cards[4].description}
                 </p>
               </div>
@@ -193,9 +193,9 @@ const ACNPartner = () => {
               <div
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
-                           w-[280px] h-[200px]
+                           w-[280px] h-[260px] xl:w-[360px] xl:h-[240px]
                            bg-white p-4 border border-[#E9EBEF] border-r-0 last:border-r
-                            transition-shadow duration-300"
+                             duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">
                   <CommonImage
@@ -211,7 +211,7 @@ const ACNPartner = () => {
                   <p className="font-bold text-lg text-primary leading-tight">
                     {card.title}
                   </p>
-                  <p className="text-[#4B5563] text-sm leading-relaxed">
+                  <p className="text-[#4B5563] text-xl leading-relaxed font-normal">
                     {card.description}
                   </p>
                 </div>
@@ -225,9 +225,9 @@ const ACNPartner = () => {
               <div
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
-                           w-[280px] h-[200px]
+                           w-[280px] h-[260px] xl:w-[360px] xl:h-[240px]
                            bg-white p-4 border border-[#E9EBEF] border-r-0 border-t-0 last:border-r
-                            transition-shadow duration-300"
+                             duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">
                   <CommonImage
@@ -243,76 +243,7 @@ const ACNPartner = () => {
                   <p className="font-bold text-lg text-primary leading-tight">
                     {card.title}
                   </p>
-                  <p className="text-[#4B5563] text-sm leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Alternative Layout for tablets if you prefer 3-2 split */}
-        <div className="hidden">
-          {/* First row - 3 cards */}
-          <div className="flex flex-wrap justify-center mb-6">
-            {cards.slice(0, 3).map((card, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col gap-3 items-center justify-center 
-                           w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px] 
-                           h-[200px] sm:h-[220px]
-                           bg-white p-4 border border-[#E9EBEF] 
-                            transition-shadow duration-300"
-              >
-                <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
-                  <CommonImage
-                    src={card.icon.src || card.icon}
-                    height={36}
-                    width={36}
-                    alt={card.alt}
-                    className="w-9 h-9"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2 text-center flex-1">
-                  <p className="font-bold text-base md:text-lg text-primary leading-tight">
-                    {card.title}
-                  </p>
-                  <p className="text-[#4B5563] text-xs sm:text-sm leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Second row - 2 cards centered */}
-          <div className="flex flex-wrap justify-center ">
-            {cards.slice(3).map((card, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col gap-3 items-center justify-center 
-                           w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px] 
-                           h-[200px] sm:h-[220px]
-                           bg-white p-4 border border-[#E9EBEF]  
-                            transition-shadow duration-300"
-              >
-                <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
-                  <CommonImage
-                    src={card.icon.src || card.icon}
-                    height={36}
-                    width={36}
-                    alt={card.alt}
-                    className="w-9 h-9"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2 text-center flex-1">
-                  <p className="font-bold text-base md:text-lg text-primary leading-tight">
-                    {card.title}
-                  </p>
-                  <p className="text-[#4B5563] text-xs sm:text-sm leading-relaxed">
+                  <p className="text-[#4B5563] text-xl leading-relaxed font-normal">
                     {card.description}
                   </p>
                 </div>

@@ -1,45 +1,51 @@
 "use client";
 import React from "react";
-import { CircleCheckBig, Monitor } from "lucide-react"; // you can replace with your own icons if needed
+import { CircleCheckBig, Monitor } from "lucide-react"; 
+import StepIcon1 from "@/public/assets/process-steps-icon-1.svg"
+import StepIcon2 from "@/public/assets/process-steps-icon-2.svg"
+import StepIcon3 from "@/public/assets/process-steps-icon-3.svg"
+import StepIcon4 from "@/public/assets/process-steps-icon-4.svg"
+import StepIcon5 from "@/public/assets/process-steps-icon-5.svg"
+import CommonImage from "../common/CommonImage";
 
 const ProcessSteps = () => {
   const steps = [
     {
       step: "Step 1",
       title: "Discovery Call & Assessment",
-      icon: <Monitor className="w-5 h-5 text-white" />,
+      icon: <CommonImage className="w-4 h-4" src={StepIcon1.src||StepIcon1} alt={"step-icon-1"}/>,
     },
     {
       step: "Step 2",
       title: "Custom Apple Ecosystem Plan",
-      icon: <Monitor className="w-5 h-5 text-white" />,
+      icon: <CommonImage className="w-4 h-4" src={StepIcon2.src||StepIcon2} alt={"step-icon-1"}/>,
     },
     {
       step: "Step 3",
       title: "Deployment & MDM Intergration",
-      icon: <Monitor className="w-5 h-5 text-white" />,
+      icon: <CommonImage className="w-4 h-4" src={StepIcon3.src||StepIcon3} alt={"step-icon-1"}/>,
     },
     {
       step: "Step 4",
       title: "Deployment & MDM Intergration",
-      icon: <Monitor className="w-5 h-5 text-white" />,
+      icon: <CommonImage className="w-4 h-4" src={StepIcon4.src||StepIcon4} alt={"step-icon-1"}/>,
     },
     {
       step: "Publish",
       title: "User Training & Onboarding",
-      icon: <CircleCheckBig className="w-5 h-5 text-white" />,
+      icon: <CommonImage className="w-4 h-4" src={StepIcon5.src||StepIcon5} alt={"step-icon-1"}/>,
       highlight: true,
     },
   ];
 
   return (
-    <div className="bg-[#f9f9fb] px-4 sm:px-8 md:px-12 lg:px-20 py-12 flex flex-col gap-10">
+    <div className="bg-[#F5F5F7] px-4 sm:px-8 md:px-12 lg:px-20 py-12 flex flex-col gap-10">
       {/* Title */}
       <div className="flex flex-col gap-3 items-center text-center">
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
           The process we follow
         </p>
-        <p className="text-[#4B5563] text-base md:text-lg max-w-3xl">
+        <p className="text-[#4B5563] text-base md:text-lg max-w-3xl font-normal">
           Transform your Apple device management with powerful enterprise grade
           capabilities
         </p>
@@ -56,8 +62,8 @@ const ProcessSteps = () => {
             <div
               className={`flex items-center gap-2 px-3 py-2 rounded-full border ${
                 item.highlight
-                  ? "border-[#A6CE39] bg-white text-[#A6CE39]"
-                  : "border-gray-300 bg-white text-primary"
+                  ? "border-[#A6CE39]  text-[#A6CE39]"
+                  : "border-[#E0E0E0]  text-primary"
               }`}
             >
               <span
@@ -67,11 +73,11 @@ const ProcessSteps = () => {
               >
                 {item.icon}
               </span>
-              <span className="text-sm">{item.step}</span>
+              <span className="text-base font-normal">{item.step}</span>
             </div>
 
             {/* Title */}
-            <p className="text-sm sm:text-base font-semibold text-primary">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-primary">
               {item.title}
             </p>
           </div>

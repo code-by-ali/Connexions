@@ -8,7 +8,7 @@ import CommonImage from "./CommonImage";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FAFAFA] px-4 sm:px-8 lg:px-20 py-12 mt-8">
+    <footer className="bg-[#FAFAFA] px-4 sm:px-8 lg:px-20 py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Section - Brand and Newsletter */}

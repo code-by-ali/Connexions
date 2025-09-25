@@ -14,6 +14,11 @@ const Header = () => {
     setOpenDropdown(openDropdown === menu ? null : menu);
   };
 
+  const handleLinkClick = () => {
+    setOpenDropdown(null); // Close any open dropdown
+    setMenuOpen(false);    // Close mobile menu if open
+  };
+
   // Close dropdown on outside click
   useEffect(() => {
     function handleClickOutside(e) {
@@ -44,7 +49,6 @@ const Header = () => {
         { label: "Apple for Work", href: "/apple-for-work" },
         { label: "Apple Business Manager", href: "/apple-business-manager" },
         { label: "Apple Consultant Partner", href: "/apple-consultant-partner" },
-
       ],
     },
     {
@@ -75,7 +79,7 @@ const Header = () => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link href={"/"} passHref>
+          <Link href={"/"} passHref onClick={handleLinkClick}>
             <CommonImage
               width={180}
               height={80}
@@ -97,7 +101,7 @@ const Header = () => {
               <Search size={14} />
             </button>
           </div>
-          <Link href="/contact-us" passHref>
+          <Link href="/contact-us" passHref onClick={handleLinkClick}>
             <button className="bg-primary cursor-pointer text-secondary rounded-sm px-4 lg:px-6 py-2 text-sm font-light">
               Contact us
             </button>
@@ -117,27 +121,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Search + Button (Mobile Only) */}
-      {/* <div className="flex md:hidden flex-col gap-4 mt-4">
-        <div className="flex border border-[#E7EAEE] rounded-sm">
-          <input
-            className="rounded-tl-sm text-xs rounded-bl-sm w-full px-2 text-[#5C728E] outline-none"
-            placeholder="What are you looking for?"
-          />
-          <button className="bg-primary text-secondary rounded-tr-sm rounded-br-sm px-4 py-2">
-            <Search size={14} />
-          </button>
-        </div>
-        <Link href="/contact-us" passHref>
-          <button className="bg-primary cursor-pointer text-secondary rounded-sm px-4 py-2 text-sm font-light w-full">
-            Contact us
-          </button>
-        </Link>
-      </div> */}
-
-      {/* =========================
-          Bottom Nav
-      ========================== */}
+      {/* Bottom Nav */}
       <div className="hidden md:block text-sm">
         {/* Tablet Only (768–1024px): Two Rows */}
         <div className="block lg:hidden">
@@ -148,7 +132,7 @@ const Header = () => {
               <span>BROWSE ALL CATEGORIES</span>
             </div>
             <div>
-              <Link href="#" className="underline cursor-pointer">
+              <Link href="#" className="underline cursor-pointer" onClick={handleLinkClick}>
                 Buy and Try
               </Link>
             </div>
@@ -166,7 +150,9 @@ const Header = () => {
                     className="flex items-center gap-1"
                     onClick={() => item.dropdown && toggleDropdown(item.label)}
                   >
-                    <Link href={item.href || "#"}>{item.label}</Link>
+                    <Link href={item.href || "#"} onClick={handleLinkClick}>
+                      {item.label}
+                    </Link>
                     {item.dropdown && <ChevronDown size={14} />}
                   </div>
 
@@ -181,7 +167,9 @@ const Header = () => {
                               : ""
                           }`}
                         >
-                          <Link href={sub.href}>{sub.label}</Link>
+                          <Link href={sub.href} onClick={handleLinkClick}>
+                            {sub.label}
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -211,7 +199,9 @@ const Header = () => {
                   className="flex items-center gap-1"
                   onClick={() => item.dropdown && toggleDropdown(item.label)}
                 >
-                  <Link href={item.href || "#"}>{item.label}</Link>
+                  <Link href={item.href || "#"} onClick={handleLinkClick}>
+                    {item.label}
+                  </Link>
                   {item.dropdown && <ChevronDown size={14} />}
                 </div>
 
@@ -226,7 +216,9 @@ const Header = () => {
                             : ""
                         }`}
                       >
-                        <Link href={sub.href}>{sub.label}</Link>
+                        <Link href={sub.href} onClick={handleLinkClick}>
+                          {sub.label}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -237,22 +229,20 @@ const Header = () => {
 
           {/* Right */}
           <div>
-            <Link href="#" className="underline cursor-pointer">
+            <Link href="#" className="underline cursor-pointer" onClick={handleLinkClick}>
               Buy and Try
             </Link>
           </div>
         </div>
       </div>
 
-      {/* =========================
-          Mobile Nav
-      ========================== */}
+      {/* Mobile Nav */}
       <div
         className={`md:hidden flex-col text-sm gap-4 ${
           menuOpen ? "flex" : "hidden"
         }`}
       >
-        {/* Search + Button (Mobile Only, now inside menu) */}
+        {/* Search + Button (Mobile Only, inside menu) */}
         <div className="flex flex-col gap-4 px-2">
           <div className="flex border border-[#E7EAEE] rounded-sm">
             <input
@@ -263,7 +253,7 @@ const Header = () => {
               <Search size={14} />
             </button>
           </div>
-          <Link href="/contact-us" passHref>
+          <Link href="/contact-us" passHref onClick={handleLinkClick}>
             <button className="bg-primary cursor-pointer text-secondary rounded-sm px-4 py-2 text-sm font-light w-full">
               Contact us
             </button>
@@ -288,7 +278,9 @@ const Header = () => {
                   className="flex items-center gap-1"
                   onClick={() => item.dropdown && toggleDropdown(item.label)}
                 >
-                  <Link href={item.href || "#"}>{item.label}</Link>
+                  <Link href={item.href || "#"} onClick={handleLinkClick}>
+                    {item.label}
+                  </Link>
                   {item.dropdown && <ChevronDown size={14} />}
                 </div>
 
@@ -303,7 +295,9 @@ const Header = () => {
                             : ""
                         }`}
                       >
-                        <Link href={sub.href}>{sub.label}</Link>
+                        <Link href={sub.href} onClick={handleLinkClick}>
+                          {sub.label}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -315,7 +309,7 @@ const Header = () => {
 
         {/* Buy and Try */}
         <div className="px-2">
-          <Link href="#" className="underline cursor-pointer">
+          <Link href="#" className="underline cursor-pointer" onClick={handleLinkClick}>
             Buy and Try
           </Link>
         </div>

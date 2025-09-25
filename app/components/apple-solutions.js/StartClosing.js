@@ -16,7 +16,7 @@ const StartClosing = () => {
       </div>
 
       {/* Heading */}
-      <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4 text-white">
+      <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 text-white">
         Ready to close faster? <br />
         <span className="text-[#717680] font-bold">
           Start your free trial today.

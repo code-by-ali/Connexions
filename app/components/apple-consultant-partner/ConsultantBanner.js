@@ -20,15 +20,15 @@ const ConsultantBanner = () => {
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary text-center font-bold">
           Certified Apple <br /> Consultant Partner
         </p>
-        <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center">
+        <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center font-normal">
           Unlock full power of Apple in your business with Connexions - an
           official member of the Apple Consultant Network
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
-          <button className="w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
+          <button className="text-lg font-semibold w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
             Talk to an Expert
           </button>
-          <button className="w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-white px-5 py-3">
+          <button className="text-lg font-semibold w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-white px-5 py-3">
             Learn More
           </button>
         </div>

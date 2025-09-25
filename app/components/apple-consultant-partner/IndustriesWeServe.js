@@ -1,9 +1,5 @@
 "use client";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
 import {
   Briefcase,
   Cpu,
@@ -48,101 +44,95 @@ const IndustriesWeServe = () => {
   ];
 
   const Pill = ({ Icon, label }) => (
-    <div className="inline-flex items-center gap-4 px-5 py-2 bg-white rounded-full border border-gray-200 shadow-sm text-lg font-medium text-[#1D1D1F] hover:shadow-md transition w-auto whitespace-nowrap">
+    <div className="inline-flex items-center gap-4 px-5 py-2 bg-white rounded-full border border-gray-200 shadow-sm text-lg font-medium text-[#1D1D1F] hover:shadow-md transition w-auto whitespace-nowrap flex-shrink-0">
       <Icon size={24} className="text-[#1D1D1F] shrink-0" />
       <span>{label}</span>
     </div>
   );
 
-  const swiperConfig = {
-    modules: [Autoplay],
-    slidesPerView: 1,
-    spaceBetween: 24,
-    loop: true,
-    autoplay: { delay: 0, disableOnInteraction: false },
-    breakpoints: {
-      480: {
-        slidesPerView: 1,
-      },
-      640: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-      1280: {
-        slidesPerView: 4,
-      },
-    },
+  const ScrollingRow = ({ items, direction = "left", speed = 30 }) => {
+    // Duplicate items multiple times to create seamless loop
+    const duplicatedItems = [...items, ...items, ...items];
+    
+    return (
+      <div className="overflow-hidden mb-6">
+        <div 
+          className="flex gap-6 items-center"
+          style={{
+            animation: `scroll-${direction} ${speed}s linear infinite`,
+            width: 'fit-content'
+          }}
+        >
+          {duplicatedItems.map((item, i) => (
+            <Pill key={i} Icon={item.icon} label={item.label} />
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
-    <section className="relative py-20 px-6 md:px-12 lg:px-20 flex justify-center">
-      <div
-        className="relative rounded-2xl shadow-md p-10 w-full max-w-6xl text-center overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${BgImage.src})`,
-          backgroundSize: "cover",
-        }}
-      >
-        {/* Overlay if needed */}
-        <div className="absolute inset-0 rounded-2xl bg-white/30 pointer-events-none"></div>
+    <>
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.333%);
+          }
+        }
+        
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-33.333%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+      `}</style>
+      
+      <section className="relative py-20 px-6 md:px-12 lg:px-20 flex justify-center">
+        <div
+          className="relative rounded-2xl shadow-md p-10 w-full max-w-6xl text-center overflow-hidden bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${BgImage.src})`,
+            backgroundSize: "cover",
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 rounded-2xl bg-white/30 pointer-events-none"></div>
 
-        {/* Content */}
-        <div className="relative z-10">
-          {/* Subtitle */}
-          <div className="flex items-center justify-center">
-            <p className="text-center px-4 py-1 ring-4 ring-white text-base text-[#6E6E73] font-medium mb-3 relative z-10 bg-[#F1F7FC] shadow-sm w-max rounded-full">
-              What's Drive
-            </p>
-          </div>
+          {/* Content */}
+          <div className="relative z-10">
+            {/* Subtitle */}
+            <div className="flex items-center justify-center">
+              <p className="text-center px-4 py-1 ring-4 ring-white text-base text-[#6E6E73] font-medium mb-3 relative z-10 bg-[#F1F7FC] shadow-sm w-max rounded-full">
+                What's Drive
+              </p>
+            </div>
 
-          {/* Title */}
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1D1D1F] mb-10">
-            Industries We Serve
-          </h2>
+            {/* Title */}
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1D1D1F] mb-10">
+              Industries We Serve
+            </h2>
 
-          {/* Categories Carousel */}
-          <div>
-            {/* Row 1 */}
-            <Swiper {...swiperConfig} speed={3000} className="mb-6">
-              {categories.map((item, i) => (
-                <SwiperSlide key={i}>
-                  <Pill Icon={item.icon} label={item.label} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            {/* Row 2 (reverse) */}
-            <Swiper
-              {...swiperConfig}
-              speed={3500}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                reverseDirection: true,
-              }}
-              className="mb-6"
-            >
-              {categories2.map((item, i) => (
-                <SwiperSlide key={i}>
-                  <Pill Icon={item.icon} label={item.label} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            {/* Row 3 */}
-            <Swiper {...swiperConfig} speed={3200}>
-              {categories3.map((item, i) => (
-                <SwiperSlide key={i}>
-                  <Pill Icon={item.icon} label={item.label} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            {/* Categories Carousels */}
+            <div>
+              {/* Row 1 - Left to Right */}
+              <ScrollingRow items={categories} direction="left" speed={25} />
+              
+              {/* Row 2 - Right to Left */}
+              <ScrollingRow items={categories2} direction="right" speed={30} />
+              
+              {/* Row 3 - Left to Right */}
+              <ScrollingRow items={categories3} direction="left" speed={28} />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

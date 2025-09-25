@@ -19,7 +19,7 @@ const WhatACN = () => {
           </h2>
 
           {/* Right Description */}
-          <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-[#4B5563] text-sm sm:text-base md:text-2xl leading-tight font-normal">
             The Apple Consultants Network is a select group of independent
             technology service providers specially trained and certified by
             Apple. Connexions brings verified expertise in deploying Apple
@@ -40,19 +40,13 @@ const WhatACN = () => {
           <div className="absolute bottom-4 sm:bottom-6 left-4 right-4 sm:left-6 sm:right-6 md:left-auto md:right-6 md:bottom-6">
             <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 lg:gap-6">
               {/* Email */}
-              <div className="flex items-center justify-between bg-white/95 backdrop-blur-sm shadow-lg border border-gray-200 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg">
-                <div className="flex items-center gap-2 sm:gap-3">
-                  {/* Perfect Circle Icon */}
-
-                  <div className="flex flex-col min-w-0">
-                    <span className="text-xs sm:text-sm text-primary font-medium">
-                      Email Us
-                    </span>
-                    <span className="text-xs sm:text-sm text-[#A6CE39] font-medium truncate">
-                      support@connexions.com
-                    </span>
-                  </div>
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="bg-white backdrop-blur-sm px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg">
+                {/* Title and Icon Row */}
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm sm:text-base text-primary font-medium">
+                    Email Us
+                  </span>
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center flex-shrink-0">
                     <CommonImage
                       src={ACNIcon1.src || ACNIcon1}
                       height={20}
@@ -61,22 +55,20 @@ const WhatACN = () => {
                     />
                   </div>
                 </div>
+                {/* Description Row */}
+                <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
+                  support@connexions.com
+                </span>
               </div>
 
               {/* Phone */}
-              <div className="flex items-center justify-between bg-white/95 backdrop-blur-sm shadow-lg border border-gray-200 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg">
-                <div className="flex items-center gap-2 sm:gap-3">
-                  {/* Perfect Circle Icon */}
-
-                  <div className="flex flex-col min-w-0">
-                    <span className="text-xs sm:text-sm text-primary font-medium">
-                      Phone Call
-                    </span>
-                    <span className="text-xs sm:text-sm text-[#A6CE39] font-medium">
-                      (+91) 98765-43210
-                    </span>
-                  </div>
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="bg-white backdrop-blur-sm px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg">
+                {/* Title and Icon Row */}
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm sm:text-base text-primary font-medium">
+                    Phone Call
+                  </span>
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center flex-shrink-0">
                     <CommonImage
                       src={ACNIcon2.src || ACNIcon2}
                       height={20}
@@ -85,22 +77,20 @@ const WhatACN = () => {
                     />
                   </div>
                 </div>
+                {/* Description Row */}
+                <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
+                  (+91) 98765-43210
+                </span>
               </div>
 
               {/* WhatsApp */}
-              <div className="flex items-center justify-between bg-white/95 backdrop-blur-sm shadow-lg border border-gray-200 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg">
-                <div className="flex items-center gap-2 sm:gap-3">
-                  {/* Perfect Circle Icon */}
-
-                  <div className="flex flex-col min-w-0">
-                    <span className="text-xs sm:text-sm text-primary font-medium">
-                      WhatsApp
-                    </span>
-                    <span className="text-xs sm:text-sm text-[#A6CE39] font-medium">
-                      (+91) 99887-66554
-                    </span>
-                  </div>
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="bg-white/95 backdrop-blur-sm shadow-lg border border-gray-200 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg">
+                {/* Title and Icon Row */}
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm sm:text-base text-primary font-medium">
+                    WhatsApp
+                  </span>
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center flex-shrink-0">
                     <CommonImage
                       src={ACNIcon3.src || ACNIcon3}
                       height={20}
@@ -109,6 +99,10 @@ const WhatACN = () => {
                     />
                   </div>
                 </div>
+                {/* Description Row */}
+                <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
+                  (+91) 99887-66554
+                </span>
               </div>
             </div>
           </div>
