@@ -61,12 +61,12 @@ const EnterpriseSolutions = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-10 p-10 items-center w-full overflow-hidden">
+    <div className="flex flex-col gap-10 p-10 items-center w-full overflow-hidden bg-white">
       <div className="flex flex-col gap-4 items-center">
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary font-bold">
           Enterprise Solutions
         </p>
-        <p className="text-base sm:text-lg text-[#4B5563] text-center">
+        <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center font-normal">
           Comprehensive Apple device solutions tailored for business success.
         </p>
       </div>

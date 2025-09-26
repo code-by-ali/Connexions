@@ -20,12 +20,12 @@ const AppleBanner = () => {
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary text-center font-bold">
           Apple devices for Enterprise
         </p>
-        <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center">
+        <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center font-normal">
           Transform your business with Apple's powerful ecosystem. Boost
           productivity, enhance security, and empower your workforce with
           seamless integration.
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-base md:text-lg font-semibold">
           <button className="w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
             Get Started
           </button>

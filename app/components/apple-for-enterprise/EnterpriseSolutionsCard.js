@@ -11,7 +11,7 @@ const EnterpriseSolutionsCard = ({ card }) => {
         <p className="text-lg sm:text-xl md:text-2xl text-primary font-bold">
           {card?.title ? card?.title : "Macbook"}
         </p>
-        <p className="text-sm sm:text-base text-primary">
+        <p className="text-sm sm:text-base text-primary tracking-[-0.37px] font-normal">
           {card?.description
             ? card?.description
             : "Powerful and versatile laptop for creative professionals and developers"}
@@ -27,7 +27,7 @@ const EnterpriseSolutionsCard = ({ card }) => {
         />
       </div>
 
-      <p className="text-sm text-[#A6CE39] flex items-center gap-2 cursor-pointer hover:text-[#8fb32a] transition-colors">
+      <p className="text-sm md:text-base text-[#A6CE39] flex items-center gap-2 cursor-pointer">
         Learn More{" "}
         <span>
           <MoveRight size={16} />

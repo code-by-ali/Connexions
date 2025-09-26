@@ -7,7 +7,7 @@ import CommonImage from "../common/CommonImage";
 
 const AppleGrid = () => {
   return (
-    <div className="mt-12 sm:mt-16 md:mt-20">
+    <div className="mt-12 sm:mt-16 md:mt-20 bg-white">
       {/* Header Section */}
       <div className="flex flex-col gap-3 sm:gap-4 px-4 sm:px-6 md:px-8">
         <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold">
@@ -33,7 +33,7 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex items-center justify-center flex-1 lg:pr-10">
-            <div className="text-center lg:text-left max-w-[400px] text-lg sm:text-xl font-bold">
+            <div className="text-center lg:text-left max-w-[400px] text-lg md:text-xl font-bold tracking-[0.23px]">
               <span className="text-primary mb-2 sm:mb-3">
                 Seamless Integration
               </span>
@@ -57,7 +57,7 @@ const AppleGrid = () => {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <div className="flex-1 text-lg sm:text-xl text-left font-bold">
+          <div className="flex-1 text-lg md:text-xl text-left font-bold tracking-[0.23px]">
             <span className="text-[#1D1D1F] mb-2 sm:mb-3">
               Enhanced Security
             </span>
@@ -80,7 +80,7 @@ const AppleGrid = () => {
               style={{ objectFit: "contain" }}
             />
           </div>
-          <div className="flex-1 text-lg sm:text-xl text-left font-bold">
+          <div className="flex-1 text-lg sm:text-xl text-left font-bold tracking-[0.23px]">
             <span className="text-primary mb-2 sm:mb-3">
               Enterprise Mobility
             </span>
@@ -103,7 +103,7 @@ const AppleGrid = () => {
             />
           </div>
           <div className="flex items-center justify-center flex-1 lg:pl-10">
-            <div className="text-lg sm:text-xl text-center lg:text-left max-w-[400px] font-bold">
+            <div className="text-lg sm:text-xl text-center lg:text-left max-w-[400px] font-bold tracking-[0.23px]">
               <span className="text-primary mb-2 sm:mb-3">
                 Enhanced Productivity.
               </span>

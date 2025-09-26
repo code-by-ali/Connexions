@@ -21,10 +21,10 @@ const EnterpriseGrid = () => {
 
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-3px]">
             Enterprise Mobility
           </h2>
-          <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-[#4B5563] text-base sm:text-lg md:text-xl leading-tight font-normal">
             Empower your workforce with secure, flexible mobile solutions that
             enable productivity from anywhere.
           </p>
@@ -32,26 +32,26 @@ const EnterpriseGrid = () => {
           {/* Feature List */}
           <div className="flex flex-col gap-2 sm:gap-3">
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg md:text-xl text-[#4B5563] font-normal">
                 Remote work capabilities
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg md:text-xl text-[#4B5563] font-normal">
                 Secure data access
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg md:text-xl text-[#4B5563] font-normal">
                 Real-time collaboration
               </span>
             </div>
@@ -59,7 +59,7 @@ const EnterpriseGrid = () => {
 
           {/* Button */}
           <div className="flex justify-center lg:justify-start mt-2">
-            <button className="border border-[#DEDEDE] bg-[#A6CE39] hover:bg-[#95B832] transition-colors rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-medium">
+            <button className="border border-[#DEDEDE] bg-[#A6CE39] rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-normal tracking-tight">
               Explore Service
             </button>
           </div>
@@ -81,10 +81,10 @@ const EnterpriseGrid = () => {
 
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-3px]">
             Zero-Touch Deployment
           </h2>
-          <p className="text-[#4B5563  ] text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-[#4B5563] text-base sm:text-lg md:text-xl leading-tight font-normal">
             Streamline device management with automated deployment and
             configuration solutions.
           </p>
@@ -92,26 +92,26 @@ const EnterpriseGrid = () => {
           {/* Feature List */}
           <div className="flex flex-col gap-2 sm:gap-3">
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg md:text-xl text-[#4B5563] font-normal">
                 Automated Setup
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg md:text-xl text-[#4B5563] font-normal">
                 Centralized management
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg md:text-xl text-[#4B5563] font-normal">
                 Reduced IT overhead
               </span>
             </div>
@@ -119,7 +119,7 @@ const EnterpriseGrid = () => {
 
           {/* Button */}
           <div className="flex justify-center lg:justify-start mt-2">
-            <button className="border border-[#DEDEDE] bg-[#A6CE39] hover:bg-[#95B832] transition-colors rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-medium">
+            <button className="border border-[#DEDEDE] bg-[#A6CE39] rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-normal tracking-tight">
               Explore Service
             </button>
           </div>
