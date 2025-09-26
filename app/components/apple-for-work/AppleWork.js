@@ -42,13 +42,13 @@ const AppleWork = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-col gap-8">
+    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-col gap-8 bg-white">
       {/* Title */}
       <div className="flex flex-col gap-4 items-center text-center">
         <p className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
           What Apple Offers for Work
         </p>
-        <p className="text-[#4B5563] text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl">
+        <p className="text-[#4B5563] text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl font-normal">
           Enterprise grade solutions designed for modern businesses
         </p>
       </div>
@@ -69,7 +69,7 @@ const AppleWork = () => {
                 width={36}
                 alt={card.alt}
               />
-              <p className="font-bold text-sm text-primary text-center">
+              <p className="font-bold text-sm md:text-base lg:text-lg text-primary text-center">
                 {card.title}
               </p>
             </div>

@@ -21,36 +21,36 @@ const AppleWorkEnterpriseGrid = () => {
 
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-3px]">
             Apple for Work & MDM
           </h2>
-          <p className="text-[#4B5563 ] text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-[#4B5563] font-normal text-base sm:text-lg md:text-xl xl:text-2xl leading-relaxed mt-2">
             Supported MDM Platforms:
           </p>
 
           {/* Feature List */}
           <div className="flex flex-col gap-2 sm:gap-3">
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg text-[#4B5563] font-normal">
                 Remote Wipe Capabilities
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg text-[#4B5563] font-normal">
                 Enforced security & Policy deployment at scale
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg text-[#4B5563] font-normal">
                 App whitelisting & management
               </span>
             </div>
@@ -58,7 +58,7 @@ const AppleWorkEnterpriseGrid = () => {
 
           {/* Button */}
           <div className="flex justify-center lg:justify-start mt-2">
-            <button className="border border-[#DEDEDE] bg-[#A6CE39] hover:bg-[#95B832] transition-colors rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-medium">
+            <button className="border border-[#DEDEDE] bg-[#A6CE39] rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-normal">
               Explore Service
             </button>
           </div>
@@ -80,44 +80,44 @@ const AppleWorkEnterpriseGrid = () => {
 
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-3px]">
             Apple Business Manager
           </h2>
-          <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-[#4B5563] font-normal text-base sm:text-lg md:text-xl xl:text-2xl leading-relaxed mt-2">
             Empowering IT Companies:
           </p>
 
           {/* Feature List */}
           <div className="flex flex-col gap-2 sm:gap-3">
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg text-[#4B5563] font-normal">
                 Automated device enrollment
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg text-[#4B5563] font-normal">
                 Bulk provisioning capabilities
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg text-[#4B5563] font-normal">
                 Centralized app licensing
               </span>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 items-center justify-center lg:justify-start">
-              <span className="text-[#A6CE39] flex-shrink-0">
+              <span className="text-[#22C55E] flex-shrink-0">
                 <Check size={16} className="sm:w-4 sm:h-4" />
               </span>
-              <span className="text-sm sm:text-base text-[#4B5563]">
+              <span className="text-base sm:text-lg text-[#4B5563] font-normal">
                 Role based user management
               </span>
             </div>
@@ -125,7 +125,7 @@ const AppleWorkEnterpriseGrid = () => {
 
           {/* Button */}
           <div className="flex justify-center lg:justify-start mt-2">
-            <button className="border border-[#DEDEDE] bg-[#A6CE39] hover:bg-[#95B832] transition-colors rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-medium">
+            <button className="border border-[#DEDEDE] bg-[#A6CE39] rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-normal">
               Explore Service
             </button>
           </div>

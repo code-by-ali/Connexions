@@ -22,11 +22,11 @@ const AppleWorkBanner = () => {
           Apple Means Business. <br />
           We make it Work for you.
         </p>
-        <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center">
+        <p className="text-base sm:text-lg md:text-xl text-[#4B5563] text-center font-normal">
           From onboarding to device refresh, unlock the full potential of Apple
           in your workplace with Connexions enterprise-ready approach
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-base md:text-lg font-semibold">
           <button className="w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
             Explore Deployment Models
           </button>
@@ -35,7 +35,7 @@ const AppleWorkBanner = () => {
           </button>
         </div>
         <div>
-          <button className="flex flex-row gap-2 text-base text-[#A6CE39] cursor-pointer">
+          <button className="flex flex-row gap-2 text-base text-[#A6CE39] cursor-pointer font-medium">
             <span>Download Program Guide </span>
             <span>
               <MoveRight />

@@ -7,13 +7,13 @@ import CommonImage from "../common/CommonImage";
 
 const AppleOffers = () => {
   return (
-    <div className="py-10 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col gap-10 items-center">
+    <div className="py-10 px-4 sm:px-8 md:px-12 lg:px-20 flex flex-col gap-10 items-center bg-white">
       {/* Title Section */}
       <div className="flex flex-col gap-4 text-center max-w-2xl">
         <p className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
           What Apple Offers for Work
         </p>
-        <p className="text-[#4B5563] text-sm sm:text-base md:text-lg lg:text-xl">
+        <p className="text-[#4B5563] text-sm sm:text-base md:text-lg lg:text-xl font-normal">
           Enterprise grade solutions designed for modern businesses
         </p>
       </div>
@@ -21,7 +21,7 @@ const AppleOffers = () => {
       {/* Cards */}
       <div className="flex flex-wrap gap-6 justify-center">
         {/* Card 1 */}
-        <div className="flex flex-col gap-4 px-4 py-4 shadow-2xl rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
+        <div className="flex flex-col gap-4 px-4 py-4 drop-shadow-sm rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
             <CommonImage
               width={28}
@@ -54,7 +54,7 @@ const AppleOffers = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="flex flex-col gap-4 px-4 py-4 shadow-2xl rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
+        <div className="flex flex-col gap-4 px-4 py-4 drop-shadow-sm rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
             <CommonImage
               width={28}
@@ -87,7 +87,7 @@ const AppleOffers = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="flex flex-col gap-4 px-4 py-4 shadow-2xl rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
+        <div className="flex flex-col gap-4 px-4 py-4 drop-shadow-sm rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
             <CommonImage
               width={28}
