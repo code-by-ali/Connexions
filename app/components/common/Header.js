@@ -224,7 +224,7 @@ const Header = () => {
           </div>
 
           {/* Nav Items */}
-          <ul className="flex flex-col gap-2 px-2">
+          <ul className="flex flex-col gap-4 px-2">
             {navItems.map((item) => (
               <li key={item.label} className="flex flex-col">
                 <div className="flex items-center justify-between cursor-pointer" onClick={() => item.dropdown ? toggleDropdown(item.label) : handleLinkClick(false)}>
