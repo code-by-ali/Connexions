@@ -5,7 +5,7 @@ import CommonImage from "../common/CommonImage";
 
 const AppleBusinessEnterpriseGrid = () => {
   return (
-    <div className="flex flex-col gap-6 sm:gap-8 py-8 sm:py-10 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-30 bg-[#F5F5F7] mb-10">
+    <div className="flex flex-col gap-6 sm:gap-8 py-8 sm:py-10 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-30 bg-white mb-10">
       {/* First Section - Enterprise Mobility */}
       <div className="flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 lg:gap-12">
         {/* Image */}

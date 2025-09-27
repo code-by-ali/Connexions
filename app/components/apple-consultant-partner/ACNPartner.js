@@ -43,7 +43,7 @@ const ACNPartner = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-10 flex flex-col gap-8 bg-[#F5F5F7]">
+    <div className="px-4 sm:px-8 md:px-12 lg:px-20 py-20 flex flex-col gap-8 bg-[#F5F5F7]">
       {/* Title */}
       <div className="flex flex-col gap-4 items-center text-center">
         <p className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -64,7 +64,7 @@ const ACNPartner = () => {
               key={idx}
               className="flex flex-col gap-3 items-center justify-center 
                          w-full max-w-[280px] h-[200px]
-                         bg-white p-4 border border-[#E9EBEF]
+                         p-4 border border-[#E9EBEF]
                           duration-300"
             >
               <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
@@ -98,7 +98,7 @@ const ACNPartner = () => {
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
                            w-full max-w-[320px] h-[240px]
-                           bg-white p-4 border border-[#E9EBEF]
+                           p-4 border border-[#E9EBEF]
                           duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">
@@ -130,7 +130,7 @@ const ACNPartner = () => {
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
                            w-full max-w-[320px] h-[240px]
-                           bg-white p-4 border border-[#E9EBEF]
+                            p-4 border border-[#E9EBEF]
                              duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">
@@ -160,7 +160,7 @@ const ACNPartner = () => {
             <div
               className="flex flex-col items-center justify-center 
                            w-full max-w-[320px] h-[240px]
-                           bg-white p-4 border border-[#E9EBEF]
+                           p-4 border border-[#E9EBEF]
                              duration-300"
             >
               <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
@@ -194,7 +194,7 @@ const ACNPartner = () => {
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
                            w-[280px] h-[260px] xl:w-[360px] xl:h-[240px]
-                           bg-white p-4 border border-[#E9EBEF] border-r-0 last:border-r
+                            p-4 border border-[#E9EBEF] border-r-0 last:border-r
                              duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">
@@ -226,7 +226,7 @@ const ACNPartner = () => {
                 key={idx}
                 className="flex flex-col gap-3 items-center justify-center 
                            w-[280px] h-[260px] xl:w-[360px] xl:h-[240px]
-                           bg-white p-4 border border-[#E9EBEF] border-r-0 border-t-0 last:border-r
+                           p-4 border border-[#E9EBEF] border-r-0 border-t-0 last:border-r
                              duration-300"
               >
                 <div className="w-16 h-16  flex items-center justify-center flex-shrink-0">

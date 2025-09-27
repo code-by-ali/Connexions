@@ -20,6 +20,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import Marquee from "react-fast-marquee";
 
 const AppleEcosystem = () => {
   // Extra data renderers
@@ -72,10 +73,15 @@ const AppleEcosystem = () => {
 
     const CardTemplate = ({ card }) => {
       return (
-        <div className="border border-gray-100 bg-[#FDFDFD] rounded-2xl flex flex-col p-4 gap-4">
+        <div className="border border-gray-100 bg-[#FDFDFD] rounded-2xl min-w-[240px] flex flex-col p-4 gap-4">
           <p className="flex gap-2 text-[#535862] text-sm font-normal items-center">
             <span>
-              <CommonImage src={card.icon.src || card.icon} alt={"card-icon"}  height={20} width={20}/>
+              <CommonImage
+                src={card.icon.src || card.icon}
+                alt={"card-icon"}
+                height={20}
+                width={20}
+              />
             </span>
             <span>{card.title}</span>
           </p>
@@ -85,74 +91,37 @@ const AppleEcosystem = () => {
               +64%
             </span>
           </div>
-          <p className="text-sm text-[#535862] font-normal">{card.secondaryData}</p>
+          <p className="text-sm text-[#535862] font-normal">
+            {card.secondaryData}
+          </p>
         </div>
       );
     };
 
     return (
       <div className="w-full flex flex-col gap-8">
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={16}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          className="w-full"
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 1,
-            },
-            1024: {
-              slidesPerView: 2,
-            },
-            1280: {
-              slidesPerView: 2,
-            },
-          }}
-        >
-          {dummyCards.map((card) => (
-            <SwiperSlide key={card.id}>
-              <CardTemplate card={card} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={16}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-            reverseDirection: true,
-          }}
-          loop={true}
-          className="w-full"
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 1,
-            },
-            1024: {
-              slidesPerView: 2,
-            },
-            1280: {
-              slidesPerView: 2,
-            },
-          }}
-        >
-          {dummyCards.map((card) => (
-            <SwiperSlide key={card.id}>
-              <CardTemplate card={card} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="relative">
+          <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          <Marquee>
+            {dummyCards.map((card) => (
+              <div className="mx-4">
+                <CardTemplate card={card} />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+        <div className="relative">
+          <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          <Marquee direction="right">
+            {dummyCards.map((card) => (
+              <div className="mx-4">
+                <CardTemplate card={card} />
+              </div>
+            ))}
+          </Marquee>
+        </div>
       </div>
     );
   };

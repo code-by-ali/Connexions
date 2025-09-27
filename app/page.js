@@ -17,7 +17,9 @@ export default function Home() {
       <ServicesSection />
       <ClientsSection />
       <FAQ />
-      <ConnectBanner />
+      <div className="py-20 bg-[#F8F9FA]">
+        <ConnectBanner />
+      </div>
     </div>
   );
 }

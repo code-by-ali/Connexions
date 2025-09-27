@@ -15,6 +15,7 @@ import Img1 from "@/public/assets/apple-work-section-card-1.svg";
 import Img2 from "@/public/assets/apple-work-section-card-2.svg";
 import Img3 from "@/public/assets/apple-work-section-card-3.svg";
 import Img4 from "@/public/assets/apple-work-section-card-4.svg";
+import Marquee from "react-fast-marquee";
 
 const AppleWorkSection = () => {
   const logos = [Logo1, Logo2, Logo3, Logo4, Logo1, Logo2, Logo3, Logo4];
@@ -56,32 +57,19 @@ const AppleWorkSection = () => {
       {/* Logo Carousel */}
       <div className="relative mb-16">
         {/* Fade effect left */}
-        <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-[#FAFAFA] to-transparent z-10 pointer-events-none"></div>
         {/* Fade effect right */}
-        <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-[#FAFAFA] to-transparent z-10 pointer-events-none"></div>
 
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={50}
-          slidesPerView={3}
-          loop={true}
-          speed={5000} // smooth continuous effect
-          autoplay={{ delay: 0, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 4 },
-            1024: { slidesPerView: 6 },
-          }}
-        >
+        <Marquee>
           {logos.map((logo, index) => (
-            <SwiperSlide key={index} className="flex justify-center">
-              <Image
-                src={logo}
-                alt={`Logo ${index}`}
-                className="h-10 w-auto object-contain"
-              />
-            </SwiperSlide>
+            <Image
+              src={logo}
+              alt={`Logo ${index}`}
+              className="h-8 mx-5 w-auto object-contain"
+            />
           ))}
-        </Swiper>
+        </Marquee>
       </div>
 
       {/* Divider */}
@@ -92,7 +80,7 @@ const AppleWorkSection = () => {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="bg-white shadow-sm rounded-3xl overflow-hidden border border-gray-200"
+            className="bg-white rounded-3xl overflow-hidden border border-[#f6f6f6]"
           >
             <Image
               src={card.img}

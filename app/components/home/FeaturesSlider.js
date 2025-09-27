@@ -32,7 +32,7 @@ const ServiceCard = ({ icon, title, description }) => {
           </div>
         </div>
 
-        <h3 className="text-xl lg:text-2xl font-bold text-primary mb-4 tracking-[0.2px] leading-tight">
+        <h3 className="text-xl lg:text-2xl font-bold text-primary mb-4 tracking-tight leading-tight">
           {title}
         </h3>
 

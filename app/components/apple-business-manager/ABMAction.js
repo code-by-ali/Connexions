@@ -137,10 +137,10 @@ const ABMAction = () => {
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-4">
                 {currentStep.title}
               </h3>
-              <p className="text-base sm:text-lg text-[#4B5563] mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#4B5563] mb-6 leading-relaxed font-medium tracking-tight">
                 {currentStep.description}
               </p>
-              <button className="bg-primary text-sm md:text-base text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+              <button className="bg-primary font-normal text-sm md:text-base text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
                 Get Started
               </button>
             </div>

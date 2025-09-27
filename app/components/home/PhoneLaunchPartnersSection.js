@@ -15,6 +15,7 @@ import HomeBannerLogo2 from "@/public/assets/abm-industries-logo-2.svg";
 import "swiper/css";
 import "swiper/css/autoplay";
 import CommonImage from "../common/CommonImage";
+import Marquee from "react-fast-marquee";
 
 const PhoneLaunchPartnersSection = () => {
   const phoneCards = [
@@ -73,7 +74,7 @@ const PhoneLaunchPartnersSection = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-[#7C7C7C] leading-relaxed mb-8 font-normal text-base md:text-lg">
+            <p className="text-[#7C7C7C] tracking-tight mb-8 font-normal text-base md:text-lg">
               iPhone’s new line-up is going to be live on Sept 7th, Make your
               move now and register with us for new device setup.
             </p>
@@ -95,35 +96,21 @@ const PhoneLaunchPartnersSection = () => {
             <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-            <Swiper
-              modules={[Autoplay]}
-              spaceBetween={0}
-              slidesPerView={1.5}
-              loop={true}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-              }}
-              speed={3000}
-              centeredSlides={false}
-              className="phone-showcase-swiper"
-            >
+            <Marquee>
               {phoneCards.map((phone, index) => (
-                <SwiperSlide key={index}>
-                  <div className="grid grid-cols-2 w-full max-w-md mx-auto px-6">
-                    {/* Phone Image Placeholder */}
-                    <div className="bg-gray-100 rounded-2xl  flex items-center justify-center col-span-2 mt-4">
-                      {/* Replace with actual iPhone image */}
-                      <CommonImage
-                        src={phone.bannerImg.src || phone.bannerImg}
-                        alt={phone.title}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
+                <div className="grid grid-cols-2 w-full max-w-md mx-auto px-6 mx-4">
+                  {/* Phone Image Placeholder */}
+                  <div className="bg-gray-100 rounded-2xl  flex items-center justify-center col-span-2 mt-4">
+                    {/* Replace with actual iPhone image */}
+                    <CommonImage
+                      src={phone.bannerImg.src || phone.bannerImg}
+                      alt={phone.title}
+                      className="w-full h-auto object-contain"
+                    />
                   </div>
-                </SwiperSlide>
+                </div>
               ))}
-            </Swiper>
+            </Marquee>
           </div>
         </div>
 
@@ -135,46 +122,19 @@ const PhoneLaunchPartnersSection = () => {
           </h2>
 
           {/* Partners Auto-scrolling Swiper */}
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={20}
-            slidesPerView={4}
-            loop={true}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-            }}
-            speed={3000}
-            breakpoints={{
-              640: {
-                slidesPerView: 6,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 8,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 10,
-                spaceBetween: 20,
-              },
-            }}
-            className="partners-swiper flex-1"
-          >
+          <Marquee>
             {partners.map((partner, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex items-center justify-center w-20 h-20 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-auto">
-                    <div className="w-16 h-16 object-contain bg-white border border-[#E6E9EE] rounded-2xl flex items-center justify-center">
-                    <CommonImage
-                      src={partner.logo.src || partner.logo}
-                      alt={partner.name}
-                      className="w-10 h-10 object-contain rounded-2xl"
-                    />
-                  </div>
+              <div className="flex items-center justify-center w-20 h-20 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
+                <div className="w-16 h-16 object-contain bg-white border border-[#E6E9EE] rounded-2xl flex items-center justify-center">
+                  <CommonImage
+                    src={partner.logo.src || partner.logo}
+                    alt={partner.name}
+                    className="w-10 h-10 object-contain rounded-2xl"
+                  />
                 </div>
-              </SwiperSlide>
+              </div>
             ))}
-          </Swiper>
+          </Marquee>
         </div>
 
         <style jsx>{`

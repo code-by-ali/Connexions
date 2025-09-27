@@ -94,7 +94,7 @@ const WhatYouGet = () => {
             We don’t stop at learning. Get mock interviews, optimized resumes,
             referrals, and job prep till you land the right role.
           </p>
-          <button className="mt-6 mx-auto font-medium flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm tracking-tight">
+          <button className="mt-6 mx-auto font-normal flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm tracking-tight">
             Join Now <ArrowRight size={16} />
           </button>
         </div>

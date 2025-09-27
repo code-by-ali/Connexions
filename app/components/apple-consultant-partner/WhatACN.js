@@ -19,7 +19,7 @@ const WhatACN = () => {
           </h2>
 
           {/* Right Description */}
-          <p className="text-[#4B5563] text-sm sm:text-base md:text-2xl leading-tight font-normal">
+          <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-tight font-normal">
             The Apple Consultants Network is a select group of independent
             technology service providers specially trained and certified by
             Apple. Connexions brings verified expertise in deploying Apple

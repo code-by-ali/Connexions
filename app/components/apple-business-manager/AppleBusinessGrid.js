@@ -23,10 +23,10 @@ const AppleBusinessGrid = () => {
             />
           </div>
           <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
-            <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              Seamless MDM Integartion
+            <h2 className="text-primary font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+              Seamless MDM Integration
             </h2>
-            <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-relaxed">
+            <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-tight font-normal tracking-tight">
               Apple Business Manager works hand-in-hand with your existing MDM
               solution
             </p>
@@ -40,7 +40,7 @@ const AppleBusinessGrid = () => {
                 <span className="text-[#A6CE39] flex-shrink-0">
                   <Check size={16} className="sm:w-4 sm:h-4" />
                 </span>
-                <span className="text-sm sm:text-base text-[#4B5563]">
+                <span className="text-sm sm:text-base text-[#4B5563] font-normal tracking-tight">
                   Automatic device assignment upon purchase{" "}
                 </span>
               </div>
@@ -48,7 +48,7 @@ const AppleBusinessGrid = () => {
                 <span className="text-[#A6CE39] flex-shrink-0">
                   <Check size={16} className="sm:w-4 sm:h-4" />
                 </span>
-                <span className="text-sm sm:text-base text-[#4B5563]">
+                <span className="text-sm sm:text-base text-[#4B5563] font-normal tracking-tight">
                   Zero touch MDM enrollment{" "}
                 </span>
               </div>
@@ -56,7 +56,7 @@ const AppleBusinessGrid = () => {
                 <span className="text-[#A6CE39] flex-shrink-0">
                   <Check size={16} className="sm:w-4 sm:h-4" />
                 </span>
-                <span className="text-sm sm:text-base text-[#4B5563]">
+                <span className="text-sm sm:text-base text-[#4B5563] font-normal tracking-tight">
                   Automated policy application{" "}
                 </span>
               </div>

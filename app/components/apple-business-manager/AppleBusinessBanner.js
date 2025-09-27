@@ -29,7 +29,7 @@ const AppleBusinessBanner = () => {
           <button className="w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
             Get Started
           </button>
-          <button className="w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-white px-5 py-3">
+          <button className="w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-transparent px-5 py-3">
             Learn More
           </button>
         </div>

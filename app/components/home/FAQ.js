@@ -70,11 +70,13 @@ const FAQ = () => {
           {faqData.map((item, index) => (
             <div
               key={index}
-              className={`${openIndex === index?"bg-white":"bg-transparent"} border border-[#E4E4E4] overflow-hidden rounded-2xl`}
+              className={`${
+                openIndex === index ? "bg-white" : "bg-transparent"
+              } border border-[#E4E4E4] overflow-hidden rounded-2xl`}
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full outline-none px-6 py-4 text-left flex items-center justify-between"
+                className="w-full outline-none cursor-pointer px-6 py-4 text-left flex items-center justify-between"
               >
                 <span className="text-base md:text-lg font-medium text-primary pr-8 tracking-[-0.36px]">
                   {item.question}

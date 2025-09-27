@@ -57,7 +57,7 @@ const ABMHelp = () => {
             <p className="font-bold text-base sm:text-lg md:text-xl text-primary">
               {item.title}
             </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#4B5563]">
+            <p className="text-sm font-normal sm:text-base md:text-lg text-[#4B5563]">
               {item.description}
             </p>
           </div>

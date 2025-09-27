@@ -53,14 +53,14 @@ const IndustriesWeServe = () => {
   const ScrollingRow = ({ items, direction = "left", speed = 30 }) => {
     // Duplicate items multiple times to create seamless loop
     const duplicatedItems = [...items, ...items, ...items];
-    
+
     return (
       <div className="overflow-hidden mb-6">
-        <div 
+        <div
           className="flex gap-6 items-center"
           style={{
             animation: `scroll-${direction} ${speed}s linear infinite`,
-            width: 'fit-content'
+            width: "fit-content",
           }}
         >
           {duplicatedItems.map((item, i) => (
@@ -82,7 +82,7 @@ const IndustriesWeServe = () => {
             transform: translateX(-33.333%);
           }
         }
-        
+
         @keyframes scroll-right {
           0% {
             transform: translateX(-33.333%);
@@ -92,10 +92,10 @@ const IndustriesWeServe = () => {
           }
         }
       `}</style>
-      
+
       <section className="relative py-20 px-6 md:px-12 lg:px-20 flex justify-center">
         <div
-          className="relative rounded-2xl shadow-md p-10 w-full max-w-6xl text-center overflow-hidden bg-cover bg-center"
+          className="relative rounded-2xl p-10 w-full max-w-6xl text-center overflow-hidden bg-cover bg-center"
           style={{
             backgroundImage: `url(${BgImage.src})`,
             backgroundSize: "cover",
@@ -122,10 +122,10 @@ const IndustriesWeServe = () => {
             <div>
               {/* Row 1 - Left to Right */}
               <ScrollingRow items={categories} direction="left" speed={25} />
-              
+
               {/* Row 2 - Right to Left */}
               <ScrollingRow items={categories2} direction="right" speed={30} />
-              
+
               {/* Row 3 - Left to Right */}
               <ScrollingRow items={categories3} direction="left" speed={28} />
             </div>
