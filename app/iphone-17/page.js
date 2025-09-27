@@ -4,9 +4,9 @@ import GetHighlightsSection from "../components/iphone-17/GetHighlightsSection";
 import CameraSection from "../components/iphone-17/CameraSection";
 import Environment from "../components/iphone-17/Environment";
 import OurValues from "../components/iphone-17/OurValues";
-import IphoneLinks from "../components/iphone-17/iPhoneLinks";
 import AllInFamily from "../components/iphone-17/AllInFamily";
 import Accessories from "../components/iphone-17/Accessories";
+import AppleLinks from "../components/iphone-17/AppleLinks";
 
 const page = () => {
   return (
@@ -18,7 +18,7 @@ const page = () => {
       <Accessories />
       <Environment />
       <OurValues />
-      <IphoneLinks />
+      <AppleLinks />
     </div>
   );
 };

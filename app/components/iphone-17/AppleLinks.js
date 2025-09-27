@@ -1,6 +1,6 @@
 import React from "react";
 
-const IphoneLinks = () => {
+const AppleLinks = () => {
   return (
     <section className="bg-white py-16 px-6 lg:px-24">
       <div className="max-w-3xl mr-auto">
@@ -52,4 +52,4 @@ const IphoneLinks = () => {
   );
 };
 
-export default IphoneLinks;
+export default AppleLinks;
