@@ -108,31 +108,29 @@ const GetHighlightsSection = () => {
           </Swiper>
         </div>
         {/* Navigation Buttons */}
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-4">
           <button
             onClick={slidePrev}
             disabled={isBeginning}
-            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center transition-all border border-primary ${
+            className={`w-10 h-0 bg-[#D2D2D7A3] rounded-full flex items-center justify-center border border-gray-200 ${
               isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
             <ChevronLeft
               className={`w-7 h-7 ${
-                isBeginning ? "text-[#86868B]" : "text-[#1D1D1F]"
+                isBeginning ? "text-gray-400" : "text-gray-600"
               }`}
             />
           </button>
           <button
             onClick={slideNext}
             disabled={isEnd}
-            className={`w-10 h-10 bg-white rounded-full flex items-center justify-center transition-all border border-primary ${
+            className={`w-10 h-10 bg-[#D2D2D7A3] rounded-full flex items-center justify-center border border-gray-200 ${
               isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
             <ChevronRight
-              className={`w-7 h-7 ${
-                isEnd ? "text-[#86868B]" : "text-[#1D1D1F]"
-              }`}
+              className={`w-7 h-7 ${isEnd ? "text-gray-400" : "text-gray-600"}`}
             />
           </button>
         </div>

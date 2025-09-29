@@ -5,6 +5,7 @@ import CommonImage from "../common/CommonImage";
 import Accessory1 from "@/public/assets/iphone-17-accessories-img-1.svg";
 import Accessory2 from "@/public/assets/iphone-17-accessories-img-2.svg";
 import Accessory3 from "@/public/assets/iphone-17-accessories-img-3.svg";
+import { ChevronRight } from "lucide-react";
 
 const Accessories = () => {
   const cards = [
@@ -35,9 +36,9 @@ const Accessories = () => {
         </h2>
         <a
           href="#"
-          className="mt-4 sm:mt-0 text-[#0066CC] text-sm md:text-base font-normal hover:underline"
+          className="mt-2 text-[#0066CC] text-sm md:text-base font-normal flex items-center gap-4"
         >
-          Shop iPhone accessories &gt;
+          Shop iPhone accessories <ChevronRight/>
         </a>
       </div>
 
