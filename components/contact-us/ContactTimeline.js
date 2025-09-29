@@ -1,8 +1,8 @@
 import { MoveRight } from "lucide-react";
 import React from "react";
-import timelineImg1 from "../../../public/assets/contact-page-timeline-1.png";
-import timelineImg2 from "../../../public/assets/contact-page-timeline-2.png";
-import timelineImg3 from "../../../public/assets/contact-page-timeline-3.png";
+import timelineImg1 from "@/public/assets/contact-page-timeline-1.png";
+import timelineImg2 from "@/public/assets/contact-page-timeline-2.png";
+import timelineImg3 from "@/public/assets/contact-page-timeline-3.png";
 import CommonImage from "../common/CommonImage";
 
 const steps = [

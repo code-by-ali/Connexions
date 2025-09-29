@@ -1,11 +1,11 @@
+import ABMAction from "@/components/apple-business-manager/ABMAction";
+import ABMHelp from "@/components/apple-business-manager/ABMHelp";
+import ABMIndustries from "@/components/apple-business-manager/ABMIndustries";
+import AppleBusinessBanner from "@/components/apple-business-manager/AppleBusinessBanner";
+import AppleBusinessEnterpriseGrid from "@/components/apple-business-manager/AppleBusinessEnterpriseGrid";
+import AppleBusinessGrid from "@/components/apple-business-manager/AppleBusinessGrid";
+import AppleBusinessManager from "@/components/apple-business-manager/AppleBusinessManager";
 import React from "react";
-import AppleBusinessBanner from "../components/apple-business-manager/AppleBusinessBanner";
-import AppleBusinessManager from "../components/apple-business-manager/AppleBusinessManager";
-import ABMHelp from "../components/apple-business-manager/ABMHelp";
-import AppleBusinessEnterpriseGrid from "../components/apple-business-manager/AppleBusinessEnterpriseGrid";
-import AppleBusinessGrid from "../components/apple-business-manager/AppleBusinessGrid";
-import ABMAction from "../components/apple-business-manager/ABMAction";
-import ABMIndustries from "../components/apple-business-manager/ABMIndustries";
 
 const page = () => {
   return (
@@ -16,7 +16,7 @@ const page = () => {
       <AppleBusinessGrid />
       <ABMAction />
       <ABMHelp />
-      <ABMIndustries/>
+      <ABMIndustries />
     </div>
   );
 };
