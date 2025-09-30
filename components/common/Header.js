@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Logo from "@/public/assets/connextions-logo-black-cropped.png";
-import { ChevronDown, Grid2x2, Search, Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Grid2x2, Search, Menu, X } from "lucide-react";
 import CommonImage from "./CommonImage";
 import FacebookIcon from "@/public/assets/facebook-icon.svg";
 import XIcon from "@/public/assets/x-icon.svg";
@@ -12,16 +12,23 @@ import LinkedinIcon from "@/public/assets/linkedin-icon.svg";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [openNestedDropdown, setOpenNestedDropdown] = useState(null);
   const navRef = useRef(null);
 
   const toggleDropdown = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
+    setOpenNestedDropdown(null); // Close nested dropdown when main dropdown changes
+  };
+
+  const toggleNestedDropdown = (menu) => {
+    setOpenNestedDropdown(openNestedDropdown === menu ? null : menu);
   };
 
   const handleLinkClick = (hasDropdown = false) => {
-    setOpenDropdown(null); // Close any open dropdown
+    setOpenDropdown(null);
+    setOpenNestedDropdown(null);
     if (!hasDropdown) {
-      setMenuOpen(false); // Close menu only if no dropdown
+      setMenuOpen(false);
     }
   };
 
@@ -30,6 +37,7 @@ const Header = () => {
     function handleClickOutside(e) {
       if (navRef.current && !navRef.current.contains(e.target)) {
         setOpenDropdown(null);
+        setOpenNestedDropdown(null);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -56,6 +64,12 @@ const Header = () => {
         { label: "Apple for Work", href: "/apple-for-work" },
         { label: "Apple Business Manager", href: "/apple-business-manager" },
         { label: "Apple Consultant Partner", href: "/apple-consultant-partner" },
+        { 
+          label: "New Launch", 
+          nested: [
+            { label: "iPhone 17", href: "/iphone-17" }
+          ]
+        },
       ],
     },
     {
@@ -155,8 +169,29 @@ const Header = () => {
                     {item.dropdown && openDropdown === item.label && (
                       <ul className="absolute top-full left-0 mt-2 bg-white rounded text-sm p-2 w-40 z-50">
                         {item.dropdown.map((sub, index) => (
-                          <li key={sub.label} className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${index !== item.dropdown.length - 1 ? "border-b border-gray-100" : ""}`}>
-                            <Link href={sub.href} onClick={() => handleLinkClick(false)}>{sub.label}</Link>
+                          <li key={sub.label} className={`relative px-3 py-1 hover:bg-gray-100 cursor-pointer ${index !== item.dropdown.length - 1 ? "border-b border-gray-100" : ""}`}>
+                            {sub.nested ? (
+                              <>
+                                <div 
+                                  className="flex items-center justify-between"
+                                  onMouseEnter={() => setOpenNestedDropdown(sub.label)}
+                                >
+                                  <span>{sub.label}</span>
+                                  <ChevronRight size={14} />
+                                </div>
+                                {openNestedDropdown === sub.label && (
+                                  <ul className="absolute left-full top-0 ml-1 bg-white border border-gray-200 rounded-md text-sm p-2 w-40 z-50">
+                                    {sub.nested.map((nestedItem, nestedIndex) => (
+                                      <li key={nestedItem.label} className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${nestedIndex !== sub.nested.length - 1 ? "border-b border-gray-100" : ""}`}>
+                                        <Link href={nestedItem.href} onClick={() => handleLinkClick(false)}>{nestedItem.label}</Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </>
+                            ) : (
+                              <Link href={sub.href} onClick={() => handleLinkClick(false)}>{sub.label}</Link>
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -185,8 +220,29 @@ const Header = () => {
                   {item.dropdown && openDropdown === item.label && (
                     <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-md text-sm p-2 w-40 z-50">
                       {item.dropdown.map((sub, index) => (
-                        <li key={sub.label} className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${index !== item.dropdown.length - 1 ? "border-b border-gray-100" : ""}`}>
-                          <Link href={sub.href} onClick={() => handleLinkClick(false)}>{sub.label}</Link>
+                        <li key={sub.label} className={`relative px-3 py-1 hover:bg-gray-100 cursor-pointer ${index !== item.dropdown.length - 1 ? "border-b border-gray-100" : ""}`}>
+                          {sub.nested ? (
+                            <>
+                              <div 
+                                className="flex items-center justify-between"
+                                onMouseEnter={() => setOpenNestedDropdown(sub.label)}
+                              >
+                                <span>{sub.label}</span>
+                                <ChevronRight size={14} />
+                              </div>
+                              {openNestedDropdown === sub.label && (
+                                <ul className="absolute left-full top-0 ml-1 bg-white border border-gray-200 rounded-md text-sm p-2 w-40 z-50">
+                                  {sub.nested.map((nestedItem, nestedIndex) => (
+                                    <li key={nestedItem.label} className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${nestedIndex !== sub.nested.length - 1 ? "border-b border-gray-100" : ""}`}>
+                                      <Link href={nestedItem.href} onClick={() => handleLinkClick(false)}>{nestedItem.label}</Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </>
+                          ) : (
+                            <Link href={sub.href} onClick={() => handleLinkClick(false)}>{sub.label}</Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -236,8 +292,29 @@ const Header = () => {
                 {item.dropdown && (
                   <ul className={`overflow-hidden transition-all duration-300 ${openDropdown === item.label ? "max-h-96 mt-2" : "max-h-0"}`}>
                     {item.dropdown.map((sub, index) => (
-                      <li key={sub.label} className={`px-3 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100`}>
-                        <Link href={sub.href} onClick={() => handleLinkClick(false)}>{sub.label}</Link>
+                      <li key={sub.label} className="border-b border-gray-100">
+                        {sub.nested ? (
+                          <div className="flex flex-col">
+                            <div 
+                              className="flex items-center justify-between px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                              onClick={() => toggleNestedDropdown(sub.label)}
+                            >
+                              <span>{sub.label}</span>
+                              <ChevronDown size={14} className={`transition-transform duration-200 ${openNestedDropdown === sub.label ? "rotate-180" : ""}`} />
+                            </div>
+                            <ul className={`overflow-hidden transition-all duration-300 ${openNestedDropdown === sub.label ? "max-h-96" : "max-h-0"}`}>
+                              {sub.nested.map((nestedItem) => (
+                                <li key={nestedItem.label} className="pl-6 pr-3 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-100">
+                                  <Link href={nestedItem.href} onClick={() => handleLinkClick(false)}>{nestedItem.label}</Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : (
+                          <div className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
+                            <Link href={sub.href} onClick={() => handleLinkClick(false)}>{sub.label}</Link>
+                          </div>
+                        )}
                       </li>
                     ))}
                   </ul>
