@@ -12,7 +12,7 @@ const CameraSection = () => {
         </p>
 
         {/* Gradient Text */}
-        <p className="max-w-3xl text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-[-1.2px] leading-tight bg-gradient-to-r from-[#A977C8] via-[#6F8CC7] via-33% via-[#639A47] via-50% to-[#1D1D1F] bg-clip-text text-transparent">
+        <p className="max-w-3xl text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-[-1.2px] leading-tight text-gradient">
           18MP Center Stage front camera. It’s a total frame changer.
         </p>
       </div>

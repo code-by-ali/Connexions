@@ -10,6 +10,7 @@ import Environment from "@/components/iphone-17/Environment";
 import GetHighlightsSection from "@/components/iphone-17/GetHighlightsSection";
 import HelpfulFeatures from "@/components/iphone-17/HelpfulFeatures";
 import IosFeatureSlider from "@/components/iphone-17/IosFeatureSlider";
+import KeepExploring from "@/components/iphone-17/KeepExploring";
 import OurValues from "@/components/iphone-17/OurValues";
 import React from "react";
 
@@ -26,6 +27,7 @@ const page = () => {
       <HelpfulFeatures />
       <Accessories />
       <BestPlaceToBuy />
+      <KeepExploring />
       <Environment />
       <OurValues />
       <AppleLinks />
