@@ -50,3 +50,28 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+.product-gradient-text{
+  background: linear-gradient(0deg, #7A8FA4 0%, #1D1D1F 70%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.product-gradient-green-text{
+  background: linear-gradient(103.39deg, #139A26 0%, #2696D2 100%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.product-gradient-pink-text{
+  background: linear-gradient(106.53deg, #915CF0 0%, #FF3434 100%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

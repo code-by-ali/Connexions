@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import React from "react";
+
 import KeepExploringBaseCameraIcon from "@/public/assets/iphone-17-keep-exploring-base-camera-icon.svg";
 import KeepExploringAirCameraIcon from "@/public/assets/iphone-17-keep-exploring-air-camera-icon.svg";
 import KeepExploringChipIcon from "@/public/assets/iphone-17-keep-exploring-chip-icon.svg";
@@ -12,7 +13,7 @@ import KeepExploringAirImage from "@/public/assets/iphone-17-keep-exploring-air-
 
 import CommonImage from "../common/CommonImage";
 
-const KeepExploring = () => {
+const KeepExploringAir = () => {
   return (
     <div className="pt-4 sm:pb-20 md:pb-40 lg:pb-60 bg-[#F5F5F7] flex flex-col gap-6 items-center lg:px-20">
       {/* Compare banner */}
@@ -51,14 +52,14 @@ const KeepExploring = () => {
               <br />
               Even more durable.
             </p>
-            <p className="text-primary font-bold text-sm md:text-base tracking-[-0.37px]">
+            {/* <p className="text-primary font-bold text-sm md:text-base tracking-[-0.37px]">
               From ₹82900.00 <br /> or ₹6492.00/mo. for 12 mo.
-            </p>
+            </p> */}
             <div className="flex flex-col gap-2 mt-4 items-start md:items-center text-sm md:text-base tracking-[-0.37px] h-[90px] md:h-auto">
               <p className="text-[#424245] px-4 py-2">Currently Viewing</p>
-              <p className="text-[#0066CC] flex items-center">
+              {/* <p className="text-[#0066CC] flex items-center">
                 Buy <ChevronRight size={16} className="ml-1 mt-1" />
-              </p>
+              </p> */}
             </div>
 
             <hr className="my-4 border-[#D2D2D7] w-full" />
@@ -139,20 +140,20 @@ const KeepExploring = () => {
               iPhone 17 Air
             </p>
             <p className="text-primary font-normal text-sm md:text-base tracking-[-0.37px]">
-              The thinnest iPhone ever.
+              Even more delightful.
               <br />
-              With the power of pro inside.
+              Even more durable.
             </p>
-            <p className="text-primary font-bold text-sm md:text-base tracking-[-0.37px]">
-              From ₹119900.00 <br /> or ₹9575.00/mo. for 12 mo.
-            </p>
+            {/* <p className="text-primary font-bold text-sm md:text-base tracking-[-0.37px]">
+              From ₹82900.00 <br /> or ₹6492.00/mo. for 12 mo.
+            </p> */}
             <div className="flex flex-col gap-2 mt-4 items-start md:items-center text-sm md:text-base tracking-[-0.37px] h-[90px] md:h-auto">
               <p className="text-white bg-[#0066CC] px-4 py-2 rounded-full">
                 Learn More
               </p>
-              <p className="text-[#0066CC] flex items-center">
+              {/* <p className="text-[#0066CC] flex items-center">
                 Buy <ChevronRight size={16} className="ml-1 mt-1" />
-              </p>
+              </p> */}
             </div>
 
             <hr className="my-4 border-[#D2D2D7] w-full" />
@@ -229,4 +230,4 @@ const KeepExploring = () => {
   );
 };
 
-export default KeepExploring;
+export default KeepExploringAir;
