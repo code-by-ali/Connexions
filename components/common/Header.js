@@ -79,7 +79,7 @@ const Header = () => {
           nested: [
             { label: "iPhone 17", href: "/iphone-17" },
             { label: "iPhone 17 Pro", href: "/iphone-17pro" },
-            // { label: "iPhone 17 Air", href: "/iphone-17air" },
+            { label: "iPhone 17 Air", href: "/iphone-17air" },
           ],
         },
       ],
