@@ -8,66 +8,124 @@ import GridIcon2 from "@/public/assets/apple-ecosystem-icon-2.svg";
 import GridIcon3 from "@/public/assets/apple-ecosystem-icon-3.svg";
 import GridIcon4 from "@/public/assets/apple-ecosystem-icon-4.svg";
 
-import GridCardImg1 from "@/public/assets/apple-ecosystem-card-img-1.svg";
-import GridCardImg3 from "@/public/assets/apple-ecosystem-card-img-3.svg";
-import GridCardImg4 from "@/public/assets/apple-ecosystem-card-img-4.svg";
+import Grid1Icon1 from "@/public/assets/apple-ecosystem-grid-1-icon-1.svg";
+import Grid1Icon2 from "@/public/assets/apple-ecosystem-grid-1-icon-2.svg";
+import Grid1Icon3 from "@/public/assets/apple-ecosystem-grid-1-icon-3.svg";
+import Grid1Icon4 from "@/public/assets/apple-ecosystem-grid-1-icon-4.svg";
 
 import MiniCardIcon1 from "@/public/assets/apple-ecosytem-mini-card-icon-1.svg";
 import MiniCardIcon2 from "@/public/assets/apple-ecosytem-mini-card-icon-2.svg";
 import MiniCardIcon3 from "@/public/assets/apple-ecosytem-mini-card-icon-3.svg";
+import MiniCardIcon4 from "@/public/assets/apple-ecosytem-mini-card-icon-4.svg";
+import MiniCardIcon5 from "@/public/assets/apple-ecosytem-mini-card-icon-5.svg";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
 import Marquee from "react-fast-marquee";
 
 const AppleEcosystem = () => {
   // Extra data renderers
-  const AdditionalDataCard1 = () => (
-    <div>
-      <CommonImage src={GridCardImg1.src || GridCardImg1} alt={"card-1"} />
-    </div>
-  );
+  const AdditionalDataCard1 = () => {
+    const features = [
+      { icon: Grid1Icon1, label: "Device Enrollment" },
+      { icon: Grid1Icon2, label: "App & Content Distribution" },
+      { icon: Grid1Icon3, label: "Role-based Access" },
+      { icon: Grid1Icon4, label: "Seamless MDM Integration" },
+    ];
+
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl p-3 sm:p-4 border border-[#E9EAEB]"
+          >
+            <div className="bg-[#F5F5F5] rounded-lg p-2 flex flex-row md:flex-col xl:flex-row gap-1 sm:gap-2 items-center md:items-start xl:items-center">
+              {/* Icon container */}
+              <div className="rounded-lg p-1 flex items-center justify-center flex-shrink-0">
+                <CommonImage
+                  src={feature.icon.src || feature.icon}
+                  alt={feature.label}
+                  width={24}
+                  height={24}
+                  className="w-5 h-5 sm:w-6 sm:h-6"
+                />
+              </div>
+
+              {/* Label */}
+              <p className="bg-white text-[#1D1D1F] rounded-lg text-xs lg:text-sm font-medium leading-tight px-2 py-1 flex-1 md:w-full xl:flex-1">
+                {feature.label}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   const AdditionalDataCard2 = () => {
     // Dummy data for cards
     const dummyCards = [
       {
         id: 1,
-        title: "Deals in Progress",
+        title: "Cost savings",
         icon: MiniCardIcon1,
-        dataMain: "42",
-        dataChange: "+64%",
-        secondaryData: (
-          <span>
-            vs <span className="text-primary font-bold">36</span> last month
-          </span>
-        ),
+        dataMain: "40%",
+        dataChange: "",
+        secondaryData: <span>Lower IT costs</span>,
       },
       {
         id: 2,
-        title: "Stalled Deals",
-        icon: MiniCardIcon2,
-        dataMain: "12",
-        dataChange: "-2",
-        secondaryData: (
-          <span>
-            vs <span className="text-primary font-bold">14</span> last week
-          </span>
-        ),
+        title: "Faster ROI",
+        icon: MiniCardIcon4,
+        dataMain: "3X",
+        dataChange: "",
+        secondaryData: <span>Return in Investment</span>,
       },
       {
         id: 3,
-        title: "New Leads",
-        icon: MiniCardIcon3,
-        dataMain: "194",
-        dataChange: "+21.5%",
+        title: "Adoption Rate",
+        icon: MiniCardIcon5,
+        dataMain: "$367,898",
+        dataChange: "",
         secondaryData: (
           <span>
-            vs <span className="text-primary font-bold">160</span> last month
+            <span className="text-primary font-bold">$320,071 </span> last year
           </span>
         ),
+      },
+    ];
+
+    const dummyCards2 = [
+      {
+        id: 1,
+        title: "Enterprise Security",
+        icon: MiniCardIcon2,
+        dataMain: "99.9%",
+        dataChange: "",
+        secondaryData: <span>Data Security</span>,
+      },
+      {
+        id: 2,
+        title: "Productivity Boost",
+        icon: MiniCardIcon3,
+        dataMain: "70%",
+        dataChange: "",
+        secondaryData: <span>Higher productivity</span>,
+      },
+      {
+        id: 3,
+        title: "Enterprise Security",
+        icon: MiniCardIcon2,
+        dataMain: "99.9%",
+        dataChange: "",
+        secondaryData: <span>Data Security</span>,
+      },
+      {
+        id: 4,
+        title: "Productivity Boost",
+        icon: MiniCardIcon3,
+        dataMain: "70%",
+        dataChange: "",
+        secondaryData: <span>Higher productivity</span>,
       },
     ];
 
@@ -86,9 +144,8 @@ const AppleEcosystem = () => {
             <span>{card.title}</span>
           </p>
           <div className="flex gap-2 items-end">
-            <span className="text-primary text-3xl font-bold">53</span>
-            <span className="border border-[#E9EAEB] text=[#535862] rounded-full text-sm  font-normal flex items-center py-1 px-2">
-              +64%
+            <span className="text-primary text-3xl font-bold">
+              {card.dataMain}
             </span>
           </div>
           <p className="text-sm text-[#535862] font-normal">
@@ -115,7 +172,7 @@ const AppleEcosystem = () => {
           <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
           <Marquee direction="right">
-            {dummyCards.map((card) => (
+            {dummyCards2.map((card) => (
               <div className="mx-4">
                 <CardTemplate card={card} />
               </div>
@@ -126,50 +183,126 @@ const AppleEcosystem = () => {
     );
   };
 
-  const AdditionalDataCard3 = () => (
-    <div>
-      <CommonImage src={GridCardImg3.src || GridCardImg3} alt={"card-3"} />
-    </div>
-  );
+  const AdditionalDataCard3 = () => {
+    const features = [
+      {
+        title: "Collaboration",
+        desc: "Work effortlessly across Mac, iPad, and iPhone with apps your teams already love.",
+      },
+      {
+        title: "Security",
+        desc: "Enterprise-grade protection with built-in encryption, privacy, and zero-trust management.",
+      },
+      {
+        title: "Flexibility",
+        desc: "Support for remote, hybrid, and on-site teams with secure mobility solutions.",
+      },
+      {
+        title: "Integration",
+        desc: "Easily connect with existing apps like Slack, Zoom, and Microsoft 365.",
+      },
+      {
+        title: "Performance",
+        desc: "Unmatched power and battery life designed for business productivity.",
+      },
+    ];
 
-  const AdditionalDataCard4 = () => (
-    <div>
-      <CommonImage src={GridCardImg4.src || GridCardImg4} alt={"card-4"} />
-    </div>
-  );
+    return (
+      <div className="bg-white rounded-2xl p-6 flex flex-col gap-6">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className={`flex ${
+              index % 2 === 0 ? "justify-start" : "justify-end"
+            }`}
+          >
+            <div className="bg-[#FDFDFD] border border-[#E9EAEB] rounded-xl p-2 w-full sm:w-4/5 flex flex-col">
+              <h4 className="text-[#1D1D1F] text-xs md:text-sm font-bold">
+                {feature.title}
+              </h4>
+              <p className="text-[#535862] text-xs md:text-sm font-normal">
+                {feature.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const AdditionalDataCard4 = () => {
+    const features = [
+      {
+        title: "Expert Guidance",
+        desc: "Get specialized consulting from Apple-certified professionals.",
+      },
+      {
+        title: "Tailored Solutions",
+        desc: "Get specialized consulting from Apple-certified professionals.",
+      },
+      {
+        title: "Seamless Integration",
+        desc: "Deploy Apple devices with existing workflows, apps, and IT.",
+      },
+      {
+        title: "Ongoing Support",
+        desc: "Continuous assistance for updates, troubleshooting, and upgrades.",
+      },
+    ];
+
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="bg-[#FDFDFD] border border-[#E9EAEB] rounded-xl p-6 flex flex-col gap-2"
+          >
+            <h4 className="text-[#1D1D1F] text-xs md:text-sm font-bold">
+              {feature.title}
+            </h4>
+            <p className="text-[#535862] text-xs md:text-sm font-normal leading-relaxed">
+              {feature.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   // Card data
   const ecosystemCards = [
     {
-      title: "Deploy in minutes",
+      title: "Apple for Enterprise",
       icon: GridIcon1,
-      descriptionPrimary: "Complete enterprise deployment. ",
+      descriptionPrimary:
+        "Empower your workforce with a secure, seamless ecosystem.",
       descriptionSecondary:
-        "Solution with custom configurations and dedicated support for large organizations.",
+        "Drive efficiency, cut costs, and unlock productivity at scale.",
       AdditionalData: AdditionalDataCard1,
     },
     {
       title: "Apple Business Manager",
       icon: GridIcon2,
-      descriptionPrimary: "Streamlined device procurement, ",
-      descriptionSecondary:
-        "app distribution, and user management through Apple's centralized platform.",
+      descriptionPrimary:
+        "Simplify how your organization deploys, manages, and secures Apple devices at scale. With Apple Business Manager (ABM), IT teams can configure devices instantly while employees enjoy a seamless out-of-the-box experience.",
+      descriptionSecondary: "",
       AdditionalData: AdditionalDataCard2,
     },
     {
-      title: "Applications",
+      title: "Apple @ work",
       icon: GridIcon3,
-      descriptionPrimary: "Productivity-focused solutions ",
+      descriptionPrimary: "Seamless tools for modern workplaces.",
       descriptionSecondary:
-        "that integrate seamlessly with your existing workflow and business applications.",
+        "Boost productivity, empower teams, and simplify IT with Apple's ecosystem.",
       AdditionalData: AdditionalDataCard3,
     },
     {
-      title: "Apple Professional Network",
+      title: "Apple Consultant Network",
       icon: GridIcon4,
       descriptionPrimary:
-        "Access certified Apple experts for specialized consulting, ",
-      descriptionSecondary: "implementation, and ongoing support services.",
+        "Certified Apple experts helping your business integrate, secure, and scale with tailored Apple solutions. ",
+      descriptionSecondary:
+        "From consulting to ongoing support, we're with you every step of the way.",
       AdditionalData: AdditionalDataCard4,
     },
   ];
@@ -208,7 +341,7 @@ const AppleEcosystem = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-sm border border-[#E9EAEB]"
+                className="bg-white rounded-2xl p-8 border border-[#E9EAEB]"
               >
                 {/* Card Header */}
                 <div className="mb-8">
