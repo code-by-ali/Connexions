@@ -12,21 +12,21 @@ const Stats = () => {
   return (
     <div className="w-full px-6 md:px-20 py-10 flex flex-col md:flex-row justify-between items-center gap-8">
       <div className={commonClassWrapper}>
-        <span className={commonClassHeader}>1M+</span>
+        <span className={commonClassHeader}>10K+</span>
         <span className={commonClassSubtitle}>
-          Customers visit connexions <br /> every month.
+          Enterprises empowered with <br /> tailored IT solutions.
         </span>
       </div>
       <div className={commonClassWrapper}>
-        <span className={commonClassHeader}>93%</span>
+        <span className={commonClassHeader}>95%</span>
         <span className={commonClassSubtitle}>
-          Satisfaction rate from our <br /> customers.
+          Client retention rate across<br />  industries.
         </span>
       </div>
       <div className={commonClassWrapper}>
-        <span className={commonClassHeader}>4.9</span>
+        <span className={commonClassHeader}>500+</span>
         <span className={commonClassSubtitle}>
-          Average customer ratings <br /> out of 5.00!
+          Enterprise deployments completed <br /> successfully
         </span>
       </div>
     </div>

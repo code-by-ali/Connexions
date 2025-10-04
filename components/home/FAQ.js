@@ -9,29 +9,34 @@ const FAQ = () => {
 
   const faqData = [
     {
-      question: "What is a Connexions?",
+      question:
+        "How does Connexions simplify Apple and Samsung deployments for enterprises?",
       answer:
-        "We pride ourselves in our 'client-first' mindset. We aim to provide cutting-edge solutions designed to empower your team with a special emphasis on superior customer care.",
+        "We take the complexity out of large-scale deployments. With zero-touch enrollment, Apple Business Manager (ABM), Samsung Knox, and seamless MDM integration, your devices arrive pre-configured and ready to use. IT saves time, employees get started faster, and your business scales with ease.",
     },
     {
-      question: "What services do we provide?",
+      question:
+        "What industries does Connexions serve with enterprise-ready IT solutions?",
       answer:
-        "We provide comprehensive business solutions including consulting, technology implementation, customer support systems, and strategic planning services tailored to your specific needs.",
+        "We partner with organizations across Healthcare & Life Sciences, Corporate Enterprises, Automotive, Manufacturing & Industrial, and IT/ITES. Each solution is tailored to industry-specific needs, ensuring technology empowers your teams and delivers measurable business outcomes.",
     },
     {
-      question: "Can I use multiple services at the same time?",
+      question:
+        "Why choose Connexions over other enterprise solution providers?",
       answer:
-        "Yes, absolutely! Our services are designed to work together seamlessly. You can combine multiple services to create a comprehensive solution that meets all your business requirements.",
+        "Because we are more than a reseller. As an authorized enterprise partner for Apple and Samsung, we deliver end-to-end solutions — from procurement and deployment to training, support, and lifecycle management. Our customer-first approach ensures technology adoption is smooth, scalable, and aligned with your strategy.",
     },
     {
-      question: "How customizable are the setups?",
+      question:
+        "What support and services can enterprises expect after deployment?",
       answer:
-        "Our setups are highly customizable to match your specific business needs. We work closely with you to understand your requirements and tailor our solutions accordingly.",
+        "Our commitment doesn't end at delivery. Connexions offers AppleCare for Business, extended warranties, trade-in programs, device recycling, AMC, and 24/7 enterprise support. We help you protect your investment while keeping your workforce productive and connected.",
     },
     {
-      question: "What tools do the connexions integrate with?",
+      question:
+        "How does Connexions ensure security and scalability for modern businesses?",
       answer:
-        "We integrate with a wide range of popular business tools including CRM systems, project management platforms, communication tools, and various third-party applications to ensure seamless workflow.",
+        "With zero-trust security frameworks, built-in Apple and Samsung encryption, secure mobile device management, and scalable deployment models, we safeguard your data while ensuring your technology grows with your enterprise. Security and productivity go hand in hand with Connexions.",
     },
   ];
 
@@ -94,7 +99,7 @@ const FAQ = () => {
 
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <div className="pt-4">
+                  <div className="pt-0">
                     <p className="text-[#4E5B6D] leading-relaxed text-base md:text-lg tracking-[-0.36px]">
                       {item.answer}
                     </p>
