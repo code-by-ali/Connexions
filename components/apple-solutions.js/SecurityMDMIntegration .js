@@ -153,11 +153,11 @@ const SecurityMDMIntegration = () => {
                   )}
 
                   {/* Plus Icon - Top Right */}
-                  <div className="absolute top-4 right-4 z-10">
+                  {/* <div className="absolute top-4 right-4 z-10">
                     <div className="w-8 h-8 bg-[#333336] bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm">
                       <Plus className="w-4 h-4 text-white" />
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col justify-end h-full p-8">

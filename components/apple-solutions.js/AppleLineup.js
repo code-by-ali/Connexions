@@ -25,7 +25,7 @@ const AppleLineup = () => {
       title: "iPhone 17 Pro",
       description:
         "Keep an eye on what matters most with cameras, doorbells, and more.",
-      linkText: "Shop Cameras and Sensors",
+      linkText: "Check it out",
       image: Iphone17Pro,
       backgroundColor: "bg-gray-900",
     },
@@ -33,7 +33,7 @@ const AppleLineup = () => {
       title: "iPhone 17",
       description:
         "Keep an eye on what matters most with cameras, doorbells, and more.",
-      linkText: "Shop Cameras and Sensors",
+      linkText: "Check it out",
       image: Iphone17,
       backgroundColor: "bg-purple-100",
     },
@@ -41,7 +41,7 @@ const AppleLineup = () => {
       title: "iPhone 17 Air",
       description:
         "Keep an eye on what matters most with cameras, doorbells, and more.",
-      linkText: "Shop Cameras and Sensors",
+      linkText: "Check it out",
       image: Iphone17Air,
       backgroundColor: "bg-gray-50",
     },
@@ -49,7 +49,7 @@ const AppleLineup = () => {
       title: "iPhone 17 Plus",
       description:
         "Keep an eye on what matters most with cameras, doorbells, and more.",
-      linkText: "Shop Cameras and Sensors",
+      linkText: "Check it out",
       image: AppleWatch,
       backgroundColor: "bg-blue-100",
     },

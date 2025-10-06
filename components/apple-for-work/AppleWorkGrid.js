@@ -1,8 +1,8 @@
 import React from "react";
-import AppleWorkGrid1 from "@/public/assets/apple-grid-1.svg";
+import AppleWorkGridImg1 from "@/public/assets/apple-work-grid-img-1.svg";
+import AppleWorkGridImg2 from "@/public/assets/apple-work-grid-img-2.svg";
 import AppleWorkGridIcon1 from "@/public/assets/apple-work-grid-1.svg";
 import AppleWorkGridIcon2 from "@/public/assets/apple-work-grid-2.svg";
-import AppleWorkGrid2 from "@/public/assets/apple-grid-2.svg";
 import CommonImage from "../common/CommonImage";
 
 const AppleWorkGrid = () => {
@@ -13,26 +13,20 @@ const AppleWorkGrid = () => {
         <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold">
           Built for Every Team, Trusted by IT
         </h2>
-        {/* <p className="text-[#4B5563] text-sm sm:text-base md:text-xl text-center max-w-4xl mx-auto">
-          Discover the advantages that make Apple the preferred choice for
-          forward-thinking businesses worldwide.
-        </p> */}
       </div>
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 gap-6 sm:gap-8 lg:gap-10">
         {/* First Large Card - Seamless Integration */}
-        <div className="lg:col-span-2 flex flex-col lg:flex-row justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
-          <div className="flex justify-center lg:justify-start">
+        <div className="lg:col-span-2 flex flex-col lg:flex-row justify-between bg-[#F5F5F7] gap-0 rounded-2xl overflow-hidden">
+          <div className="flex justify-center lg:justify-start h-64 lg:h-auto lg:w-1/2 mt-6 lg:mt-0">
             <CommonImage
-              src={AppleWorkGrid1.src || AppleWorkGrid1}
-              height={400}
-              width={550}
+              src={AppleWorkGridImg1.src || AppleWorkGridImg1}
               alt="apple-grid-img-1"
-              className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
+              className="w-full h-full object-cover rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none"
             />
           </div>
-          <div className="flex items-center justify-center flex-1 lg:pr-10">
+          <div className="flex items-center justify-center flex-1 py-6 px-6 sm:px-8 lg:px-10">
             <div className="text-center lg:text-left max-w-[400px] text-lg sm:text-xl font-bold tracking-[0.23px]">
               <span className="text-primary mb-2 sm:mb-3">CXOs</span>
               <span className="text-[#4B5563] ml-2">
@@ -81,17 +75,15 @@ const AppleWorkGrid = () => {
         </div>
 
         {/* Second Large Card - Right Image */}
-        <div className="lg:col-span-2 flex flex-col lg:flex-row-reverse justify-between bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
-          <div className="flex justify-center lg:justify-end">
+        <div className="lg:col-span-2 flex flex-col lg:flex-row-reverse justify-between bg-[#F5F5F7] gap-0 rounded-2xl overflow-hidden">
+          <div className="flex justify-center lg:justify-end h-64 lg:h-auto lg:w-1/2 mt-6 lg:mt-0">
             <CommonImage
-              className="rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl lg:rounded-tl-none lg:rounded-bl-none w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[550px] h-auto"
-              src={AppleWorkGrid2.src || AppleWorkGrid2}
-              height={400}
-              width={550}
+              src={AppleWorkGridImg2.src || AppleWorkGridImg2}
               alt="apple-grid-img-2"
+              className="w-full h-full object-cover rounded-t-2xl lg:rounded-r-2xl lg:rounded-tl-none"
             />
           </div>
-          <div className="flex items-center justify-center flex-1 lg:pl-10">
+          <div className="flex items-center justify-center flex-1 py-6 px-6 sm:px-8 lg:px-10">
             <div className="text-lg sm:text-xl text-center lg:text-left max-w-[400px] font-bold tracking-[0.23px]">
               <span className="text-primary mb-2 sm:mb-3">Employees.</span>
               <span className="text-[#4B5563] ml-2">

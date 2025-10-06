@@ -1,6 +1,10 @@
 import React from "react";
 import { Check } from "lucide-react";
-import EnterpriseGridImg from "@/public/assets/enterprise-grid-image.svg";
+import EnterpriseGridImg from "@/public/assets/enterprise-grid-image-1.svg";
+import AppleBusinessEnterpriseGridImg1 from "@/public/assets/apple-business-grid-img-1.svg";
+import AppleBusinessEnterpriseGridImg2 from "@/public/assets/apple-business-grid-img-2.svg";
+import AppleBusinessEnterpriseGridImg3 from "@/public/assets/apple-business-grid-img-3.svg";
+
 import CommonImage from "../common/CommonImage";
 
 const AppleBusinessEnterpriseGrid = () => {
@@ -11,7 +15,10 @@ const AppleBusinessEnterpriseGrid = () => {
         {/* Image */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-start">
           <CommonImage
-            src={EnterpriseGridImg.src || EnterpriseGridImg}
+            src={
+              AppleBusinessEnterpriseGridImg1.src ||
+              AppleBusinessEnterpriseGridImg1
+            }
             width={600}
             height={400}
             alt="enterprise mobility"
@@ -25,7 +32,7 @@ const AppleBusinessEnterpriseGrid = () => {
             Device Enrollment
           </h2>
           <p className="text-[#4B5563] text-sm sm:text-base md:text-lg leading-relaxed">
-            Automatically enrol new devices into your MDM solution the moment
+            Automatically enroll new devices into your MDM solution the moment
             they're unboxed, ensuring immediate compliance and security.
           </p>
 
@@ -43,7 +50,10 @@ const AppleBusinessEnterpriseGrid = () => {
         {/* Image */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-end">
           <CommonImage
-            src={EnterpriseGridImg.src || EnterpriseGridImg}
+            src={
+              AppleBusinessEnterpriseGridImg2.src ||
+              AppleBusinessEnterpriseGridImg2
+            }
             width={600}
             height={400}
             alt="zero-touch deployment"
@@ -75,7 +85,10 @@ const AppleBusinessEnterpriseGrid = () => {
         {/* Image */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-start">
           <CommonImage
-            src={EnterpriseGridImg.src || EnterpriseGridImg}
+            src={
+              AppleBusinessEnterpriseGridImg3.src ||
+              AppleBusinessEnterpriseGridImg3
+            }
             width={600}
             height={400}
             alt="enterprise mobility"

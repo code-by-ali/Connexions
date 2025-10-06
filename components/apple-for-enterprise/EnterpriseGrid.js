@@ -1,6 +1,7 @@
 import React from "react";
 import { Check } from "lucide-react";
-import EnterpriseGridImg from "@/public/assets/enterprise-grid-image.svg";
+import EnterpriseGridImg1 from "@/public/assets/enterprise-grid-image-1.svg";
+import EnterpriseGridImg2 from "@/public/assets/enterprise-grid-image-2.svg";
 import CommonImage from "../common/CommonImage";
 
 const EnterpriseGrid = () => {
@@ -11,7 +12,7 @@ const EnterpriseGrid = () => {
         {/* Image */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-start">
           <CommonImage
-            src={EnterpriseGridImg.src || EnterpriseGridImg}
+            src={EnterpriseGridImg1.src || EnterpriseGridImg1}
             width={600}
             height={400}
             alt="enterprise mobility"
@@ -71,7 +72,7 @@ const EnterpriseGrid = () => {
         {/* Image */}
         <div className="w-full lg:w-auto flex justify-center lg:justify-end">
           <CommonImage
-            src={EnterpriseGridImg.src || EnterpriseGridImg}
+            src={EnterpriseGridImg2.src || EnterpriseGridImg2}
             width={600}
             height={400}
             alt="zero-touch deployment"

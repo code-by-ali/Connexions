@@ -81,7 +81,7 @@ const StillHaveQuestions = () => {
         </div>
 
         {/* Questions List */}
-        <div className="space-y-1 p-4 bg-white">
+        <div className="space-y-1 p-4 bg-white rounded-2xl">
           {questionsData.map((item, index) => (
             <div
               key={index}

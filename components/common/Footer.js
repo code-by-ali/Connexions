@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section - Links */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {/* Quick Links */}
             <div>
               <h3 className="text-sm sm:text-base font-semibold text-primary mb-4">
@@ -59,7 +59,7 @@ const Footer = () => {
                     href="#"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
-                    Donation
+                    Home
                   </a>
                 </li>
                 <li>
@@ -67,7 +67,7 @@ const Footer = () => {
                     href="#"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
-                    About us
+                    Apple
                   </a>
                 </li>
                 <li>
@@ -75,40 +75,7 @@ const Footer = () => {
                     href="#"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
-                    Programs
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* More */}
-            <div>
-              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4">
-                More
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
-                  >
-                    Blogs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
-                  >
-                    Blogs details
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
-                  >
-                    Testimonials
+                    Contact us
                   </a>
                 </li>
               </ul>
@@ -126,14 +93,6 @@ const Footer = () => {
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
                     Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
-                  >
-                    Contact Us
                   </a>
                 </li>
               </ul>

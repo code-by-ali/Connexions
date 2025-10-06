@@ -18,8 +18,8 @@ const AppleCTA = () => {
   return (
     <section className="bg-white text-center py-10 px-6 flex flex-col items-center">
       {/* Announcement Pill */}
-      <div className="flex items-center gap-10 bg-[#FAFAFA] text-blue-600 rounded-full px-3 py-1 text-sm font-normal mb-6">
-        <span>iPhone 17 is here</span>
+      <div className="flex items-center gap-10 bg-[#FAFAFA] text-blue-600 rounded-full px-3 py-1 text-sm font-medium tracking-[-0.16px] mb-6">
+        <span>Apple Authorized Reseller</span>
         <div className="border-l-1 border-[#E9EAEB] pl-4">
           <span className="bg-white w-8 h-8 rounded-full flex items-center justify-center text-primary">
             <CommonImage

@@ -9,9 +9,6 @@ import CrownIcon from "@/public/assets/what-you-get-icon-3.svg";
 
 import CardImage1 from "@/public/assets/what-you-get-img-1.svg";
 import CardImage2 from "@/public/assets/what-you-get-img-2.svg";
-import CardImage3 from "@/public/assets/what-you-get-img-3.svg";
-import CardImage4 from "@/public/assets/what-you-get-img-4.svg";
-import CardImage5 from "@/public/assets/what-you-get-img-5.svg";
 
 const WhatYouGet = () => {
   return (
@@ -83,23 +80,25 @@ const WhatYouGet = () => {
         </div>
 
         {/* Column 2 - tall card */}
-        <div className="bg-white rounded-2xl p-6 shadow-md flex flex-col">
+        <div className="bg-white rounded-2xl p-0 shadow-md flex flex-col">
           <div className="flex flex-wrap justify-center gap-3 mb-6 flex-1">
             <CommonImage
               src={CardImage2.src || CardImage2}
               alt={"card-img-2"}
             />
           </div>
-          <h3 className="font-medium text-primary text-xl md:text-2xl mb-2 text-center tracking-[-1.02px]">
-            Industry Expertise
-          </h3>
-          <p className="text-primary text-sm md:text-base tracking-[-0.51px] text-center font-normal">
-            From healthcare to manufacturing and IT/ITES, we deliver tailored
-            solutions built around sector-specific challenges.
-          </p>
-          <button className="mt-6 mx-auto font-normal flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm tracking-tight">
-            Join Now <ArrowRight size={16} />
-          </button>
+          <div className="p-3">
+            <h3 className="font-medium text-primary text-xl md:text-2xl mb-2 text-center tracking-[-1.02px]">
+              Industry Expertise
+            </h3>
+            <p className="text-primary text-sm md:text-base tracking-[-0.51px] text-center font-normal">
+              From healthcare to manufacturing and IT/ITES, we deliver tailored
+              solutions built around sector-specific challenges.
+            </p>
+            <button className="mt-6 mx-auto font-normal flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm tracking-tight">
+              Join Now <ArrowRight size={16} />
+            </button>
+          </div>
         </div>
 
         {/* Column 3 - two stacked cards */}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Marquee from "react-fast-marquee";
 import CommonImage from "../common/CommonImage";
 import ClientsTitleIcon from "@/public/assets/faq-icon.svg";
 
@@ -30,22 +30,6 @@ const ClientsSection = () => {
     UpdatedClientIcon11,
   ];
 
-  const clientIconsDesktop = [
-    // Row 1 - 8 icons
-    [
-      UpdatedClientIcon1,
-      UpdatedClientIcon2,
-      UpdatedClientIcon3,
-      UpdatedClientIcon4,
-      UpdatedClientIcon5,
-      UpdatedClientIcon6,
-      UpdatedClientIcon7,
-      UpdatedClientIcon8,
-    ],
-    // Row 2 - 3 icons (centered)
-    [UpdatedClientIcon9, UpdatedClientIcon10, UpdatedClientIcon11],
-  ];
-
   return (
     <div className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
@@ -66,7 +50,7 @@ const ClientsSection = () => {
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0F0F0F] tracking-[-1px]  lg:tracking-[-3px] mb-3 sm:mb-4 px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0F0F0F] tracking-[-1px] lg:tracking-[-3px] mb-3 sm:mb-4 px-2">
             See for whom we are working
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-[#4E5B6D] px-4 font-medium tracking-[-0.36px]">
@@ -74,81 +58,23 @@ const ClientsSection = () => {
           </p>
         </div>
 
-        {/* Client Icons Grid */}
+        {/* Client Icons Marquee */}
         <div className="bg-[#F8F9FA] py-8 sm:py-12 px-4 sm:px-8 lg:px-12 rounded-2xl sm:rounded-3xl overflow-hidden">
-          {/* Desktop Layout (lg and above) - 8 on top, 3 centered on bottom */}
-          <div className="hidden lg:block space-y-8 xl:space-y-12">
-            {clientIconsDesktop.map((row, rowIndex) => (
-              <div key={rowIndex} className="flex justify-center">
-                <div
-                  className={`grid gap-8 xl:gap-12 ${
-                    rowIndex === 0 ? "grid-cols-8" : "grid-cols-3"
-                  }`}
-                >
-                  {row.map((client, iconIndex) => (
-                    <div
-                      key={iconIndex}
-                      className="flex items-center justify-center"
-                    >
-                      <div className="w-20 h-20 xl:w-24 xl:h-24 bg-white rounded-xl flex items-center justify-center transition-all duration-300 cursor-pointer group">
-                        <CommonImage
-                          height={48}
-                          width={48}
-                          src={client.src || client}
-                          alt={`client-icon-${rowIndex}-${iconIndex}`}
-                          className="w-10 h-10 xl:w-12 xl:h-12 group-hover:scale-110 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  ))}
+          <Marquee speed={40} gradient={false}>
+            {allClientIcons.map((client, index) => (
+              <div key={index} className="mx-4 sm:mx-6 lg:mx-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white rounded-xl flex items-center justify-center transition-all duration-300 cursor-pointer group hover:shadow-md">
+                  <CommonImage
+                    height={48}
+                    width={48}
+                    src={client.src || client}
+                    alt={`client-icon-${index}`}
+                    className="w-7 h-7 sm:w-10 sm:h-10 lg:w-12 lg:h-12 group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Tablet Layout (md to lg) - 4 columns */}
-          <div className="hidden md:block lg:hidden">
-            <div className="grid grid-cols-4 gap-6 justify-items-center">
-              {allClientIcons.map((client, iconIndex) => (
-                <div
-                  key={iconIndex}
-                  className="flex items-center justify-center"
-                >
-                  <div className="w-18 h-18 bg-white rounded-xl flex items-center justify-center transition-all duration-300 cursor-pointer group">
-                    <CommonImage
-                      height={36}
-                      width={36}
-                      src={client.src || client}
-                      alt={`client-icon-${iconIndex}`}
-                      className="w-9 h-9 group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Layout (sm and below) - 3 columns */}
-          <div className="block md:hidden">
-            <div className="grid grid-cols-3 gap-4 justify-items-center">
-              {allClientIcons.map((client, iconIndex) => (
-                <div
-                  key={iconIndex}
-                  className="flex items-center justify-center"
-                >
-                  <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center transition-all duration-300 cursor-pointer group">
-                    <CommonImage
-                      height={28}
-                      width={28}
-                      src={client.src || client}
-                      alt={`client-icon-${iconIndex}`}
-                      className="w-7 h-7 group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          </Marquee>
         </div>
       </div>
     </div>

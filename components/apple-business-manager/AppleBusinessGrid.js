@@ -1,8 +1,5 @@
 import React from "react";
-import AppleWorkGrid1 from "@/public/assets/apple-grid-1.svg";
-import AppleWorkGridIcon1 from "@/public/assets/apple-work-grid-1.svg";
-import AppleWorkGridIcon2 from "@/public/assets/apple-work-grid-2.svg";
-import AppleWorkGrid2 from "@/public/assets/apple-grid-2.svg";
+import AppleBusinessGridImg1 from "@/public/assets/apple-business-grid-1.svg";
 import CommonImage from "../common/CommonImage";
 import { Check } from "lucide-react";
 
@@ -15,7 +12,7 @@ const AppleBusinessGrid = () => {
         <div className="lg:col-span-2 flex flex-col lg:flex-row bg-[#F5F5F7] py-6 sm:py-8 lg:py-10 px-6 sm:px-8 lg:px-0 gap-6 sm:gap-10 lg:gap-20 rounded-2xl">
           <div className="flex justify-center lg:justify-start">
             <CommonImage
-              src={AppleWorkGrid1.src || AppleWorkGrid1}
+              src={AppleBusinessGridImg1.src || AppleBusinessGridImg1}
               height={400}
               width={550}
               alt="apple-grid-img-1"

@@ -94,9 +94,9 @@ const AppleWorkSection = () => {
               <p className="text-base md:text-lg text-[#1D1D1F] font-bold mb-2">
                 {card.desc}
               </p>
-              <button className="text-sm text-[#6E6E73] tracking-[-0.22px] font-medium hover:underline">
+              {/* <button className="text-sm text-[#6E6E73] tracking-[-0.22px] font-medium hover:underline">
                 Learn more
-              </button>
+              </button> */}
             </div>
           </div>
         ))}

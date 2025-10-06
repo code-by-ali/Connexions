@@ -1,5 +1,8 @@
 import React from "react";
-import AppleOfferImg from "@/public/assets/apple-offers-1.svg";
+import AppleOfferImg1 from "@/public/assets/apple-offers-img-1.svg";
+import AppleOfferImg2 from "@/public/assets/apple-offers-img-2.svg";
+import AppleOfferImg3 from "@/public/assets/apple-offers-img-3.svg";
+
 import AppleOfferIcon1 from "@/public/assets/apple-offers-icon-1.svg";
 import AppleOfferIcon2 from "@/public/assets/apple-offers-icon-2.svg";
 import AppleOfferIcon3 from "@/public/assets/apple-offers-icon-3.svg";
@@ -24,8 +27,8 @@ const AppleOffers = () => {
         <div className="flex flex-col gap-4 px-4 py-4 drop-shadow-sm rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
             <CommonImage
-              width={28}
-              height={28}
+              width={40}
+              height={40}
               src={AppleOfferIcon1.src || AppleOfferIcon1}
               alt="icon"
             />
@@ -46,7 +49,7 @@ const AppleOffers = () => {
           </div>
           <div className="mt-auto">
             <CommonImage
-              src={AppleOfferImg.src || AppleOfferImg}
+              src={AppleOfferImg1.src || AppleOfferImg1}
               alt="offer-img"
               className="rounded-xl object-contain"
             />
@@ -57,8 +60,8 @@ const AppleOffers = () => {
         <div className="flex flex-col gap-4 px-4 py-4 drop-shadow-sm rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
             <CommonImage
-              width={28}
-              height={28}
+              width={40}
+              height={40}
               src={AppleOfferIcon2.src || AppleOfferIcon2}
               alt="icon"
             />
@@ -79,7 +82,7 @@ const AppleOffers = () => {
           </div>
           <div className="mt-auto">
             <CommonImage
-              src={AppleOfferImg.src || AppleOfferImg}
+              src={AppleOfferImg2.src || AppleOfferImg2}
               alt="offer-img"
               className="rounded-xl object-contain"
             />
@@ -90,8 +93,8 @@ const AppleOffers = () => {
         <div className="flex flex-col gap-4 px-4 py-4 drop-shadow-sm rounded-2xl w-full sm:w-[300px] md:w-[340px] lg:w-[370px] min-h-[360px] lg:h-[420px] bg-white">
           <div className="flex gap-4 items-center">
             <CommonImage
-              width={28}
-              height={28}
+              width={40}
+              height={40}
               src={AppleOfferIcon3.src || AppleOfferIcon3}
               alt="icon"
             />
@@ -112,7 +115,7 @@ const AppleOffers = () => {
           </div>
           <div className="mt-auto">
             <CommonImage
-              src={AppleOfferImg.src || AppleOfferImg}
+              src={AppleOfferImg3.src || AppleOfferImg3}
               alt="offer-img"
               className="rounded-xl object-contain"
             />
