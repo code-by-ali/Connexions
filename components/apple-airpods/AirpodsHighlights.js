@@ -42,7 +42,7 @@ const AirpodsHighlights = () => {
   ];
 
   return (
-    <div className="bg-[#F5F5F7] py-16 px-4 sm:px-6 lg:px-20">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-12">
