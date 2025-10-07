@@ -82,11 +82,12 @@ const AboutUsShowcase = () => {
                 </span>
               </div>
 
-              <p className="text-xl md:text-2xl text-[#4E5B6D] leading-relaxed tracking-[-0.96px] font-medium">
+              <p className="text-xl md:text-2xl text-[#22222299] leading-relaxed tracking-[-0.96px] font-medium">
                 We started as a small group of passionate creators who believed
                 that great ideas deserve the best execution. What began over
                 coffee-fueled brainstorming sessions has grown into a thriving
-                digital agency dedicated to <span className="text-primary">helping brands stand out.</span>
+                digital agency dedicated to{" "}
+                <span className="text-primary">helping brands stand out.</span>
               </p>
             </div>
 
@@ -96,9 +97,7 @@ const AboutUsShowcase = () => {
                 onClick={slidePrev}
                 disabled={isBeginning}
                 className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center transition-all border border-gray-200 ${
-                  isBeginning
-                    ? "opacity-50 cursor-not-allowed"
-                    : ""
+                  isBeginning ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
                 <ChevronLeft
@@ -111,9 +110,7 @@ const AboutUsShowcase = () => {
                 onClick={slideNext}
                 disabled={isEnd}
                 className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center transition-all border border-gray-200 ${
-                  isEnd
-                    ? "opacity-50 cursor-not-allowed"
-                    : ""
+                  isEnd ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
                 <ChevronRight
@@ -174,13 +171,6 @@ const AboutUsShowcase = () => {
                     />
                   )}
 
-                  {/* Plus Icon - Bottom Right */}
-                  <div className="absolute bottom-4 right-4 z-10">
-                    <div className="w-8 h-8 bg-[#333336] bg-opacity-30 rounded-full flex items-center justify-center backdrop-blur-sm border-opacity-20">
-                      <Plus className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
-
                   {/* Content */}
                   <div className="relative z-10 flex flex-col justify-start h-full p-6">
                     <div>
@@ -209,9 +199,7 @@ const AboutUsShowcase = () => {
               onClick={slidePrev}
               disabled={isBeginning}
               className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center transition-all border border-gray-200 ${
-                isBeginning
-                  ? "opacity-50 cursor-not-allowed"
-                  : ""
+                isBeginning ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
               <ChevronLeft
@@ -224,9 +212,7 @@ const AboutUsShowcase = () => {
               onClick={slideNext}
               disabled={isEnd}
               className={`w-9 h-9 bg-[#D2D2D7A3] rounded-full flex items-center justify-center lg transition-all border border-gray-200 ${
-                isEnd
-                  ? "opacity-50 cursor-not-allowed"
-                  : ""
+                isEnd ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >
               <ChevronRight

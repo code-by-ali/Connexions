@@ -20,6 +20,7 @@ import MiniCardIcon4 from "@/public/assets/apple-ecosytem-mini-card-icon-4.svg";
 import MiniCardIcon5 from "@/public/assets/apple-ecosytem-mini-card-icon-5.svg";
 
 import Marquee from "react-fast-marquee";
+import Link from "next/link";
 
 const AppleEcosystem = () => {
   // Extra data renderers
@@ -273,6 +274,7 @@ const AppleEcosystem = () => {
   const ecosystemCards = [
     {
       title: "Apple for Enterprise",
+      link: "/apple-for-enterprise",
       icon: GridIcon1,
       descriptionPrimary:
         "Empower your workforce with a secure, seamless ecosystem.",
@@ -283,6 +285,7 @@ const AppleEcosystem = () => {
     {
       title: "Apple Business Manager",
       icon: GridIcon2,
+      link: "/apple-business-manager",
       descriptionPrimary:
         "Simplify how your organization deploys, manages, and secures Apple devices at scale. With Apple Business Manager (ABM), IT teams can configure devices instantly while employees enjoy a seamless out-of-the-box experience.",
       descriptionSecondary: "",
@@ -291,6 +294,7 @@ const AppleEcosystem = () => {
     {
       title: "Apple @ work",
       icon: GridIcon3,
+      link: "/apple-for-work",
       descriptionPrimary: "Seamless tools for modern workplaces.",
       descriptionSecondary:
         "Boost productivity, empower teams, and simplify IT with Apple's ecosystem.",
@@ -299,6 +303,7 @@ const AppleEcosystem = () => {
     {
       title: "Apple Consultant Network",
       icon: GridIcon4,
+      link: "/apple-consultant-partner",
       descriptionPrimary:
         "Certified Apple experts helping your business integrate, secure, and scale with tailored Apple solutions. ",
       descriptionSecondary:
@@ -351,9 +356,11 @@ const AppleEcosystem = () => {
                       width={24}
                       src={card.icon.src || card.icon}
                     />
-                    <h3 className="text-base md:text-lg font-medium tracking-tight">
-                      {card.title}
-                    </h3>
+                    <Link href={card.link}>
+                      <h3 className="text-base md:text-lg font-medium tracking-tight">
+                        {card.title}
+                      </h3>
+                    </Link>
                     <ChevronRight size={20} />
                   </div>
                   <p className="leading-relaxed text-lg md:text-xl xl:text-2xl tracking-[-1.01px] font-normal">

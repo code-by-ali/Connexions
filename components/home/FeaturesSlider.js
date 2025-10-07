@@ -19,7 +19,7 @@ import CommonImage from "../common/CommonImage";
 // ServiceCard Component — NOTE: uses h-full and flex so it will fill slide height
 const ServiceCard = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-6 rounded-3xl min-h-[330px] flex flex-col justify-between border border-[#F6F6F6]">
+    <div className="bg-white p-6 rounded-3xl min-h-[310px] flex flex-col justify-between border border-[#F6F6F6]">
       <div>
         <div className="mb-6">
           <div className="w-12 h-12">
@@ -39,12 +39,6 @@ const ServiceCard = ({ icon, title, description }) => {
         <p className="text-primary text-base font-normal leading-relaxed tracking-[-0.37px] mb-6">
           {description}
         </p>
-      </div>
-
-      <div className="flex justify-end">
-        <button className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-          <Plus className="w-4 h-4 text-white" />
-        </button>
       </div>
     </div>
   );

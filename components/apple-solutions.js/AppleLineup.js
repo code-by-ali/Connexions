@@ -13,6 +13,7 @@ import Iphone17Pro from "@/public/assets/apple-lineup-iphone17pro.svg";
 import Iphone17 from "@/public/assets/apple-lineup-iphone17.svg";
 import Iphone17Air from "@/public/assets/apple-lineup-iphone17air.svg";
 import AppleWatch from "@/public/assets/apple-lineup-watch.svg";
+import AppleAirpods from "@/public/assets/apple-lineup-airpods.svg";
 import CommonImage from "../common/CommonImage";
 
 const AppleLineup = () => {
@@ -24,34 +25,45 @@ const AppleLineup = () => {
     {
       title: "iPhone 17 Pro",
       description:
-        "Keep an eye on what matters most with cameras, doorbells, and more.",
+        "Exceptional performance. Ultimate pro camera system. Breakthrough battery life. A19 Pro chip.",
       linkText: "Check it out",
       image: Iphone17Pro,
       backgroundColor: "bg-gray-900",
+      link: "/iphone-17pro",
     },
     {
       title: "iPhone 17",
       description:
-        "Keep an eye on what matters most with cameras, doorbells, and more.",
+        "With a better display, selfie camera, battery life, and storage than the previous model.",
       linkText: "Check it out",
       image: Iphone17,
       backgroundColor: "bg-purple-100",
+      link: "/iphone-17",
     },
     {
       title: "iPhone 17 Air",
       description:
-        "Keep an eye on what matters most with cameras, doorbells, and more.",
+        "Thinnest iPhone Ever, Display with Promotion up to 120Hz, Powerful A19 Pro Chip",
       linkText: "Check it out",
       image: Iphone17Air,
       backgroundColor: "bg-gray-50",
+      link: "/iphone-17air",
     },
     {
-      title: "iPhone 17 Plus",
-      description:
-        "Keep an eye on what matters most with cameras, doorbells, and more.",
+      title: "Apple Watch",
+      description: "It can help you track your distance, pace and heart rate",
       linkText: "Check it out",
       image: AppleWatch,
       backgroundColor: "bg-blue-100",
+      link: "/apple-watch",
+    },
+    {
+      title: "Apple Airpods",
+      description: "The next evolution of sound, comfort and noise control.",
+      linkText: "Check it out",
+      image: AppleAirpods,
+      backgroundColor: "bg-blue-100",
+      link: "/apple-airpods",
     },
   ];
 
@@ -128,7 +140,7 @@ const AppleLineup = () => {
               <SwiperSlide key={index}>
                 <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 ">
                   {/* Product Info */}
-                  <div className="p-6 text-center">
+                  <div className="p-6 text-center min-h-[192px]">
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1D1D1F] tracking-[-0.22px] mb-3">
                       {product.title}
                     </h3>
@@ -136,8 +148,8 @@ const AppleLineup = () => {
                       {product.description}
                     </p>
                     <a
-                      href="#"
-                      className="text-[#0066CC] text-sm md:text-base tracking-[-0.37px] font-medium inline-block mb-4"
+                      href={product.link}
+                      className="text-[#0066CC] text-sm md:text-base tracking-[-0.37px] font-medium inline-block mb-1"
                     >
                       {product.linkText}
                     </a>

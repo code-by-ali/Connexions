@@ -6,6 +6,7 @@ import CalendlyCard from "@/public/assets/calendly-card.svg";
 import BannerBg from "@/public/assets/connect-banner-bg.svg";
 import { InlineWidget } from "react-calendly";
 import CommonImage from "./CommonImage";
+import Link from "next/link";
 
 const ConnectBanner = () => {
   return (
@@ -28,9 +29,12 @@ const ConnectBanner = () => {
             <ArrowRight className="w-5 h-5 bg-primary text-white rounded-sm p-1" />
           </button>
 
-          <button className="cursor-pointer h-11 px-5 bg-white text-primary rounded-lg text-sm font-medium w-full sm:w-auto">
+          <Link
+            href={"/contact-us"}
+            className="cursor-pointer flex items-center h-11 px-5 bg-white text-primary rounded-lg text-sm font-medium w-full sm:w-auto"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
 

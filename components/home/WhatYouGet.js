@@ -9,6 +9,7 @@ import CrownIcon from "@/public/assets/what-you-get-icon-3.svg";
 
 import CardImage1 from "@/public/assets/what-you-get-img-1.svg";
 import CardImage2 from "@/public/assets/what-you-get-img-2.svg";
+import Link from "next/link";
 
 const WhatYouGet = () => {
   return (
@@ -95,9 +96,11 @@ const WhatYouGet = () => {
               From healthcare to manufacturing and IT/ITES, we deliver tailored
               solutions built around sector-specific challenges.
             </p>
-            <button className="mt-6 mx-auto font-normal flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm tracking-tight">
-              Join Now <ArrowRight size={16} />
-            </button>
+            <Link href={"/contact-us"}>
+              <button className="cursor-pointer mt-6 mx-auto font-normal flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm tracking-tight">
+                Join Now <ArrowRight size={16} />
+              </button>
+            </Link>
           </div>
         </div>
 

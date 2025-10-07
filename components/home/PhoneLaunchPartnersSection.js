@@ -9,6 +9,7 @@ import HomeBannerImg2 from "@/public/assets/home-banner-img-2.svg";
 import HomeBannerImg3 from "@/public/assets/home-banner-img-3.svg";
 import HomeBannerImg4 from "@/public/assets/home-banner-img-4.svg";
 import HomeBannerImg5 from "@/public/assets/home-banner-img-5.svg";
+import HomeBannerImg6 from "@/public/assets/home-banner-img-6.svg";
 
 import HomeBannerLogo1 from "@/public/assets/home-banner-logo-1.svg";
 import HomeBannerLogo2 from "@/public/assets/home-banner-logo-2.svg";
@@ -23,6 +24,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import CommonImage from "../common/CommonImage";
 import Marquee from "react-fast-marquee";
+import Link from "next/link";
 
 const PhoneLaunchPartnersSection = () => {
   const phoneCards = [
@@ -40,6 +42,9 @@ const PhoneLaunchPartnersSection = () => {
     },
     {
       bannerImg: HomeBannerImg5,
+    },
+    {
+      bannerImg: HomeBannerImg6,
     },
   ];
 
@@ -68,11 +73,10 @@ const PhoneLaunchPartnersSection = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 pl-1 pr-3 py-1 font-normal bg-[#F0F0F0] text-primary rounded-full text-sm mb-6 w-fit">
-              <span className="bg-[#A6CE39] text-white rounded-full px-2 py-1">
-                New
+            <div className="inline-flex items-center gap-2 px-3 py-1 font-normal bg-[#FAFAFA] text-primary rounded-full text-sm mb-6 w-fit">
+              <span className="bg-gradient-to-r from-[#0F0F0F] via-[#2E90FA] to-[#0F0F0F] bg-clip-text text-transparent">
+                Apple Authorized Reseller
               </span>
-              <span>Check it now</span>
             </div>
 
             {/* Main Heading */}
@@ -87,12 +91,14 @@ const PhoneLaunchPartnersSection = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 text-sm font-normal">
-              <button className="bg-[#A6CE39] text-white px-8 py-3 rounded-full transition-colors">
+              {/* <button className="bg-[#A6CE39] text-white px-8 py-3 rounded-full transition-colors">
                 Explore Now
-              </button>
-              <button className="bg-primary text-white px-8 py-3 rounded-full transition-colors">
-                Get Started
-              </button>
+              </button> */}
+              <Link href={"/contact-us"}>
+                <button className="bg-primary text-white px-8 py-3 rounded-full transition-colors">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
 

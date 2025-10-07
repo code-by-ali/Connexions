@@ -13,13 +13,16 @@ import CTAIcon1 from "@/public/assets/apple-solutions-cta-icon-1.svg";
 import CTAIcon2 from "@/public/assets/apple-solutions-cta-icon-2.svg";
 import CTAIcon3 from "@/public/assets/apple-solutions-cta-icon-3.svg";
 import TitleIcon from "@/public/assets/apple-solutions-cta-title-icon.svg";
+import Link from "next/link";
 
 const AppleCTA = () => {
   return (
     <section className="bg-white text-center py-10 px-6 flex flex-col items-center">
       {/* Announcement Pill */}
-      <div className="flex items-center gap-10 bg-[#FAFAFA] text-blue-600 rounded-full px-3 py-1 text-sm font-medium tracking-[-0.16px] mb-6">
-        <span>Apple Authorized Reseller</span>
+      <div className="flex items-center gap-10 bg-[#FAFAFA] rounded-full px-3 py-1 text-sm font-medium tracking-[-0.16px] mb-6">
+        <span className="bg-gradient-to-r from-[#0F0F0F] via-[#2E90FA] to-[#0F0F0F] bg-clip-text text-transparent">
+          Apple Authorized Reseller
+        </span>
         <div className="border-l-1 border-[#E9EAEB] pl-4">
           <span className="bg-white w-8 h-8 rounded-full flex items-center justify-center text-primary">
             <CommonImage
@@ -54,17 +57,19 @@ const AppleCTA = () => {
             <ChevronRight height={20} width={20} />
           </span>
         </button>
-        <button className="flex cursor-pointer items-center gap-2 bg-white border border-[#D5D7DA] text-[#1D1D1F] px-6 py-3 rounded-full text-sm transition font-normal">
-          Talk to an Expert{" "}
-          <span>
-            <CommonImage
-              height={20}
-              width={20}
-              src={TalkToExpertIcon.src || TalkToExpertIcon}
-              alt={"cta-icon"}
-            />
-          </span>
-        </button>
+        <Link href={"/contact-us"}>
+          <button className="flex cursor-pointer items-center gap-2 bg-white border border-[#D5D7DA] text-[#1D1D1F] px-6 py-3 rounded-full text-sm transition font-normal">
+            Talk to an Expert{" "}
+            <span>
+              <CommonImage
+                height={20}
+                width={20}
+                src={TalkToExpertIcon.src || TalkToExpertIcon}
+                alt={"cta-icon"}
+              />
+            </span>
+          </button>
+        </Link>
       </div>
 
       {/* Trust Signals */}

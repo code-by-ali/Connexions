@@ -56,14 +56,6 @@ const Header = () => {
   const navItems = [
     { label: "Home", href: "/" },
     {
-      label: "Services",
-      dropdown: [
-        { label: "Consulting", href: "#" },
-        { label: "Support", href: "#" },
-        { label: "Cloud", href: "#" },
-      ],
-    },
-    {
       label: "Apple",
       dropdown: [
         { label: "Apple Solutions", href: "/apple-solutions" },
@@ -84,23 +76,7 @@ const Header = () => {
         },
       ],
     },
-    {
-      label: "Partners",
-      dropdown: [
-        { label: "Microsoft", href: "#" },
-        { label: "AWS", href: "#" },
-        { label: "Google", href: "#" },
-      ],
-    },
-    {
-      label: "Resources",
-      dropdown: [
-        { label: "Blog", href: "#" },
-        { label: "Case Studies", href: "#" },
-        { label: "Docs", href: "#" },
-      ],
-    },
-    { label: "Sustainability", href: "#" },
+    { label: "Contact Us", href: "/contact-us" },
   ];
 
   return (

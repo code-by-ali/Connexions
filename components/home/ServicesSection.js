@@ -20,6 +20,7 @@ import ServicesSectionIcon5 from "@/public/assets/services-section-grid-icon-5.s
 import ServicesSectionIcon6 from "@/public/assets/services-section-grid-icon-6.svg";
 import ServicesSectionIcon7 from "@/public/assets/services-section-grid-icon-7.svg";
 import ServicesSectionIcon8 from "@/public/assets/services-section-grid-icon-8.svg";
+import Link from "next/link";
 
 const services = [
   {
@@ -94,7 +95,9 @@ const ServicesSection = () => {
               src={FAQIcon.src || FAQIcon}
             />
           </div>
-          <p className="ml-2 text-base text-primary font-medium tracking-tight">Services</p>
+          <p className="ml-2 text-base text-primary font-medium tracking-tight">
+            Services
+          </p>
         </div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-[-3px] mb-12">
           Services from connexions
@@ -125,20 +128,27 @@ const ServicesSection = () => {
                     className="text-xs font-normal flex items-center gap-1"
                   >
                     <span className="w-1 h-1 bg-[#A6CE39] rounded-full"></span>
-                    <span className="text-[#0F0F0F] font-normal uppercase">{tag}</span>
+                    <span className="text-[#0F0F0F] font-normal uppercase">
+                      {tag}
+                    </span>
                   </p>
                 ))}
               </div>
-              <p className="text-xs md:text-sm font-normal text-[#565F6B] ">{service.description}</p>
+              <p className="text-xs md:text-sm font-normal text-[#565F6B] ">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Button */}
         <div className="mt-12">
-          <button className="px-6 py-3 rounded-xl bg-primary text-base text-white font-medium transition">
+          <Link
+            href={"/contact-us"}
+            className="px-6 py-3 rounded-xl bg-primary text-base text-white font-medium transition"
+          >
             Contact Now
-          </button>
+          </Link>
         </div>
       </div>
     </section>
