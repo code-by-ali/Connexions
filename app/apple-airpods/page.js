@@ -1,4 +1,5 @@
 import AirpodsBanner from "@/components/apple-airpods/AirpodsBanner";
+import AirPodsBatterySection from "@/components/apple-airpods/AirpodsBatterySection";
 import AirpodsHighlights from "@/components/apple-airpods/AirpodsHighlights";
 import BestBuyAirpods from "@/components/apple-airpods/BestBuyAirpods";
 import EnvironmentAirpods from "@/components/apple-airpods/EnvironmentAirpods";
@@ -14,6 +15,7 @@ const page = () => {
       <AirpodsHighlights />
       <BestBuyAirpods />
       <MagicToYourEars />
+      <AirPodsBatterySection />
       <KeepExploringAirpods />
       <EnvironmentAirpods />
       <OurValuesAirpods />

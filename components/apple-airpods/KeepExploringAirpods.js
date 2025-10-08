@@ -59,7 +59,7 @@ const KeepExploringAirpods = () => {
             <hr className="my-4 border-[#D2D2D7] w-full" />
 
             <div className="flex flex-col gap-4 items-start md:items-center text-xs font-normal tracking-[-0.12px]">
-              <div className="flex flex-col gap-2 items-start md:items-center">
+              <div className="flex flex-col gap-4 items-start md:items-center">
                 <CommonImage
                   height={56}
                   width={41}
@@ -74,7 +74,7 @@ const KeepExploringAirpods = () => {
               <div className="flex flex-col gap-2 items-start md:items-center">
                 <CommonImage
                   height={56}
-                  width={35}
+                  width={89}
                   src={
                     AppleAirpodsTwoPeopleIcon.src || AppleAirpodsTwoPeopleIcon
                   }
@@ -97,7 +97,7 @@ const KeepExploringAirpods = () => {
                   src={AppleAirpodsHeartIcon.src || AppleAirpodsHeartIcon}
                   alt="icon-1.4"
                 />
-                <p>High and low heart rate notifications</p>
+                <p>Heart rate sensing during workouts</p>
               </div>
 
               <div className="flex flex-col gap-2 items-start md:items-center">
@@ -107,7 +107,9 @@ const KeepExploringAirpods = () => {
                   src={AppleAirpodsEarIcon.src || AppleAirpodsEarIcon}
                   alt="icon-1.4"
                 />
-                <p>Up to 18 hours</p>
+                <p>
+                  Loud Sound Reduction, Conversation Boost, Background Sounds
+                </p>
               </div>
 
               <div className="flex flex-col gap-2 items-start md:items-center">
@@ -119,7 +121,15 @@ const KeepExploringAirpods = () => {
                   }
                   alt="icon-1.4"
                 />
-                <p>Up to 18 hours</p>
+                <p>Live Translation</p>
+              </div>
+
+              <div className="flex flex-col gap-2 items-start md:items-center">
+                <p className="text-2xl text-primary font-bold">8 Hours</p>
+                <p>
+                  Up to 8 hours of listening time on a single charge with Active
+                  Noise Cancellation
+                </p>
               </div>
 
               <div className="flex flex-col gap-2 items-start md:items-center">
@@ -129,7 +139,7 @@ const KeepExploringAirpods = () => {
                   src={AppleAirpodsH2Icon.src || AppleAirpodsH2Icon}
                   alt="icon-1.4"
                 />
-                <p>Up to 18 hours</p>
+                <p>Voice Isolation, Hey Siri and Siri Interactions</p>
               </div>
             </div>
           </div>
@@ -160,7 +170,7 @@ const KeepExploringAirpods = () => {
             <hr className="my-4 border-[#D2D2D7] w-full" />
 
             <div className="flex flex-col gap-4 items-start md:items-center text-xs font-normal tracking-[-0.12px]">
-              <div className="flex flex-col gap-2 items-start md:items-center">
+              <div className="flex flex-col gap-4 items-start md:items-center">
                 <CommonImage
                   height={56}
                   width={41}
@@ -175,7 +185,7 @@ const KeepExploringAirpods = () => {
               <div className="flex flex-col gap-2 items-start md:items-center">
                 <CommonImage
                   height={56}
-                  width={35}
+                  width={89}
                   src={
                     AppleAirpodsTwoPeopleIcon.src || AppleAirpodsTwoPeopleIcon
                   }
@@ -222,6 +232,14 @@ const KeepExploringAirpods = () => {
                   alt="icon-2.4"
                 />
                 <p>Up to 24 hours</p>
+              </div>
+
+              <div className="flex flex-col gap-2 items-start md:items-center">
+                <p className="text-2xl text-primary font-bold">5 Hours</p>
+                <p>
+                  Up to 5 hours of listening time on a single charge (up to 4
+                  hours with Active Noise Cancellation)
+                </p>
               </div>
 
               <div className="flex flex-col gap-2 items-start md:items-center">

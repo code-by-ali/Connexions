@@ -24,7 +24,7 @@ const Header = () => {
 
   const toggleDropdown = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
-    setOpenNestedDropdown(null); // Close nested dropdown when main dropdown changes
+    setOpenNestedDropdown(null);
   };
 
   const toggleNestedDropdown = (menu) => {
@@ -39,7 +39,6 @@ const Header = () => {
     }
   };
 
-  // Close dropdown on outside click
   useEffect(() => {
     function handleClickOutside(e) {
       if (navRef.current && !navRef.current.contains(e.target)) {
@@ -97,12 +96,6 @@ const Header = () => {
               alt="fb"
             />
           </Link>
-          {/* <CommonImage
-            width={14}
-            height={14}
-            src={XIcon.src || XIcon}
-            alt="x"
-          /> */}
           <Link
             href={
               "https://www.instagram.com/connexions.pune?igsh=MTdnc3hwamJteTdtZw=="
@@ -116,20 +109,12 @@ const Header = () => {
               alt="ig"
             />
           </Link>
-          {/* <CommonImage
-            width={14}
-            height={14}
-            src={LinkedinIcon.src || LinkedinIcon}
-            alt="li"
-          /> */}
         </div>
         <div className="flex items-center gap-3 text-white text-xs sm:text-sm">
           <a href="tel:+919373225250" className="hover:underline">
             Call: +91-9373225250
           </a>
-
           <div className="w-px bg-white/50 h-5"></div>
-
           <a
             href="mailto:nikhil@connexionsmobile.com"
             className="hover:underline"
@@ -430,89 +415,97 @@ const Header = () => {
             <span>BROWSE ALL CATEGORIES</span>
           </div>
 
-          {/* Nav Items */}
+          {/* Nav Items - FIXED */}
           <ul className="flex flex-col gap-4 px-2">
             {navItems.map((item) => (
               <li key={item.label} className="flex flex-col">
-                <div
-                  className="flex items-center justify-between cursor-pointer"
-                  onClick={() =>
-                    item.dropdown
-                      ? toggleDropdown(item.label)
-                      : handleLinkClick(false)
-                  }
-                >
-                  <span>{item.label}</span>
-                  {item.dropdown && (
-                    <ChevronDown
-                      size={14}
-                      className={`transition-transform duration-200 ${
-                        openDropdown === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
-                </div>
+                {item.dropdown ? (
+                  <>
+                    <div
+                      className="flex items-center justify-between cursor-pointer"
+                      onClick={() => toggleDropdown(item.label)}
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDown
+                        size={14}
+                        className={`transition-transform duration-200 ${
+                          openDropdown === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </div>
 
-                {/* Dropdown for Mobile */}
-                {item.dropdown && (
-                  <ul
-                    className={`overflow-hidden transition-all duration-300 ${
-                      openDropdown === item.label ? "max-h-96 mt-2" : "max-h-0"
-                    }`}
-                  >
-                    {item.dropdown.map((sub, index) => (
-                      <li key={sub.label} className="border-b border-gray-100">
-                        {sub.nested ? (
-                          <div className="flex flex-col">
-                            <div
-                              className="flex items-center justify-between px-3 py-2 hover:bg-gray-100 cursor-pointer"
-                              onClick={() => toggleNestedDropdown(sub.label)}
-                            >
-                              <span>{sub.label}</span>
-                              <ChevronDown
-                                size={14}
-                                className={`transition-transform duration-200 ${
+                    <ul
+                      className={`overflow-hidden transition-all duration-300 ${
+                        openDropdown === item.label
+                          ? "max-h-96 mt-2"
+                          : "max-h-0"
+                      }`}
+                    >
+                      {item.dropdown.map((sub) => (
+                        <li
+                          key={sub.label}
+                          className="border-b border-gray-100"
+                        >
+                          {sub.nested ? (
+                            <div className="flex flex-col">
+                              <div
+                                className="flex items-center justify-between px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                                onClick={() => toggleNestedDropdown(sub.label)}
+                              >
+                                <span>{sub.label}</span>
+                                <ChevronDown
+                                  size={14}
+                                  className={`transition-transform duration-200 ${
+                                    openNestedDropdown === sub.label
+                                      ? "rotate-180"
+                                      : ""
+                                  }`}
+                                />
+                              </div>
+                              <ul
+                                className={`overflow-hidden transition-all duration-300 ${
                                   openNestedDropdown === sub.label
-                                    ? "rotate-180"
-                                    : ""
+                                    ? "max-h-96"
+                                    : "max-h-0"
                                 }`}
-                              />
-                            </div>
-                            <ul
-                              className={`overflow-hidden transition-all duration-300 ${
-                                openNestedDropdown === sub.label
-                                  ? "max-h-96"
-                                  : "max-h-0"
-                              }`}
-                            >
-                              {sub.nested.map((nestedItem) => (
-                                <li
-                                  key={nestedItem.label}
-                                  className="pl-6 pr-3 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-100"
-                                >
-                                  <Link
-                                    href={nestedItem.href}
-                                    onClick={() => handleLinkClick(false)}
+                              >
+                                {sub.nested.map((nestedItem) => (
+                                  <li
+                                    key={nestedItem.label}
+                                    className="pl-6 pr-3 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-100"
                                   >
-                                    {nestedItem.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ) : (
-                          <div className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
-                            <Link
-                              href={sub.href}
-                              onClick={() => handleLinkClick(false)}
-                            >
-                              {sub.label}
-                            </Link>
-                          </div>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
+                                    <Link
+                                      href={nestedItem.href}
+                                      onClick={() => handleLinkClick(false)}
+                                    >
+                                      {nestedItem.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : (
+                            <div className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
+                              <Link
+                                href={sub.href}
+                                onClick={() => handleLinkClick(false)}
+                              >
+                                {sub.label}
+                              </Link>
+                            </div>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="cursor-pointer"
+                    onClick={() => handleLinkClick(false)}
+                  >
+                    {item.label}
+                  </Link>
                 )}
               </li>
             ))}
