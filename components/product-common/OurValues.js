@@ -54,12 +54,6 @@ const OurValues = () => {
               <p className="text-primary text-sm md:text-base font-normal tracking-[-0.37px]">
                 {card.description}
               </p>
-              <p className="flex gap-4 items-center text-[#0066CC] text-sm md:text-base font-normal tracking-[-0.37px]">
-                {card.extras}
-                <span>
-                  <ChevronRight />
-                </span>
-              </p>
             </div>
           </div>
         ))}

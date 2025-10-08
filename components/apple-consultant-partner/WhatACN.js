@@ -6,6 +6,7 @@ import CommonImage from "../common/CommonImage";
 import ACNIcon1 from "@/public/assets/what-acn-icon-1.svg";
 import ACNIcon2 from "@/public/assets/what-acn-icon-2.svg";
 import ACNIcon3 from "@/public/assets/what-acn-icon-3.svg";
+import Link from "next/link";
 
 const WhatACN = () => {
   return (
@@ -56,9 +57,14 @@ const WhatACN = () => {
                   </div>
                 </div>
                 {/* Description Row */}
-                <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
-                  support@connexions.com
-                </span>
+                <Link
+                  href="mailto:nikhil@connexionsmobile.com"
+                  className="hover:underline decoration-[#A6CE39] underline-offset-2"
+                >
+                  <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
+                    nikhil@connexionsmobile.com
+                  </span>
+                </Link>
               </div>
 
               {/* Phone */}
@@ -78,9 +84,14 @@ const WhatACN = () => {
                   </div>
                 </div>
                 {/* Description Row */}
-                <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
-                  (+91) 98765-43210
-                </span>
+                <Link
+                  href="tel:+919373225250"
+                  className="hover:underline decoration-[#A6CE39] underline-offset-2"
+                >
+                  <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
+                    (+91) 93732-25250
+                  </span>
+                </Link>
               </div>
 
               {/* WhatsApp */}
@@ -100,9 +111,14 @@ const WhatACN = () => {
                   </div>
                 </div>
                 {/* Description Row */}
-                <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
-                  (+91) 99887-66554
-                </span>
+                <Link
+                  href="tel:+918149882686"
+                  className="hover:underline decoration-[#A6CE39] underline-offset-2"
+                >
+                  <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
+                    (+91) 81498-82686
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

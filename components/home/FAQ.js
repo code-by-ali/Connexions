@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { HelpCircle, X, Plus } from "lucide-react";
 import FAQIcon from "@/public/assets/faq-icon.svg";
 import CommonImage from "../common/CommonImage";
+import Link from "next/link";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0); // First question open by default
@@ -112,9 +113,11 @@ const FAQ = () => {
 
         {/* Help Center Button */}
         <div className="text-center mt-12">
-          <button className="bg-primary outline-none cursor-pointer text-white px-6 py-3 rounded-xl text-base font-medium">
-            Help Center
-          </button>
+          <Link href={"/contact-us"}>
+            <button className="bg-primary outline-none cursor-pointer text-white px-6 py-3 rounded-xl text-base font-medium">
+              Help Center
+            </button>
+          </Link>
         </div>
       </div>
     </div>

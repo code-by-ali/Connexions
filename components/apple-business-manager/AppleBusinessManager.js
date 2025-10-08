@@ -38,10 +38,10 @@ const AppleBusinessManager = () => {
               Small Business.
               <br /> Super powered.
             </p>
-            <p className="text-sm md:text-base flex items-center justify-center gap-1 text-[#2997FF] cursor-pointer hover:underline">
+            {/* <p className="text-sm md:text-base flex items-center justify-center gap-1 text-[#2997FF] cursor-pointer hover:underline">
               Learn more
               <ChevronRight size={14} className="mt-1" />
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -60,10 +60,10 @@ const AppleBusinessManager = () => {
               Work.
               <br /> Like never before.
             </p>
-            <p className="text-sm md:text-base flex items-center justify-center gap-1 text-[#2997FF] cursor-pointer hover:underline">
+            {/* <p className="text-sm md:text-base flex items-center justify-center gap-1 text-[#2997FF] cursor-pointer hover:underline">
               Learn more
               <ChevronRight size={14} className="mt-1" />
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

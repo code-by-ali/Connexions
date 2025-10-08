@@ -12,27 +12,28 @@ import AppleAirpodsPro3 from "@/public/assets/apple-airpods-keep-exploring-img-1
 import AppleAirpods4 from "@/public/assets/apple-airpods-keep-exploring-img-2.svg";
 
 import CommonImage from "../common/CommonImage";
+import Link from "next/link";
 
 const KeepExploringAirpods = () => {
   return (
     <div className="pt-4 sm:pb-20 md:pb-40 lg:pb-60 bg-[#F5F5F7] flex flex-col gap-6 items-center lg:px-20">
       {/* Compare banner */}
-      <div className="bg-[#E8E8EDB8] px-3 py-1 inline-flex gap-4 items-center rounded-full">
+      {/* <div className="bg-[#E8E8EDB8] px-3 py-1 inline-flex gap-4 items-center rounded-full">
         <span>Compare all iPhone models</span>
         <span className="p-1 bg-[#0071E3] rounded-full">
           <ChevronRight className="text-white" />
         </span>
-      </div>
+      </div> */}
 
       {/* Heading row */}
       <div className="w-full flex flex-col gap-4 px-4 md:flex-row justify-between items-start md:items-center ">
         <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-[-0.28px] md:px-0 md:gap-0">
           Keep exploring iPhone.
         </p>
-        <div className="flex gap-4 items-center font-normal text-[#0066CC]">
+        {/* <div className="flex gap-4 items-center font-normal text-[#0066CC]">
           <span className="text-sm md:text-base">Explore all iPhone</span>
           <ChevronRight />
-        </div>
+        </div> */}
       </div>
 
       {/* Comparison grid */}
@@ -147,9 +148,13 @@ const KeepExploringAirpods = () => {
             </p>
 
             <div className="flex flex-col gap-2 mt-4 items-start md:items-center text-sm md:text-base tracking-[-0.37px] h-[90px] md:h-auto">
-              <p className="text-white bg-[#0066CC] px-4 py-2 rounded-full">
+              <Link
+                href={"https://www.apple.com/in/airpods-4/"}
+                target="_blank"
+                className="text-white bg-[#0066CC] px-4 py-2 rounded-full"
+              >
                 Learn More
-              </p>
+              </Link>
             </div>
 
             <hr className="my-4 border-[#D2D2D7] w-full" />

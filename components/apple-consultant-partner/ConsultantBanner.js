@@ -4,6 +4,7 @@ import BannerIphone from "@/public/assets/apple-banner-iphone.svg";
 import BannerMac from "@/public/assets/apple-banner-mac.svg";
 import BannerWatch from "@/public/assets/apple-banner-watch.svg";
 import CommonImage from "../common/CommonImage";
+import Link from "next/link";
 
 const ConsultantBanner = () => {
   return (
@@ -25,12 +26,14 @@ const ConsultantBanner = () => {
           official member of the Apple Consultant Network
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
-          <button className="text-lg font-semibold w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
-            Talk to an Expert
-          </button>
-          <button className="text-lg font-semibold w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-transparent px-5 py-3">
+          <Link href={"/contact-us"}>
+            <button className="text-lg font-semibold w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
+              Talk to an Expert
+            </button>
+          </Link>
+          {/* <button className="text-lg font-semibold w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-transparent px-5 py-3">
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
 

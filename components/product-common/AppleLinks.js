@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const AppleLinks = () => {
@@ -14,37 +15,21 @@ const AppleLinks = () => {
           {/* Column 1 */}
           <div className="flex flex-col gap-3">
             <p className="text-sm text-gray-500 font-medium">Explore iPhone</p>
-            <a href="#" className="font-semibold text-base">Explore All iPhone</a>
-            <a href="#" className="font-semibold text-base">iPhone 17 Pro</a>
-            <a href="#" className="font-semibold text-base">iPhone Air</a>
-            <a href="#" className="font-semibold text-base">iPhone 17</a>
-            <a href="#" className="font-semibold text-base">iPhone 16</a>
-            <a href="#" className="font-semibold text-base">iPhone 16e</a>
-            <a href="#" className="text-base text-gray-700">Compare iPhone</a>
-            <a href="#" className="text-base text-gray-700">Switch from Android</a>
-          </div>
-
-          {/* Column 2 */}
-          <div className="flex flex-col gap-3">
-            <p className="text-sm text-gray-500 font-medium">Shop iPhone</p>
-            <a href="#" className="font-semibold text-base">Shop iPhone</a>
-            <a href="#" className="font-semibold text-base">iPhone Accessories</a>
-            <a href="#" className="font-semibold text-base">Apple Trade In</a>
-            <a href="#" className="font-semibold text-base">Ways to Buy</a>
-          </div>
-
-          {/* Column 3 */}
-          <div className="flex flex-col gap-3">
-            <p className="text-sm text-gray-500 font-medium">More from iPhone</p>
-            <a href="#" className="font-semibold text-base">iPhone Support</a>
-            <a href="#" className="font-semibold text-base">AppleCare</a>
-            <a href="#" className="font-semibold text-base">iOS 26</a>
-            <a href="#" className="font-semibold text-base">Apple Intelligence</a>
-            <a href="#" className="font-semibold text-base">Apps by Apple</a>
-            <a href="#" className="font-semibold text-base">iPhone Privacy</a>
-            <a href="#" className="font-semibold text-base">iCloud+</a>
-            <a href="#" className="font-semibold text-base">Wallet</a>
-            <a href="#" className="font-semibold text-base">Siri</a>
+            <Link href="/iphone-17pro" className="font-semibold text-base">
+              iPhone 17 Pro
+            </Link>
+            <Link href="/iphone-17air" className="font-semibold text-base">
+              iPhone Air
+            </Link>
+            <Link href="/iphone-17" className="font-semibold text-base">
+              iPhone 17
+            </Link>
+            <Link href="/apple-airpods" className="font-semibold text-base">
+              Apple Airpods Pro 3
+            </Link>
+            <Link href="/apple-watch" className="font-semibold text-base">
+              Apple Watch SE3
+            </Link>
           </div>
         </div>
       </div>

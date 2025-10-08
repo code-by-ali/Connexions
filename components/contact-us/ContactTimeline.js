@@ -8,20 +8,20 @@ import CommonImage from "../common/CommonImage";
 const steps = [
   {
     id: "01",
-    title: "Simple Booking",
-    desc: "Effortlessly schedule a consultation to discuss your business needs and challenges. We streamline the process to get started quickly.",
+    title: "Simple Consultation",
+    desc: "Schedule a one-on-one discovery call to explore your business needs, existing IT ecosystem, and opportunities for Apple solutions integration.",
     img: timelineImg1,
   },
   {
     id: "02",
-    title: "Tailored Strategy",
-    desc: "We analyze your goals and create a customized strategy designed to offer measurable success for your business.",
+    title: "Tailored Solution Mapping",
+    desc: "Our experts recommend the right Apple products, deployment tools, and workflows customized for your organization’s size, goals, and workforce setup",
     img: timelineImg2,
   },
   {
     id: "03",
-    title: "Continuous Support",
-    desc: "From implementation to optimization, we provide ongoing guidance to ensure long-term growth for you and your business.",
+    title: "Seamless Implementation",
+    desc: "We assist with everything — from device setup to MDM and onboarding — ensuring a secure, scalable, and future-ready Apple environment from day one.",
     img: timelineImg3,
   },
 ];
@@ -37,16 +37,8 @@ const ContactTimeline = () => {
         </div>
 
         <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-semibold leading-snug">
-          A proven process to achieve <br /> your biggest goals
+          Simplifying business, from start to scale.
         </h2>
-
-        {/* Button */}
-        <button className="bg-[#A6CE39] rounded-full px-4 py-1 flex gap-4 items-center text-base">
-          <span className="text-white">Get in touch </span>
-          <span className="p-3 bg-white rounded-full text-primary">
-            <MoveRight size={14} />
-          </span>
-        </button>
       </div>
 
       {/* Timeline Section */}
@@ -94,9 +86,6 @@ const ContactTimeline = () => {
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   {step.desc}
                 </p>
-                <span className="text-primary underline cursor-pointer text-sm sm:text-base">
-                  Discover More
-                </span>
               </div>
             </div>
           ))}

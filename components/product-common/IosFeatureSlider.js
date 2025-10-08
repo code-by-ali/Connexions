@@ -61,12 +61,12 @@ const IosFeatureSlider = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-primary leading-tight tracking-[0.13px]">
               iOS 26. New look. <br /> Even more magic.
             </h2>
-            <a
+            {/* <a
               href="#"
               className="text-[#0066CC] text-sm md:text-base mt-2 flex gap-4 items-center font-normal"
             >
               Learn more about iOS 26 <ChevronRight />
-            </a>
+            </a> */}
           </div>
         </div>
 

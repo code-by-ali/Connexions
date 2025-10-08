@@ -25,22 +25,22 @@ const AppleWorkSection = () => {
   const cards = [
     {
       title: "ENTERPRISE SECURITY",
-      desc: "Build in security features protect your data",
+      desc: "Built-in features protect your data. Apple devices combine hardware and software to secure business data automatically.",
       img: Img1,
     },
     {
       title: "SEAMLESS COLLABORATION",
-      desc: "Work together effortlessly across devices",
+      desc: "Effortless work across devices. Stay in sync with handoff, continuity, and built‑in collaboration tools.",
       img: Img2,
     },
     {
       title: "INCREASED PRODUCTIVITY",
-      desc: "Intuitive design boosts team efficiency",
+      desc: "Design that drives efficiency. Apple’s intuitive design reduces learning curves and boosts output.",
       img: Img3,
     },
     {
       title: "EASY MANAGEMENT",
-      desc: "Simplified device deployment and control",
+      desc: "Simple deployment and control. Manage and secure devices at scale with Apple Business Manager and MDM.",
       img: Img4,
     },
   ];

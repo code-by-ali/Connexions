@@ -5,6 +5,7 @@ import BannerMac from "@/public/assets/apple-banner-mac.svg";
 import BannerWatch from "@/public/assets/apple-banner-watch.svg";
 import { MoveRight } from "lucide-react";
 import CommonImage from "../common/CommonImage";
+import Link from "next/link";
 
 const AppleWorkBanner = () => {
   return (
@@ -27,21 +28,23 @@ const AppleWorkBanner = () => {
           in your workplace with Connexions enterprise-ready approach
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 text-base md:text-lg font-semibold">
-          <button className="w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
+          {/* <button className="w-full sm:w-auto cursor-pointer border-2 border-[#E5E7EB] rounded-full text-white bg-[#A6CE39] px-5 py-3">
             Explore Deployment Models
-          </button>
-          <button className="w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-transparent px-5 py-3">
-            Talk to an Apple Expert{" "}
-          </button>
+          </button> */}
+          <Link href={"/contact-us"}>
+            <button className="w-full sm:w-auto cursor-pointer border-2 border-primary rounded-full text-primary bg-transparent px-5 py-3">
+              Talk to an Apple Expert{" "}
+            </button>
+          </Link>
         </div>
-        <div>
+        {/* <div>
           <button className="flex flex-row gap-2 text-base text-[#A6CE39] cursor-pointer font-medium">
             <span>Download Program Guide </span>
             <span>
               <MoveRight />
             </span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Images positioned responsively */}

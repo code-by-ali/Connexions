@@ -15,7 +15,7 @@ const page = () => {
       <AppleGrid />
       <EnterpriseSolutions />
       <EnterpriseGrid />
-      <WhatClientsSay />
+      {/* <WhatClientsSay /> */}
       <Rating />
     </div>
   );

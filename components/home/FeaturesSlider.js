@@ -53,39 +53,33 @@ const FeaturesSlider = () => {
   const servicesData = [
     {
       icon: FeatureIcon1,
-      title: "Pay over time, interest-free.",
+      title: "Strategic Consultancy",
       description:
-        "When you choose to check out with Apple Card Monthly Installments.",
+        "Guiding enterprises with future-ready strategies. From IT planning to mobility adoption, we align tech with growth.",
     },
     {
       icon: FeatureIcon2,
-      title: "Save up to $520 with Apple Trade In.",
+      title: "Authorized Reseller Partner",
       description:
-        "Get credit toward your next iPad when you trade in an eligible device.",
+        "Trusted Apple & Samsung enterprise partner. Direct access to devices, tools, and certified support.",
     },
     {
       icon: FeatureIcon3,
-      title: "Get flexible delivery and easy pickup.",
+      title: "Seamless Deployment",
       description:
-        "Choose two-hour delivery from an Apple Store, free delivery, or easy pickup options.",
+        "Zero-touch configuration and managed rollouts. From setup to delivery, your teams are ready instantly.",
     },
     {
       icon: FeatureIcon4,
-      title: "Personalize your iPad for free.",
+      title: "Training & Enablement",
       description:
-        "Engrave your new iPad with a mix of emoji, names, initials, and numbers.",
+        "Empowering people, not just devices. Hands-on workshops ensure your workforce unlocks innovation.",
     },
     {
       icon: FeatureIcon1,
-      title: "Extended Warranty Options",
+      title: "Enterprise Support",
       description:
-        "Protect your investment with comprehensive coverage and support services.",
-    },
-    {
-      icon: FeatureIcon2,
-      title: "Expert Setup Service",
-      description:
-        "Professional setup and configuration to get you started right away.",
+        "24/7 technical care for your business. Proactive monitoring keeps systems secure, stable, and scalable.",
     },
   ];
 

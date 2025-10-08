@@ -59,11 +59,11 @@ const AppleWorkEnterpriseGrid = () => {
           </div>
 
           {/* Button */}
-          <div className="flex justify-center lg:justify-start mt-2">
+          {/* <div className="flex justify-center lg:justify-start mt-2">
             <button className="border border-[#DEDEDE] bg-[#A6CE39] rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-normal">
               Explore Service
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -126,11 +126,11 @@ const AppleWorkEnterpriseGrid = () => {
           </div>
 
           {/* Button */}
-          <div className="flex justify-center lg:justify-start mt-2">
+          {/* <div className="flex justify-center lg:justify-start mt-2">
             <button className="border border-[#DEDEDE] bg-[#A6CE39] rounded-full text-sm sm:text-base text-white py-2 sm:py-3 px-4 sm:px-6 font-normal">
               Explore Service
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

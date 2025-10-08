@@ -72,6 +72,8 @@ const Header = () => {
             { label: "iPhone 17", href: "/iphone-17" },
             { label: "iPhone 17 Pro", href: "/iphone-17pro" },
             { label: "iPhone 17 Air", href: "/iphone-17air" },
+            { label: "Apple Watch SE3", href: "/apple-watch" },
+            { label: "Apple Airpods Pro 3", href: "/apple-airpods" },
           ],
         },
       ],
@@ -84,35 +86,56 @@ const Header = () => {
       {/* Top Social + Contact Bar */}
       <div className="w-full px-4 sm:px-8 lg:px-20 py-4 bg-[#222] text-white flex flex-col sm:flex-row gap-3 justify-between items-center">
         <div className="flex items-center gap-5 cursor-pointer">
-          <CommonImage
-            width={14}
-            height={14}
-            src={FacebookIcon.src || FacebookIcon}
-            alt="fb"
-          />
-          <CommonImage
+          <Link
+            href={"https://www.facebook.com/share/1DQySs4f9D/?mibextid=wwXIfr"}
+            target="_blank"
+          >
+            <CommonImage
+              width={14}
+              height={14}
+              src={FacebookIcon.src || FacebookIcon}
+              alt="fb"
+            />
+          </Link>
+          {/* <CommonImage
             width={14}
             height={14}
             src={XIcon.src || XIcon}
             alt="x"
-          />
-          <CommonImage
-            width={14}
-            height={14}
-            src={InstagramIcon.src || InstagramIcon}
-            alt="ig"
-          />
-          <CommonImage
+          /> */}
+          <Link
+            href={
+              "https://www.instagram.com/connexions.pune?igsh=MTdnc3hwamJteTdtZw=="
+            }
+            target="_blank"
+          >
+            <CommonImage
+              width={14}
+              height={14}
+              src={InstagramIcon.src || InstagramIcon}
+              alt="ig"
+            />
+          </Link>
+          {/* <CommonImage
             width={14}
             height={14}
             src={LinkedinIcon.src || LinkedinIcon}
             alt="li"
-          />
+          /> */}
         </div>
-        <div className="flex items-center gap-5 text-white font-medium text-xs sm:text-sm">
-          <span>Call: (123) 123-4567</span>
+        <div className="flex items-center gap-3 text-white text-xs sm:text-sm">
+          <a href="tel:+919373225250" className="hover:underline">
+            Call: +91-9373225250
+          </a>
+
           <div className="w-px bg-white/50 h-5"></div>
-          <span>Email: example@gmail.com</span>
+
+          <a
+            href="mailto:nikhil@connexionsmobile.com"
+            className="hover:underline"
+          >
+            Email: nikhil@connexionsmobile.com
+          </a>
         </div>
       </div>
 

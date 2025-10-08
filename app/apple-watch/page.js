@@ -8,6 +8,7 @@ import KeepExploringWatch from "@/components/apple-watch/KeepExploringWatch";
 import EnvironmentWatch from "@/components/apple-watch/EnvironmentWatch";
 import OurValuesWatch from "@/components/apple-watch/OurValuesWatch";
 import WatchLinks from "@/components/apple-watch/WatchLinks";
+import AppleLinks from "@/components/product-common/AppleLinks";
 
 const page = () => {
   return (
@@ -20,7 +21,8 @@ const page = () => {
       <KeepExploringWatch />
       <EnvironmentWatch />
       <OurValuesWatch />
-      <WatchLinks />
+      {/* <WatchLinks /> */}
+      <AppleLinks />
     </div>
   );
 };

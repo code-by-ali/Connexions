@@ -9,6 +9,7 @@ import ABMActionIcon1 from "@/public/assets/abm-action-icon-1.svg";
 import ABMActionIcon2 from "@/public/assets/abm-action-icon-2.svg";
 import ABMActionIcon3 from "@/public/assets/abm-action-icon-3.svg";
 import ABMActionIcon4 from "@/public/assets/abm-action-icon-4.svg";
+import Link from "next/link";
 
 const ABMAction = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -140,9 +141,11 @@ const ABMAction = () => {
               <p className="text-base sm:text-lg text-[#4B5563] mb-6 leading-relaxed font-medium tracking-tight">
                 {currentStep.description}
               </p>
-              <button className="bg-primary font-normal text-sm md:text-base text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
-                Get Started
-              </button>
+              <Link href={"/contact-us"}>
+                <button className="bg-primary cursor-pointer font-normal text-sm md:text-base text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
 

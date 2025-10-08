@@ -18,6 +18,7 @@ import HomeBannerLogo4 from "@/public/assets/home-banner-logo-4.svg";
 import HomeBannerLogo5 from "@/public/assets/home-banner-logo-5.svg";
 import HomeBannerLogo6 from "@/public/assets/home-banner-logo-6.svg";
 import HomeBannerLogo7 from "@/public/assets/home-banner-logo-7.svg";
+import AppleLogoBlack from "@/public/assets/apple-logo-black.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -73,9 +74,14 @@ const PhoneLaunchPartnersSection = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 font-normal bg-[#FAFAFA] text-primary rounded-full text-sm mb-6 w-fit">
+            <div className="inline-flex items-center gap-2 px-3 py-2 font-normal bg-[#FAFAFA] text-primary rounded-full text-sm mb-6 w-fit">
+              <CommonImage
+                src={AppleLogoBlack.src || AppleLogoBlack}
+                alt={"apple logo"}
+                className="w-6 h-6"
+              />{" "}
               <span className="bg-gradient-to-r from-[#0F0F0F] via-[#2E90FA] to-[#0F0F0F] bg-clip-text text-transparent">
-                Apple Authorized Reseller
+                Authorized Reseller
               </span>
             </div>
 

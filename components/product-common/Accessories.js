@@ -34,12 +34,12 @@ const Accessories = () => {
           <span className="">Snap it on.</span>{" "}
           <span className="">Show it off.</span>
         </h2>
-        <a
+        {/* <a
           href="#"
           className="mt-2 text-[#0066CC] text-sm md:text-base font-normal flex items-center gap-4"
         >
           Shop iPhone accessories <ChevronRight/>
-        </a>
+        </a> */}
       </div>
 
       {/* Cards */}

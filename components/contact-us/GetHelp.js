@@ -33,10 +33,6 @@ const GetHelp = () => {
           here to support you, Our team helps organisation simplify technology
           adoption, optimize workflows, and achieve seamless integration.
         </span>
-        <button className="bg-[#A6CE39] text-white flex items-center gap-4 rounded-lg px-4 py-2 text-sm sm:text-base">
-          <span>Connect now</span>
-          <ArrowRight size={14} />
-        </button>
       </div>
     </div>
   );

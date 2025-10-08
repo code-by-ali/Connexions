@@ -80,12 +80,12 @@ const BestPlaceToBuy = () => {
               Why Apple is the best. <br />
               place to buy iPhone.
             </h2>
-            <a
+            {/* <a
               href="#"
               className="text-[#0066CC] text-sm md:text-base font-normal mt-2 flex gap-4 items-center"
             >
               Shop iPhone <ChevronRight />
-            </a>
+            </a> */}
           </div>
         </div>
 

@@ -83,11 +83,16 @@ const AboutUsShowcase = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-[#22222299] leading-relaxed tracking-[-0.96px] font-medium">
-                We started as a small group of passionate creators who believed
-                that great ideas deserve the best execution. What began over
-                coffee-fueled brainstorming sessions has grown into a thriving
-                digital agency dedicated to{" "}
-                <span className="text-primary">helping brands stand out.</span>
+                At Connexions, we believe technology should simplify work, not
+                complicate it. As an enterprise solutions partner for Apple and
+                Samsung, we empower businesses to innovate with seamless device
+                management, secure mobility, and future-ready IT solutions. From
+                procurement to lifecycle support, our mission is to connect
+                people, processes, and possibilities —{" "}
+                <span className="text-primary">
+                  helping enterprises work smarter, scale faster, and stay
+                  ahead.
+                </span>
               </p>
             </div>
 

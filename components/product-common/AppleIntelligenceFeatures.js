@@ -67,12 +67,12 @@ const AppleIntelligenceFeatures = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-primary leading-tight tracking-[0.13px]">
               Apple Intelligence. <br /> Effortlessly helpful every day.
             </h2>
-            <a
+            {/* <a
               href="#"
               className="text-[#0066CC] text-sm md:text-base mt-2 flex gap-4 items-center font-normal"
             >
               Learn more about Apple Intelligence <ChevronRight />
-            </a>
+            </a> */}
           </div>
         </div>
 

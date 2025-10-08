@@ -2,6 +2,7 @@ import { ChevronRight } from "lucide-react";
 import React from "react";
 import BannerImg from "@/public/assets/iphone-17-air-banner-img.svg";
 import CommonImage from "../common/CommonImage";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -12,9 +13,14 @@ const Banner = () => {
           Last chance to find something special for your special someone this
           Diwali
         </span>
-        <span className="font-normal text-xs sm:text-sm tracking-[-0.22px] text-[#A6CE39] flex items-center gap-2 cursor-pointer hover:underline">
-          Shop <ChevronRight size={16} />
-        </span>
+        <Link
+          href={"https://www.apple.com/in/shop/buy-iphone/iphone-air"}
+          target="_blank"
+        >
+          <span className="font-normal text-xs sm:text-sm tracking-[-0.22px] text-[#A6CE39] flex items-center gap-2 cursor-pointer hover:underline">
+            Shop <ChevronRight size={16} />
+          </span>
+        </Link>
       </div>
 
       {/* Main banner content */}

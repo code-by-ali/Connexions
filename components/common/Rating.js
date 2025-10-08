@@ -24,7 +24,7 @@ const Rating = () => {
           />
           <p className="text-sm">
             <span className="text-primary">4.6</span>
-            <span className="text-[#535862]">/5 based on reviews</span>
+            <span className="text-[#535862]">/5 Productivity That Scales</span>
           </p>
         </div>
       </div>
@@ -45,7 +45,7 @@ const Rating = () => {
           />
           <p className="text-sm">
             <span className="text-primary">4.6</span>
-            <span className="text-[#535862]">/5 based on reviews</span>
+            <span className="text-[#535862]">/5 Collaboration Made Easy</span>
           </p>
         </div>
       </div>
@@ -66,7 +66,7 @@ const Rating = () => {
           />
           <p className="text-sm">
             <span className="text-primary">4.6</span>
-            <span className="text-[#535862]">/5 based on reviews</span>
+            <span className="text-[#535862]">/5 Built for Closers</span>
           </p>
         </div>
       </div>

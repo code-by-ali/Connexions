@@ -10,27 +10,28 @@ import KeepExploringProImage from "@/public/assets/iphone-17-keep-exploring-pro-
 import KeepExploringAirImage from "@/public/assets/iphone-17-keep-exploring-air-img.png";
 
 import CommonImage from "../common/CommonImage";
+import Link from "next/link";
 
 const KeepExploringPro = () => {
   return (
     <div className="pt-4 sm:pb-20 md:pb-40 lg:pb-60 bg-[#F5F5F7] flex flex-col gap-6 items-center lg:px-20">
       {/* Compare banner */}
-      <div className="bg-[#E8E8EDB8] px-3 py-1 inline-flex gap-4 items-center rounded-full">
+      {/* <div className="bg-[#E8E8EDB8] px-3 py-1 inline-flex gap-4 items-center rounded-full">
         <span>Compare all iPhone models</span>
         <span className="p-1 bg-[#0071E3] rounded-full">
           <ChevronRight className="text-white" />
         </span>
-      </div>
+      </div> */}
 
       {/* Heading row */}
       <div className="w-full flex flex-col gap-4 px-4 md:flex-row justify-between items-start md:items-center ">
         <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-[-0.28px] md:px-0 md:gap-0">
           Keep exploring iPhone.
         </p>
-        <div className="flex gap-4 items-center font-normal text-[#0066CC]">
+        {/* <div className="flex gap-4 items-center font-normal text-[#0066CC]">
           <span className="text-sm md:text-base">Explore all iPhone</span>
           <ChevronRight />
-        </div>
+        </div> */}
       </div>
 
       {/* Comparison grid */}
@@ -106,7 +107,10 @@ const KeepExploringPro = () => {
                 <CommonImage
                   height={56}
                   width={42}
-                  src={KeepExploringAppleIntelligenceIcon.src || KeepExploringAppleIntelligenceIcon}
+                  src={
+                    KeepExploringAppleIntelligenceIcon.src ||
+                    KeepExploringAppleIntelligenceIcon
+                  }
                   alt="icon-1.4"
                 />
                 <p>Apple Intelligence</p>
@@ -143,9 +147,13 @@ const KeepExploringPro = () => {
               From ₹82900.00 <br /> or ₹6492.00/mo. for 12 mo.
             </p> */}
             <div className="flex flex-col gap-2 mt-4 items-start md:items-center text-sm md:text-base tracking-[-0.37px] h-[90px] md:h-auto">
-              <p className="text-white bg-[#0066CC] px-4 py-2 rounded-full">
+              <Link
+                href={"https://www.apple.com/in/iphone-air/"}
+                target="_blank"
+                className="text-white bg-[#0066CC] px-4 py-2 rounded-full"
+              >
                 Learn More
-              </p>
+              </Link>
               {/* <p className="text-[#0066CC] flex items-center">
                 Buy <ChevronRight size={16} className="ml-1 mt-1" />
               </p> */}
@@ -164,7 +172,9 @@ const KeepExploringPro = () => {
                 <CommonImage
                   height={56}
                   width={46}
-                  src={KeepExploringAirCameraIcon.src || KeepExploringAirCameraIcon}
+                  src={
+                    KeepExploringAirCameraIcon.src || KeepExploringAirCameraIcon
+                  }
                   alt="icon-2.1"
                 />
                 <p>48MP Fusion camera system</p>
@@ -195,7 +205,10 @@ const KeepExploringPro = () => {
                 <CommonImage
                   height={56}
                   width={42}
-                  src={KeepExploringAppleIntelligenceIcon.src || KeepExploringAppleIntelligenceIcon}
+                  src={
+                    KeepExploringAppleIntelligenceIcon.src ||
+                    KeepExploringAppleIntelligenceIcon
+                  }
                   alt="icon-2.4"
                 />
                 <p>Apple Intelligence</p>

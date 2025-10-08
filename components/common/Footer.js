@@ -4,6 +4,7 @@ import Logo from "@/public/assets/connextions-logo-black-cropped.png";
 import xLogo from "@/public/assets/x-icon.png";
 import metaLogo from "@/public/assets/meta-icon.png";
 import linkedInLogo from "@/public/assets/linkedin-icon.png";
+import InstagramIcon from "@/public/assets/instagram-icon.svg";
 import CommonImage from "./CommonImage";
 
 const Footer = () => {
@@ -26,8 +27,9 @@ const Footer = () => {
 
             {/* Mission Statement */}
             <p className="text-base sm:text-lg text-[#505050] leading-relaxed max-w-md">
-              Together, we can make a real impact in work space around the
-              world.
+              Shaping the Future of Work, Together. Join a growing community of
+              businesses embracing seamless, secure, and scalable technology
+              solutions designed for the modern workspace.
             </p>
 
             {/* Newsletter Subscription */}
@@ -101,13 +103,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section - Copyright and Social Links */}
-        <div className="mt-8 pt-4 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-8 pt-4 border-t border-gray-100 flex flex-col sm:flex-row justify-center items-center gap-4">
           <p className="text-sm sm:text-base text-[#505050]">
             Copyright © 2025 Connexions. All Rights Reserved
           </p>
 
           {/* Social Media Icons */}
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a href="#">
               <CommonImage
                 height={20}
@@ -132,7 +134,15 @@ const Footer = () => {
                 alt="linkedin-logo"
               />
             </a>
-          </div>
+            <a href="#">
+              <CommonImage
+                height={20}
+                width={20}
+                src={InstagramIcon.src || linkedInLogo}
+                alt="linkedin-logo"
+              />
+            </a>
+          </div> */}
         </div>
       </div>
     </footer>

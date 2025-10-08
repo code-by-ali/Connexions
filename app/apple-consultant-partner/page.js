@@ -18,7 +18,7 @@ const page = () => {
       <ServicesWeOffer />
       <IndustriesWeServe />
       <ProcessSteps />
-      <WhatClientsSayConsultant />
+      {/* <WhatClientsSayConsultant /> */}
       <Rating />
       <StillHaveQuestionsConsultant />
     </div>

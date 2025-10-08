@@ -7,47 +7,48 @@ const StillHaveQuestions = () => {
 
   const questionsData = [
     {
-      question: "Is there a free trial?",
+      question: "What makes Apple devices suitable for business environments?",
       answer: (
         <>
-          Yes — when you sign up, you'll get instant access to a{" "}
-          <span className="font-bold">14-day</span> free trial of our Growth
-          plan. You don't need a credit card, and you can explore all premium
-          features including automations, AI call summaries, and integrations.
-          After the trial, you'll have the option to upgrade or continue on the
-          free Starter tier — no interruption to your account.
+          Apple devices are built with performance, security, and seamless user
+          experience at their core. From macOS to iOS, every Apple product
+          integrates effortlessly with business workflows, offers advanced
+          security features, and supports tools like MDM (Mobile Device
+          Management), making them ideal for work.
         </>
       ),
     },
     {
-      question: "What happens after my trial ends?",
+      question: "Can Apple devices be managed remotely in bulk?",
       answer:
-        "After your 14-day free trial ends, you can choose to upgrade to a paid plan to continue using premium features, or you'll be automatically moved to our free Starter plan which includes basic functionality and limited features.",
+        "Yes. Apple Business Manager and MDM tools enable simple and secure remote device management. IT teams can deploy, configure, and manage Apple devices across locations without physically handling each one — perfect for scaling teams or hybrid models.",
     },
     {
-      question: "Can I cancel or change plans anytime?",
+      question: "How secure are Apple products for enterprise use?",
       answer:
-        "Yes, you can cancel or change your plan at any time. If you cancel a paid plan, you'll continue to have access to premium features until the end of your billing period, after which you'll be moved to the free plan.",
+        "Apple leads the industry in device security. Features like built-in encryption, Touch ID/Face ID, secure boot processes, and app sandboxing ensure that data stays protected — both on-device and across networks.",
     },
     {
-      question: "What integrations does Connexions support?",
+      question:
+        "Do Apple devices work with Microsoft Office and other business apps?",
       answer:
-        "Connexions integrates with popular tools including Slack, Microsoft Teams, Google Workspace, Salesforce, HubSpot, Zoom, and many other business applications to streamline your workflow.",
+        "Absolutely. Apple devices are fully compatible with Microsoft 365, Zoom, Slack, Google Workspace, and more. You get the same productivity apps your team already uses, optimized for performance and design on Apple hardware.",
     },
     {
-      question: "How does Connexions keep my data secure?",
+      question: "What services does Connexions provide with Apple solutions?",
       answer:
-        "We use enterprise-grade security including end-to-end encryption, secure data centers, regular security audits, and comply with industry standards like SOC 2 and GDPR to protect your data.",
+        "We offer consultation, deployment, configuration, and ongoing support. As an Authorised Apple Reseller, Connexions ensures smooth onboarding, employee training, warranty management, and enterprise-grade service tailored to your needs.",
     },
     {
-      question: "Can I add more teammates later?",
+      question:
+        "Can we integrate Apple solutions into our existing IT infrastructure?",
       answer:
-        "Absolutely! You can add or remove team members at any time. Billing is prorated automatically, so you only pay for what you use when you add new users mid-billing cycle.",
+        "Yes. Apple works well in mixed environments. Whether you’re integrating with Windows servers, cloud-based tools, or legacy systems, Apple devices can be configured to fit within your IT ecosystem with minimal friction.",
     },
     {
-      question: "Who is Connexions built for?",
+      question: "What kind of support do you offer post-deployment?",
       answer:
-        "Connexions is designed for growing businesses, sales teams, customer support teams, and any organization looking to improve their communication and workflow efficiency with powerful collaboration tools.",
+        "We offer dedicated after-sales support, AMC, and device lifecycle management. From troubleshooting to hardware repairs, software updates, or onboarding new users, Connexions ensures your Apple experience remains smooth and business-focused.",
     },
   ];
 
