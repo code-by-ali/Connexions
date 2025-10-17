@@ -75,3 +75,11 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+.macbook-gradient-text{
+  background: linear-gradient(90deg, #AC299B 0%, #F1439C 100%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

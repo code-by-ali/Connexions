@@ -74,15 +74,20 @@ const PhoneLaunchPartnersSection = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-2 font-normal bg-[#FAFAFA] text-primary rounded-full text-sm mb-6 w-fit">
-              <CommonImage
-                src={AppleLogoBlack.src || AppleLogoBlack}
-                alt={"apple logo"}
-                className="w-6 h-6"
-              />{" "}
-              <span className="bg-gradient-to-r from-[#0F0F0F] via-[#2E90FA] to-[#0F0F0F] bg-clip-text text-transparent">
-                Authorized Reseller
-              </span>
+            <div className="inline-flex items-center gap-2 py-2 mb-6 w-fit">
+              <div className="flex gap-3 items-center text-black font-medium text-sm md:text-base">
+                <CommonImage
+                  src={AppleLogoBlack.src || AppleLogoBlack}
+                  alt={"apple logo"}
+                  className="w-10 h-10"
+                />{" "}
+                <span>
+                  Premium <br /> Buisness Partner
+                </span>
+                <span>
+                  Authorized <br /> Service Provider
+                </span>
+              </div>
             </div>
 
             {/* Main Heading */}

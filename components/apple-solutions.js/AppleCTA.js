@@ -20,26 +20,21 @@ const AppleCTA = () => {
   return (
     <section className="bg-white text-center py-10 px-6 flex flex-col items-center">
       {/* Announcement Pill */}
-      <div className="flex items-center gap-10 bg-[#FAFAFA] rounded-full px-3 py-2 text-sm font-medium tracking-[-0.16px] mb-6">
-        <div className="flex items-center gap-2">
-          <CommonImage
-            src={AppleLogoBlack.src || AppleLogoBlack}
-            alt={"apple logo"}
-            className="w-6 h-6"
-          />{" "}
-          <span className="bg-gradient-to-r from-[#0F0F0F] via-[#2E90FA] to-[#0F0F0F] bg-clip-text text-transparent">
-            Authorized Reseller
-          </span>
-        </div>
-        <div className="border-l-1 border-[#E9EAEB] pl-4">
-          <span className="bg-white w-8 h-8 rounded-full flex items-center justify-center text-primary">
+      <div className="flex items-center gap-10 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.16px] mb-6">
+        <div className="inline-flex items-center gap-2 py-2 mb-6 w-fit">
+          <div className="flex gap-3 items-center text-black font-medium text-sm md:text-base text-left">
             <CommonImage
-              src={TitleIcon.src || TitleIcon}
-              height={12}
-              width={12}
-              alt={"arrow-right"}
-            />
-          </span>
+              src={AppleLogoBlack.src || AppleLogoBlack}
+              alt={"apple logo"}
+              className="w-10 h-10"
+            />{" "}
+            <span>
+              Premium <br /> Buisness Partner
+            </span>
+            <span>
+              Authorized <br /> Service Provider
+            </span>
+          </div>
         </div>
       </div>
 

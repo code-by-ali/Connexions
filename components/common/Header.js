@@ -77,6 +77,7 @@ const Header = () => {
         },
       ],
     },
+    { label: "MacBooks", href: "/apple-macbooks" },
     { label: "Contact Us", href: "/contact-us" },
   ];
 
