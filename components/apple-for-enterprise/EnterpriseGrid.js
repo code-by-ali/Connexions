@@ -22,7 +22,7 @@ const EnterpriseGrid = () => {
 
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-3px]">
+          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-1px]">
             Enterprise Mobility
           </h2>
           <p className="text-[#4B5563] text-base sm:text-lg md:text-xl leading-tight font-normal">
@@ -82,7 +82,7 @@ const EnterpriseGrid = () => {
 
         {/* Content */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[600px] text-center lg:text-left">
-          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-3px]">
+          <h2 className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[-1px]">
             Zero-Touch Deployment
           </h2>
           <p className="text-[#4B5563] text-base sm:text-lg md:text-xl leading-tight font-normal">

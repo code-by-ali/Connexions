@@ -99,7 +99,7 @@ const ServicesSection = () => {
             Services
           </p>
         </div>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-[-3px] mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-[-1px] mb-12">
           Services from connexions
         </h2>
 

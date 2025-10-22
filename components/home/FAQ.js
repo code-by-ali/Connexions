@@ -63,7 +63,7 @@ const FAQ = () => {
               FAQ
             </p>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4 tracking-[-3px]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-4 tracking-[-1px]">
             Frequently Asked Questions
           </h2>
           <p className="text-base md:text-lg text-[#4E5B6D] font-medium tracking-[-0.36px]">
