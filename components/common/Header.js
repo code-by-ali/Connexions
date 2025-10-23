@@ -65,19 +65,19 @@ const Header = () => {
           label: "Apple Consultant Partner",
           href: "/apple-consultant-partner",
         },
-        {
-          label: "New Launch",
-          nested: [
-            { label: "iPhone 17", href: "/iphone-17" },
-            { label: "iPhone 17 Pro", href: "/iphone-17pro" },
-            { label: "iPhone 17 Air", href: "/iphone-17air" },
-            { label: "Apple Watch SE3", href: "/apple-watch" },
-            { label: "Apple Airpods Pro 3", href: "/apple-airpods" },
-          ],
-        },
       ],
     },
     { label: "MacBooks", href: "/apple-macbooks" },
+    {
+      label: "New Launch",
+      dropdown: [
+        { label: "iPhone 17", href: "/iphone-17" },
+        { label: "iPhone 17 Pro", href: "/iphone-17pro" },
+        { label: "iPhone 17 Air", href: "/iphone-17air" },
+        { label: "Apple Watch SE3", href: "/apple-watch" },
+        { label: "Apple Airpods Pro 3", href: "/apple-airpods" },
+      ],
+    },
     { label: "Contact Us", href: "/contact-us" },
   ];
 
