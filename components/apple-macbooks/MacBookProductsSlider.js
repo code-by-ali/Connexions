@@ -16,7 +16,10 @@ import "swiper/css/navigation";
 import CommonImage from "../common/CommonImage";
 
 // Card Component
-const ProductCard = ({ image, name, colors, pricing, price, alt }) => {
+const ProductCard = ({ image, name, colors, pricing, price, buyLink, alt }) => {
+  const handleBuyNow = () => {
+    window.open(buyLink, "_blank");
+  };
   return (
     <div className="bg-white shadow-md rounded-xl overflow-hidden h-full flex flex-col">
       {/* Product Name */}
@@ -52,7 +55,10 @@ const ProductCard = ({ image, name, colors, pricing, price, alt }) => {
         <span className="text-sm font-normal text-primary tracking-[-0.22px]">
           {pricing}
         </span>
-        <button className="bg-[#0071E3] text-white rounded-full px-4 py-2 text-sm font-normal tracking-[-0.22px] cursor-pointer">
+        <button
+          onClick={handleBuyNow}
+          className="bg-[#0071E3] text-white rounded-full px-4 py-2 text-sm font-normal tracking-[-0.22px] cursor-pointer"
+        >
           Buy
         </button>
       </div>
@@ -74,6 +80,7 @@ const MacBookProductsSlider = () => {
       pricing:
         "From ₹7492.00/mo. with instant cashback* and no-cost EMI or ₹99900.00",
       alt: "MacBook Air",
+      buyLink: "https://www.apple.com/in/shop/buy-mac/macbook-air",
     },
     {
       image: ProductSliderImg2,
@@ -82,6 +89,7 @@ const MacBookProductsSlider = () => {
       pricing:
         "From ₹13325.00/mo. with instant cashback* and no-cost EMI or ₹169900.00",
       alt: "MacBook Pro",
+      buyLink: "https://www.apple.com/in/shop/buy-mac/macbook-pro",
     },
     {
       image: ProductSliderImg3,
@@ -97,6 +105,7 @@ const MacBookProductsSlider = () => {
       pricing:
         "From ₹10825.00/mo. with instant cashback* and no-cost EMI or ₹134900.00",
       alt: "iMac",
+      buyLink: "https://www.apple.com/in/shop/buy-mac/imac",
     },
     {
       image: ProductSliderImg4,
@@ -105,6 +114,7 @@ const MacBookProductsSlider = () => {
       pricing:
         "From ₹4658.00/mo. with instant cashback* and no-cost EMI or ₹59900.00",
       alt: "Mac mini",
+      buyLink: "https://www.apple.com/in/shop/buy-mac/mac-mini",
     },
   ];
 
@@ -176,6 +186,7 @@ const MacBookProductsSlider = () => {
                     pricing={product.pricing}
                     price={product.price}
                     alt={product.alt}
+                    buyLink={product.buyLink}
                   />
                 </SwiperSlide>
               ))}

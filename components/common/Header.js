@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "@/public/assets/connextions-logo-black-cropped.png";
 import {
   ChevronDown,
@@ -17,6 +18,7 @@ import InstagramIcon from "@/public/assets/instagram-icon.svg";
 import LinkedinIcon from "@/public/assets/linkedin-icon.svg";
 
 const Header = () => {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openNestedDropdown, setOpenNestedDropdown] = useState(null);
@@ -51,6 +53,25 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // Helper function to check if nav item is active
+  const isNavItemActive = (item) => {
+    if (item.href && pathname === item.href) {
+      return true;
+    }
+    if (item.dropdown) {
+      return item.dropdown.some((sub) => {
+        if (sub.href && pathname === sub.href) {
+          return true;
+        }
+        if (sub.nested) {
+          return sub.nested.some((nested) => pathname === nested.href);
+        }
+        return false;
+      });
+    }
+    return false;
+  };
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -191,7 +212,8 @@ const Header = () => {
               </div>
               <div>
                 <Link
-                  href="#"
+                  href="https://www.apple.com/in/"
+                  target="_blank"
                   className="underline"
                   onClick={() => handleLinkClick(false)}
                 >
@@ -201,7 +223,123 @@ const Header = () => {
             </div>
             <div className="flex justify-center">
               <ul className="flex gap-6 flex-wrap">
-                {navItems.map((item) => (
+                {navItems.map((item) => {
+                  const isActive = isNavItemActive(item);
+                  return (
+                    <li
+                      key={item.label}
+                      className="relative flex flex-col cursor-pointer"
+                    >
+                      <div
+                        className="flex items-center gap-1"
+                        onClick={() =>
+                          item.dropdown && toggleDropdown(item.label)
+                        }
+                      >
+                        <Link
+                          href={item.href || "#"}
+                          className={`${
+                            isActive ? "text-[#A6CE39] underline" : "text-black"
+                          }`}
+                          onClick={() => handleLinkClick(!!item.dropdown)}
+                        >
+                          {item.label}
+                        </Link>
+                        {item.dropdown && (
+                          <ChevronDown
+                            size={14}
+                            className={isActive ? "text-[#A6CE39]" : ""}
+                          />
+                        )}
+                      </div>
+                      {item.dropdown && openDropdown === item.label && (
+                        <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded text-sm p-2 w-40 z-50">
+                          {item.dropdown.map((sub, index) => (
+                            <li
+                              key={sub.label}
+                              className={`relative px-3 py-1 hover:bg-gray-100 cursor-pointer ${
+                                index !== item.dropdown.length - 1
+                                  ? "border-b border-gray-100"
+                                  : ""
+                              }`}
+                            >
+                              {sub.nested ? (
+                                <>
+                                  <div
+                                    className="flex items-center justify-between"
+                                    onMouseEnter={() =>
+                                      setOpenNestedDropdown(sub.label)
+                                    }
+                                  >
+                                    <span>{sub.label}</span>
+                                    <ChevronRight size={14} />
+                                  </div>
+                                  {openNestedDropdown === sub.label && (
+                                    <ul className="absolute left-full top-0 ml-1 bg-white border border-gray-200 rounded-md text-sm p-2 w-40 z-50">
+                                      {sub.nested.map(
+                                        (nestedItem, nestedIndex) => (
+                                          <li
+                                            key={nestedItem.label}
+                                            className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${
+                                              nestedIndex !==
+                                              sub.nested.length - 1
+                                                ? "border-b border-gray-100"
+                                                : ""
+                                            }`}
+                                          >
+                                            <Link
+                                              href={nestedItem.href}
+                                              className={
+                                                pathname === nestedItem.href
+                                                  ? "text-[#A6CE39]"
+                                                  : ""
+                                              }
+                                              onClick={() =>
+                                                handleLinkClick(false)
+                                              }
+                                            >
+                                              {nestedItem.label}
+                                            </Link>
+                                          </li>
+                                        )
+                                      )}
+                                    </ul>
+                                  )}
+                                </>
+                              ) : (
+                                <Link
+                                  href={sub.href}
+                                  className={
+                                    pathname === sub.href
+                                      ? "text-[#A6CE39]"
+                                      : ""
+                                  }
+                                  onClick={() => handleLinkClick(false)}
+                                >
+                                  {sub.label}
+                                </Link>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+
+          {/* Desktop: One Row */}
+          <div className="hidden lg:flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Grid2x2 size={14} />
+              <span>BROWSE ALL CATEGORIES</span>
+            </div>
+            <ul className="flex gap-8 flex-wrap">
+              {navItems.map((item) => {
+                const isActive = isNavItemActive(item);
+                return (
                   <li
                     key={item.label}
                     className="relative flex flex-col cursor-pointer"
@@ -214,14 +352,22 @@ const Header = () => {
                     >
                       <Link
                         href={item.href || "#"}
+                        className={`${
+                          isActive ? "text-[#A6CE39]" : "text-primary"
+                        }`}
                         onClick={() => handleLinkClick(!!item.dropdown)}
                       >
                         {item.label}
                       </Link>
-                      {item.dropdown && <ChevronDown size={14} />}
+                      {item.dropdown && (
+                        <ChevronDown
+                          size={14}
+                          className={isActive ? "text-[#A6CE39]" : ""}
+                        />
+                      )}
                     </div>
                     {item.dropdown && openDropdown === item.label && (
-                      <ul className="absolute top-full left-0 mt-2 bg-white rounded text-sm p-2 w-40 z-50">
+                      <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-md text-sm p-2 w-40 z-50">
                         {item.dropdown.map((sub, index) => (
                           <li
                             key={sub.label}
@@ -257,6 +403,11 @@ const Header = () => {
                                         >
                                           <Link
                                             href={nestedItem.href}
+                                            className={
+                                              pathname === nestedItem.href
+                                                ? "text-[#A6CE39]"
+                                                : ""
+                                            }
                                             onClick={() =>
                                               handleLinkClick(false)
                                             }
@@ -272,6 +423,9 @@ const Header = () => {
                             ) : (
                               <Link
                                 href={sub.href}
+                                className={
+                                  pathname === sub.href ? "text-[#A6CE39]" : ""
+                                }
                                 onClick={() => handleLinkClick(false)}
                               >
                                 {sub.label}
@@ -282,97 +436,13 @@ const Header = () => {
                       </ul>
                     )}
                   </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Desktop: One Row */}
-          <div className="hidden lg:flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Grid2x2 size={14} />
-              <span>BROWSE ALL CATEGORIES</span>
-            </div>
-            <ul className="flex gap-8 flex-wrap">
-              {navItems.map((item) => (
-                <li
-                  key={item.label}
-                  className="relative flex flex-col cursor-pointer"
-                >
-                  <div
-                    className="flex items-center gap-1"
-                    onClick={() => item.dropdown && toggleDropdown(item.label)}
-                  >
-                    <Link
-                      href={item.href || "#"}
-                      onClick={() => handleLinkClick(!!item.dropdown)}
-                    >
-                      {item.label}
-                    </Link>
-                    {item.dropdown && <ChevronDown size={14} />}
-                  </div>
-                  {item.dropdown && openDropdown === item.label && (
-                    <ul className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-md text-sm p-2 w-40 z-50">
-                      {item.dropdown.map((sub, index) => (
-                        <li
-                          key={sub.label}
-                          className={`relative px-3 py-1 hover:bg-gray-100 cursor-pointer ${
-                            index !== item.dropdown.length - 1
-                              ? "border-b border-gray-100"
-                              : ""
-                          }`}
-                        >
-                          {sub.nested ? (
-                            <>
-                              <div
-                                className="flex items-center justify-between"
-                                onMouseEnter={() =>
-                                  setOpenNestedDropdown(sub.label)
-                                }
-                              >
-                                <span>{sub.label}</span>
-                                <ChevronRight size={14} />
-                              </div>
-                              {openNestedDropdown === sub.label && (
-                                <ul className="absolute left-full top-0 ml-1 bg-white border border-gray-200 rounded-md text-sm p-2 w-40 z-50">
-                                  {sub.nested.map((nestedItem, nestedIndex) => (
-                                    <li
-                                      key={nestedItem.label}
-                                      className={`px-3 py-1 hover:bg-gray-100 cursor-pointer ${
-                                        nestedIndex !== sub.nested.length - 1
-                                          ? "border-b border-gray-100"
-                                          : ""
-                                      }`}
-                                    >
-                                      <Link
-                                        href={nestedItem.href}
-                                        onClick={() => handleLinkClick(false)}
-                                      >
-                                        {nestedItem.label}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-                            </>
-                          ) : (
-                            <Link
-                              href={sub.href}
-                              onClick={() => handleLinkClick(false)}
-                            >
-                              {sub.label}
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
+                );
+              })}
             </ul>
             <div>
               <Link
-                href="#"
+                href="https://www.apple.com/in/"
+                target="_blank"
                 className="underline"
                 onClick={() => handleLinkClick(false)}
               >
@@ -416,106 +486,126 @@ const Header = () => {
             <span>BROWSE ALL CATEGORIES</span>
           </div>
 
-          {/* Nav Items - FIXED */}
+          {/* Nav Items - Mobile with Active State */}
           <ul className="flex flex-col gap-4 px-2">
-            {navItems.map((item) => (
-              <li key={item.label} className="flex flex-col">
-                {item.dropdown ? (
-                  <>
-                    <div
-                      className="flex items-center justify-between cursor-pointer"
-                      onClick={() => toggleDropdown(item.label)}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown
-                        size={14}
-                        className={`transition-transform duration-200 ${
-                          openDropdown === item.label ? "rotate-180" : ""
-                        }`}
-                      />
-                    </div>
+            {navItems.map((item) => {
+              const isActive = isNavItemActive(item);
+              return (
+                <li key={item.label} className="flex flex-col">
+                  {item.dropdown ? (
+                    <>
+                      <div
+                        className="flex items-center justify-between cursor-pointer"
+                        onClick={() => toggleDropdown(item.label)}
+                      >
+                        <span className={isActive ? "text-[#A6CE39]" : ""}>
+                          {item.label}
+                        </span>
+                        <ChevronDown
+                          size={14}
+                          className={`transition-transform duration-200 ${
+                            openDropdown === item.label ? "rotate-180" : ""
+                          } ${isActive ? "text-[#A6CE39]" : ""}`}
+                        />
+                      </div>
 
-                    <ul
-                      className={`overflow-hidden transition-all duration-300 ${
-                        openDropdown === item.label
-                          ? "max-h-96 mt-2"
-                          : "max-h-0"
-                      }`}
-                    >
-                      {item.dropdown.map((sub) => (
-                        <li
-                          key={sub.label}
-                          className="border-b border-gray-100"
-                        >
-                          {sub.nested ? (
-                            <div className="flex flex-col">
-                              <div
-                                className="flex items-center justify-between px-3 py-2 hover:bg-gray-100 cursor-pointer"
-                                onClick={() => toggleNestedDropdown(sub.label)}
-                              >
-                                <span>{sub.label}</span>
-                                <ChevronDown
-                                  size={14}
-                                  className={`transition-transform duration-200 ${
+                      <ul
+                        className={`overflow-hidden transition-all duration-300 ${
+                          openDropdown === item.label
+                            ? "max-h-96 mt-2"
+                            : "max-h-0"
+                        }`}
+                      >
+                        {item.dropdown.map((sub) => (
+                          <li
+                            key={sub.label}
+                            className="border-b border-gray-100"
+                          >
+                            {sub.nested ? (
+                              <div className="flex flex-col">
+                                <div
+                                  className="flex items-center justify-between px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                                  onClick={() =>
+                                    toggleNestedDropdown(sub.label)
+                                  }
+                                >
+                                  <span>{sub.label}</span>
+                                  <ChevronDown
+                                    size={14}
+                                    className={`transition-transform duration-200 ${
+                                      openNestedDropdown === sub.label
+                                        ? "rotate-180"
+                                        : ""
+                                    }`}
+                                  />
+                                </div>
+                                <ul
+                                  className={`overflow-hidden transition-all duration-300 ${
                                     openNestedDropdown === sub.label
-                                      ? "rotate-180"
-                                      : ""
+                                      ? "max-h-96"
+                                      : "max-h-0"
                                   }`}
-                                />
-                              </div>
-                              <ul
-                                className={`overflow-hidden transition-all duration-300 ${
-                                  openNestedDropdown === sub.label
-                                    ? "max-h-96"
-                                    : "max-h-0"
-                                }`}
-                              >
-                                {sub.nested.map((nestedItem) => (
-                                  <li
-                                    key={nestedItem.label}
-                                    className="pl-6 pr-3 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-100"
-                                  >
-                                    <Link
-                                      href={nestedItem.href}
-                                      onClick={() => handleLinkClick(false)}
+                                >
+                                  {sub.nested.map((nestedItem) => (
+                                    <li
+                                      key={nestedItem.label}
+                                      className="pl-6 pr-3 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-100"
                                     >
-                                      {nestedItem.label}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ) : (
-                            <div className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
-                              <Link
-                                href={sub.href}
-                                onClick={() => handleLinkClick(false)}
-                              >
-                                {sub.label}
-                              </Link>
-                            </div>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="cursor-pointer"
-                    onClick={() => handleLinkClick(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </li>
-            ))}
+                                      <Link
+                                        href={nestedItem.href}
+                                        className={
+                                          pathname === nestedItem.href
+                                            ? "text-[#A6CE39]"
+                                            : ""
+                                        }
+                                        onClick={() => handleLinkClick(false)}
+                                      >
+                                        {nestedItem.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : (
+                              <div className="px-3 py-2 hover:bg-gray-100 cursor-pointer">
+                                <Link
+                                  href={sub.href}
+                                  className={
+                                    pathname === sub.href
+                                      ? "text-[#A6CE39]"
+                                      : ""
+                                  }
+                                  onClick={() => handleLinkClick(false)}
+                                >
+                                  {sub.label}
+                                </Link>
+                              </div>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={`cursor-pointer ${
+                        isActive ? "text-[#A6CE39]" : ""
+                      }`}
+                      onClick={() => handleLinkClick(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
 
           {/* Buy and Try */}
           <div className="px-2 mt-2">
             <Link
-              href="#"
+              href="https://www.apple.com/in/"
+              target="_blank"
               className="underline"
               onClick={() => handleLinkClick(false)}
             >
