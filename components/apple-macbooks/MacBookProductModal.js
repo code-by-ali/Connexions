@@ -10,13 +10,6 @@ import "swiper/css/navigation";
 import CommonImage from "../common/CommonImage";
 
 // Import your product images
-import ProductImg1 from "@/public/assets/apple-macbook-product-img-1.svg";
-import ProductImg2 from "@/public/assets/apple-macbook-product-img-2.svg";
-import ProductImg3 from "@/public/assets/apple-macbook-product-img-3.svg";
-import ProductImg4 from "@/public/assets/apple-macbook-product-img-4.svg";
-import ProductImg5 from "@/public/assets/apple-macbook-product-img-5.svg";
-import ProductImg6 from "@/public/assets/apple-macbook-product-img-6.svg";
-
 import MacAirIcon1 from "@/public/assets/modal-mac-air-icon-1.svg";
 import MacAirIcon2 from "@/public/assets/modal-mac-air-icon-2.svg";
 import MacAirIcon3 from "@/public/assets/modal-mac-air-icon-3.svg";
@@ -24,14 +17,27 @@ import MacAirIcon4 from "@/public/assets/modal-mac-air-icon-4.svg";
 import MacAirIcon5 from "@/public/assets/modal-mac-air-icon-5.svg";
 import MacAirIcon6 from "@/public/assets/modal-mac-air-icon-6.svg";
 
+import MacAirImg1 from "@/public/assets/modal-mac-air-img-1.png";
+
+import MacBookProImg1 from "@/public/assets/modal-macbook-pro-img-1.png";
+
+import IMacImg1 from "@/public/assets/modal-imac-img-1.png";
+
+import MacMiniImg from "@/public/assets/modal-mac-mini-img-1.png";
+
+import MacStudioImg from "@/public/assets/modal-mac-studio-img-1.png";
+
+import MacProImg from "@/public/assets/modal-mac-pro-img-1.png";
+
 // Product details data
 const productDetailsData = {
   1: {
     name: "MacBook Air",
-    description:"",
+    description:
+      "A stunning all-in-one desktop for creativity and productivity.",
     price:
       "From ₹7492.00/mo. with instant cashback* and no-cost EMI or ₹99900.00",
-    images: [ProductImg1, ProductImg2],
+    images: [MacAirImg1],
     colors: ["#C8D8E0", "#2E3642", "#F0E4D3", "#E3E4E5"],
     specs: [
       {
@@ -68,108 +74,136 @@ const productDetailsData = {
   },
   2: {
     name: "MacBook Pro",
-    description:"",
+    description:
+      "The ultimate notebook for demanding workflows, delivering breakthrough performance and all-day battery life.",
     price:
-      "From ₹7492.00/mo. with instant cashback* and no-cost EMI or ₹99900.00",
-    images: [ProductImg2, ProductImg3],
+      "From ₹12492.00/mo. with instant cashback* and no-cost EMI or ₹159900.00",
+    images: [MacBookProImg1],
     colors: ["#C8D8E0", "#2E3642", "#F0E4D3", "#E3E4E5"],
     specs: [
       {
-        icon: "⚡",
-        title: "M4 Max chip",
+        icon: <CommonImage src={MacAirIcon2.src || MacAirIcon2} />,
         description:
-          "up to 12-core CPU and up to 20-core GPU for exceptional performance",
+          "Powered by the M4 Pro and M4 Max chips for extreme performance and efficiency",
       },
       {
-        icon: "🔋",
-        title: "Extended battery",
-        description: "Up to 33 hours of battery life for all-day productivity",
+        icon: <CommonImage src={MacAirIcon3.src || MacAirIcon4} />,
+        description:
+          "Up to 22 hours of battery life — the longest ever in a Mac notebook",
       },
       {
         icon: "🖥️",
-        title: "XDR display",
         description:
-          "16-inch Liquid Retina XDR display with extreme brightness",
+          "Brilliant Liquid Retina XDR display with exceptional contrast and color accuracy",
+      },
+      {
+        icon: <CommonImage src={MacAirIcon6.src || MacAirIcon6} />,
+        description:
+          "Built for Apple Intelligence. Personal, Private, Powerful",
       },
     ],
   },
   3: {
     name: "iMac",
-    description:"",
+    description:
+      "A vibrant all-in-one desktop that's bursting with personality and power — now with the M4 chip.",
     price:
-      "From ₹7492.00/mo. with instant cashback* and no-cost EMI or ₹99900.00",
-    images: [ProductImg3, ProductImg4],
-    colors: ["#C8D8E0", "#2E3642", "#F0E4D3", "#E3E4E5"],
+      "From ₹10492.00/mo. with instant cashback* and no-cost EMI or ₹139900.00",
+    images: [IMacImg1],
+    colors: [],
     specs: [
       {
-        icon: "⚡",
-        title: "Professional performance",
-        description: "M3, M3 Pro, or M3 Max chip options",
+        icon: "🖥️",
+        description:
+          "24-inch 4.5K Retina display with over 11 million pixels and 1 billion colors",
       },
       {
-        icon: "🖥️",
-        title: "14-inch display",
-        description: "Liquid Retina XDR with incredible brightness",
+        icon: <CommonImage src={MacAirIcon2.src || MacAirIcon2} />,
+        description:
+          "Powered by the Apple M4 chip for incredible speed and efficiency",
+      },
+      {
+        icon: "📷",
+        description:
+          "1080p FaceTime HD camera, studio-quality mics, and six-speaker sound system",
+      },
+      {
+        icon: <CommonImage src={MacAirIcon6.src || MacAirIcon6} />,
+        description:
+          "Built for Apple Intelligence. Personal, Private, Powerful",
       },
     ],
   },
   4: {
     name: "Mac Mini",
-    description:"",
+    description:
+      "The most affordable way to get the power of Apple silicon in a compact desktop form.",
     price:
-      "From ₹7492.00/mo. with instant cashback* and no-cost EMI or ₹99900.00",
-    images: [ProductImg4, ProductImg5],
-    colors: ["#C8D8E0", "#2E3642", "#F0E4D3", "#E3E4E5"],
+      "From ₹6660.00/mo. with instant cashback* and no-cost EMI or ₹89900.00",
+    images: [MacMiniImg],
+    colors: [],
     specs: [
       {
-        icon: "🖥️",
-        title: "4.5K display",
-        description: "Stunning Retina display with vibrant colors",
+        icon: <CommonImage src={MacAirIcon2.src || MacAirIcon2} />,
+        description:
+          "M4 or M4 Pro chip for lightning-fast performance and multitasking",
       },
       {
-        icon: "🎨",
-        title: "10 colors",
-        description: "Choose from 10 beautiful color options",
+        icon: "🍃",
+        description:
+          "Silent, energy-efficient performance that's built to last",
+      },
+      {
+        icon: "🖥️",
+        description:
+          "Connect up to two displays and a range of high-speed devices with Thunderbolt 4",
       },
     ],
   },
   5: {
-    name: "Mac mini",
-    description:"",
+    name: "Mac Studio",
+    description:
+      "A creative powerhouse that combines performance, connectivity, and modularity — made for professionals.",
     price:
-      "From ₹7492.00/mo. with instant cashback* and no-cost EMI or ₹99900.00",
-    images: [ProductImg5, ProductImg6],
-    colors: ["#C8D8E0", "#2E3642", "#F0E4D3", "#E3E4E5"],
+      "From ₹20825.00/mo. with instant cashback* and no-cost EMI or ₹266900.00",
+    images: [MacStudioImg],
+    colors: [],
     specs: [
       {
-        icon: "📦",
-        title: "Ultra-compact",
-        description: "Powerful desktop in a tiny form factor",
+        icon: <CommonImage src={MacAirIcon2.src || MacAirIcon2} />,
+        description:
+          "M4 Max or M4 Ultra chip for groundbreaking performance and efficiency",
       },
       {
-        icon: "⚡",
-        title: "M4 chip",
-        description: "Exceptional performance in a small package",
+        icon: "🖥️",
+        description:
+          "Supports up to six Pro Display XDRs for expansive workflows",
+      },
+      {
+        icon: "🎥",
+        description:
+          "Designed for video editing, 3D rendering, music production, and AI development",
       },
     ],
   },
   6: {
-    name: "Mac Studio",
-    description:"",
+    name: "Mac Pro",
+    description:
+      "The most powerful Mac ever — designed for extreme performance, scalability, and professional workflows.",
     price:
-      "From ₹7492.00/mo. with instant cashback* and no-cost EMI or ₹99900.00",
-    images: [ProductImg6, ProductImg1],
-    colors: ["#C8D8E0", "#2E3642", "#F0E4D3", "#E3E4E5"],
+      "From ₹45825.00/mo. with instant cashback* and no-cost EMI or ₹586900.00",
+    images: [MacProImg],
+    colors: [],
     specs: [
       {
-        icon: "🎬",
-        title: "Professional workstation",
-        description: "For creators and professionals",
+        icon: <CommonImage src={MacAirIcon2.src || MacAirIcon2} />,
+        description:
+          "Built around the M4 Ultra chip for ultimate power and efficiency",
       },
       {
-        icon: "⚡",
-        title: "Maximum performance",
-        description: "M4 Max and M4 Ultra chip options",
+        icon: "🍃",
+        description:
+          "Quiet, energy-efficient, and beautifully built from the ground up",
       },
     ],
   },
@@ -356,21 +390,23 @@ const MacBookProductModal = ({ selectedProduct, onClose, onSelectProduct }) => {
               )}
 
               {/* Available Colors */}
-              <div className="flex flex-col items-center justify-center gap-2 py-2">
-                <p className="text-xs sm:text-sm font-normal text-gray-600">
-                  Available in {productData?.colors?.length} colors
-                </p>
-                <div className="flex gap-2 items-center">
-                  {productData.colors.map((color, idx) => (
-                    <div
-                      key={idx}
-                      className="w-5 h-5 sm:w-6 sm:h-6 rounded-full cursor-pointer border-2 border-gray-200 hover:border-gray-400 transition-colors"
-                      style={{ backgroundColor: color }}
-                      aria-label={`Color option ${idx + 1}`}
-                    />
-                  ))}
+              {productData.colors.length > 0 && (
+                <div className="flex flex-col items-center justify-center gap-2 py-2">
+                  <p className="text-xs sm:text-sm font-normal text-gray-600">
+                    Available in {productData?.colors?.length} colors
+                  </p>
+                  <div className="flex gap-2 items-center">
+                    {productData.colors.map((color, idx) => (
+                      <div
+                        key={idx}
+                        className="w-5 h-5 sm:w-6 sm:h-6 rounded-full cursor-pointer border-2 border-gray-200 hover:border-gray-400 transition-colors"
+                        style={{ backgroundColor: color }}
+                        aria-label={`Color option ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Right Side - Specifications */}
@@ -382,20 +418,20 @@ const MacBookProductModal = ({ selectedProduct, onClose, onSelectProduct }) => {
                     <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-1.5 sm:mb-2">
                       {productData.name}
                     </h2>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                      {productData.price}
+                    <p className="text-xs sm:text-sm text-primary leading-relaxed">
+                      {productData.description}
                     </p>
                   </div>
-                  <button className="flex-shrink-0 px-4 sm:px-6 py-2 sm:py-2.5 cursor-pointer rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base font-medium transition-colors shadow-sm">
-                    Buy
-                  </button>
                 </div>
               </div>
 
               {/* Specifications List */}
               <div className="space-y-3 sm:space-y-4">
                 {productData.specs.map((spec, idx) => (
-                  <div key={idx} className="flex gap-3 sm:gap-4 group">
+                  <div
+                    key={idx}
+                    className="flex gap-3 sm:gap-4 group items-center"
+                  >
                     <div className="flex-shrink-0 text-xl sm:text-2xl w-7 sm:w-8">
                       {spec.icon}
                     </div>
