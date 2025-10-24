@@ -58,7 +58,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
                     Home
@@ -66,15 +66,15 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/apple-macbooks"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
-                    Apple
+                    MacBooks
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/contact-us"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
                     Contact us
@@ -83,18 +83,99 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Legal & Policy Links */}
+            {/* Apple Links */}
             <div>
               <h3 className="text-sm sm:text-base font-semibold text-primary mb-4">
-                Legal & Policy Links
+                Apple
               </h3>
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="/apple-solutions"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
-                    Privacy Policy
+                    Apple Solutions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/apple-for-enterprise"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    Apple for Enterprise
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/apple-for-work"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    Apple for Work
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/apple-business-manager"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    Apple Business Manager
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/apple-consultant-partner"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    Apple Consultant Partner
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* New Launches Links */}
+            <div>
+              <h3 className="text-sm sm:text-base font-semibold text-primary mb-4">
+                New Launches
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href="/iphone-17"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    iPhone 17
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/iphone-17pro"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    iPhone 17 Pro
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/iphone-17air"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    iPhone 17 Air
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/apple-watch"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    Apple Watch SE3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/apple-airpods"
+                    className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
+                  >
+                    Apple Airpods Pro 3
                   </a>
                 </li>
               </ul>

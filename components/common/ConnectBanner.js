@@ -14,12 +14,12 @@ const ConnectBanner = () => {
       {/* Left Content */}
       <div className="flex flex-col gap-4 sm:gap-6 max-w-full lg:max-w-[500px] text-center lg:text-left relative z-10">
         <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug">
-          Connect with us via Calendly or Email Us
+          Lets Start a Smarter Conversation
         </p>
         <p className="text-sm sm:text-base text-white leading-relaxed">
-          Join thousands of aspiring designers and gain the skills to create
-          stunning, user-friendly designs. Don&apos;t wait — your design career
-          starts here!
+          Looking to upgrade your business tech? We're here to help you plan,
+          deploy, and scale with confidence.Book a quick call or drop us message
+          — your smarter solution starts here.
         </p>
 
         {/* Buttons */}
@@ -33,7 +33,7 @@ const ConnectBanner = () => {
             href={"/contact-us"}
             className="cursor-pointer flex items-center h-11 px-5 bg-white text-primary rounded-lg text-sm font-medium w-full sm:w-auto"
           >
-            Contact Us
+            Contact Our Team
           </Link>
         </div>
       </div>
