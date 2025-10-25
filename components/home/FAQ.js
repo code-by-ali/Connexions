@@ -67,7 +67,8 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-base md:text-lg text-[#4E5B6D] font-medium tracking-[-0.36px]">
-            Do you want to learn more about us, let's go the blog page.
+            Explore quick, helpful answers to common questions about our
+            solutions and services.
           </p>
         </div>
 

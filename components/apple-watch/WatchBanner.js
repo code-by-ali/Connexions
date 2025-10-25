@@ -14,7 +14,7 @@ const WatchBanner = () => {
           Diwali
         </span>
         <Link
-          href={"https://www.apple.com/in/shop/buy-watch/apple-watch-se"}
+          href={"/contact-us"}
           target="_blank"
         >
           <span className="font-normal text-xs sm:text-sm tracking-[-0.22px] text-[#A6CE39] flex items-center gap-2 cursor-pointer hover:underline">

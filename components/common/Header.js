@@ -133,8 +133,8 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center gap-3 text-white text-xs sm:text-sm">
-          <a href="tel:+919373225250" className="hover:underline">
-            Call: +91-9373225250
+          <a href="tel:+918149882686" className="hover:underline">
+            Call: +91-8149882686
           </a>
           <div className="w-px bg-white/50 h-5"></div>
           <a
@@ -212,7 +212,7 @@ const Header = () => {
               </div>
               <div>
                 <Link
-                  href="https://www.apple.com/in/"
+                  href="/contact-us"
                   target="_blank"
                   className="underline"
                   onClick={() => handleLinkClick(false)}
@@ -441,7 +441,7 @@ const Header = () => {
             </ul>
             <div>
               <Link
-                href="https://www.apple.com/in/"
+                href="/contact-us"
                 target="_blank"
                 className="underline"
                 onClick={() => handleLinkClick(false)}
@@ -604,7 +604,7 @@ const Header = () => {
           {/* Buy and Try */}
           <div className="px-2 mt-2">
             <Link
-              href="https://www.apple.com/in/"
+              href="/contact-us"
               target="_blank"
               className="underline"
               onClick={() => handleLinkClick(false)}

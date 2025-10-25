@@ -1,8 +1,13 @@
 import { MoveRight } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 import EnterpriseMacbook from "@/public/assets/enterprise-macbook.svg";
 import CommonImage from "../common/CommonImage";
+
+const contactUsLink = "/contact-us";
+
+const handleLearnMore = () => {
+  window.open(contactUsLink, "_blank");
+};
 
 const EnterpriseSolutionsCard = ({ card }) => {
   return (
@@ -27,7 +32,10 @@ const EnterpriseSolutionsCard = ({ card }) => {
         />
       </div>
 
-      <p className="text-sm md:text-base text-[#A6CE39] flex items-center gap-2 cursor-pointer">
+      <p
+        onClick={handleLearnMore}
+        className="text-sm md:text-base text-[#A6CE39] flex items-center gap-2 cursor-pointer"
+      >
         Learn More{" "}
         <span>
           <MoveRight size={16} />

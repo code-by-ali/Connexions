@@ -12,8 +12,8 @@ import TalkToExpertIcon from "@/public/assets/talk-to-expert-icon.svg";
 import CTAIcon1 from "@/public/assets/apple-solutions-cta-icon-1.svg";
 import CTAIcon2 from "@/public/assets/apple-solutions-cta-icon-2.svg";
 import CTAIcon3 from "@/public/assets/apple-solutions-cta-icon-3.svg";
-import TitleIcon from "@/public/assets/apple-solutions-cta-title-icon.svg";
-import AppleLogoBlack from "@/public/assets/apple-logo-black.png";
+import CTALogo1 from "@/public/assets/apple-solutions-cta-logo-1.svg";
+import CTALogo2 from "@/public/assets/apple-solutions-cta-logo-2.svg";
 import Link from "next/link";
 
 const AppleCTA = () => {
@@ -22,18 +22,23 @@ const AppleCTA = () => {
       {/* Announcement Pill */}
       <div className="flex items-center gap-10 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.16px] mb-6">
         <div className="inline-flex items-center gap-2 py-2 mb-6 w-fit">
-          <div className="flex gap-3 items-center text-black font-medium text-sm md:text-base text-left">
-            <CommonImage
-              src={AppleLogoBlack.src || AppleLogoBlack}
-              alt={"apple logo"}
-              className="w-10 h-10"
-            />{" "}
-            <span>
-              Premium <br /> Buisness Partner
-            </span>
-            <span>
-              Authorized <br /> Service Provider
-            </span>
+          <div className="flex items-center justify-center w-40 h-18 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
+            <div className="w-32 h-14 object-contain px-4 bg-white border border-[#E6E9EE] rounded-xl flex items-center justify-center">
+              <CommonImage
+                src={CTALogo1.src || CTALogo1}
+                alt={"cta-logo-1"}
+                className="w-auto h-14 object-contain rounded-2xl"
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-40 h-18 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
+            <div className="w-32 h-14 object-contain px-4 bg-white border border-[#E6E9EE] rounded-xl flex items-center justify-center">
+              <CommonImage
+                src={CTALogo2.src || CTALogo2}
+                alt={"cta-logo-2"}
+                className="w-auto h-14 object-contain rounded-2xl"
+              />
+            </div>
           </div>
         </div>
       </div>

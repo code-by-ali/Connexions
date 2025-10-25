@@ -100,7 +100,7 @@ const ServicesSection = () => {
           </p>
         </div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-[-1px] mb-12">
-          Services from connexions
+          Our Enterprise-Ready Solutions
         </h2>
 
         {/* Grid */}

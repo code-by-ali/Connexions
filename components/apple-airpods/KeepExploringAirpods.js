@@ -159,7 +159,7 @@ const KeepExploringAirpods = () => {
 
             <div className="flex flex-col gap-2 mt-4 items-start md:items-center text-sm md:text-base tracking-[-0.37px] h-[90px] md:h-auto">
               <Link
-                href={"https://www.apple.com/in/airpods-4/"}
+                href={"/contact-us"}
                 target="_blank"
                 className="text-white bg-[#0066CC] px-4 py-2 rounded-full"
               >

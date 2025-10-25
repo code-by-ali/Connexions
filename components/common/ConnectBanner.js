@@ -25,7 +25,9 @@ const ConnectBanner = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
           <button className="cursor-pointer h-11 px-5 bg-white text-primary rounded-lg flex items-center gap-2 text-sm font-medium w-full sm:w-auto">
-            <span>Email Us</span>
+            <a href="mailto:nikhil@connexionsmobile.com">
+              <span>Email Us</span>
+            </a>
             <ArrowRight className="w-5 h-5 bg-primary text-white rounded-sm p-1" />
           </button>
 

@@ -12,8 +12,10 @@ const AirpodsBanner = () => {
           Last chance to find something special for your special someone this
           Diwali
         </span>
-        <span className="font-normal text-xs sm:text-sm tracking-[-0.22px] text-[#A6CE39] flex items-center gap-2 cursor-pointer hover:underline">
-          Shop <ChevronRight size={16} />
+        <span className="font-normal text-xs sm:text-sm tracking-[-0.22px] text-[#A6CE39] cursor-pointer hover:underline">
+          <a href="/contact-us" className="flex items-center gap-1">
+            Shop <ChevronRight size={16} />
+          </a>
         </span>
       </div>
 

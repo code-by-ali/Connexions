@@ -1,8 +1,15 @@
+"use client"
 import React from "react";
 import TradeInImg from "@/public/assets/apple-macbook-tradein-img.svg";
 import CommonImage from "../common/CommonImage";
 
 const MacBookAppleTradeIn = () => {
+  const contactUsLink = "/contact-us";
+
+  const handleBuyNow = () => {
+    window.open(contactUsLink, "_blank");
+  };
+
   return (
     <div className="px-4 sm:px-6 md:px-8 lg:px-20 bg-white py-6 sm:py-8 lg:py-12">
       <div className="max-w-7xl mx-auto">
@@ -21,7 +28,10 @@ const MacBookAppleTradeIn = () => {
               device and apply it toward a new one. If your device isn't
               eligible for credit, we' ll recycle it for free.
             </p>
-            <button className="bg-[#A6CE39] border border-[#DEDEDE] text-white rounded-full px-6 py-3 text-sm md:text-base tracking-[-0.5px] font-normal max-w-fit">
+            <button
+              onClick={handleBuyNow}
+              className="bg-[#A6CE39] cursor-pointer border border-[#DEDEDE] text-white rounded-full px-6 py-3 text-sm md:text-base tracking-[-0.5px] font-normal max-w-fit"
+            >
               Explore Service
             </button>
           </div>

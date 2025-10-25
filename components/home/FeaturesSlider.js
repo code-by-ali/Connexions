@@ -116,7 +116,7 @@ const FeaturesSlider = () => {
 
           <div className="flex items-start justify-between">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight max-w-2xl tracking-tight">
-              Why Connexions is the best place to IT Solutions
+              Empowering Enterprises with End-to-End IT Solutions
             </h2>
           </div>
         </div>

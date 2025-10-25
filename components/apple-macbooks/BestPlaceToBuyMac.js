@@ -98,6 +98,12 @@ const BestPlaceToBuyMac = () => {
     }
   };
 
+  const contactUsLink = "/contact-us";
+
+  const handleBuyNow = () => {
+    window.open(contactUsLink, "_blank");
+  };
+
   return (
     <div className="bg-[#FAFAFA] py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
@@ -107,7 +113,10 @@ const BestPlaceToBuyMac = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight max-w-lg tracking-tight">
               Why Apple is the best place to buy Mac.
             </h2>
-            <button className="bg-[#A6CE39] border border-[#DEDEDE] text-white rounded-full px-6 py-3 text-sm md:text-base tracking-[-0.5px] font-normal max-w-fit">
+            <button
+              onClick={handleBuyNow}
+              className="bg-[#A6CE39] cursor-pointer border border-[#DEDEDE] text-white rounded-full px-6 py-3 text-sm md:text-base tracking-[-0.5px] font-normal max-w-fit"
+            >
               Explore Service
             </button>
           </div>

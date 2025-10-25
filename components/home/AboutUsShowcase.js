@@ -82,17 +82,26 @@ const AboutUsShowcase = () => {
                 </span>
               </div>
 
-              <p className="text-xl md:text-2xl text-[#22222299] leading-relaxed tracking-[-0.96px] font-medium">
-                At Connexions, we believe technology should simplify work, not
-                complicate it. As an enterprise solutions partner for Apple and
-                Samsung, we empower businesses to innovate with seamless device
-                management, secure mobility, and future-ready IT solutions. From
-                procurement to lifecycle support, our mission is to connect
-                people, processes, and possibilities —{" "}
-                <span className="text-primary">
-                  helping enterprises work smarter, scale faster, and stay
-                  ahead.
-                </span>
+              <p className="text-lg md:text-xl text-[#22222299] leading-relaxed tracking-[-0.96px] font-medium">
+                At Connexions, we believe technology should accelerate
+                progress—not complicate it. With over 20 years of proven
+                expertise, we are proud to be among the industry leaders in
+                delivering comprehensive enterprise IT, mobility, and AV
+                solutions.
+                <br />
+                From end-to-end device lifecycle management and secure
+                enterprise mobility to audio-visual integration and IT
+                infrastructure consulting, our services are tailored to meet the
+                dynamic needs of modern businesses.
+                <br />
+                We partner with leading global brands to provide seamless
+                deployments, zero-touch provisioning, MDM integration, and
+                future-ready support, enabling organizations to scale faster,
+                operate smarter, and stay ahead of the curve.
+                <br /> Our commitment is to empower businesses with simplified
+                processes, sustainable technology adoption, and connected
+                ecosystems—so your teams can focus on what truly matters:
+                growth, innovation, and impact.
               </p>
             </div>
 

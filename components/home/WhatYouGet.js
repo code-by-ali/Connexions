@@ -30,11 +30,11 @@ const WhatYouGet = () => {
           </p>
         </div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-3 tracking-[-1.6px] text-primary">
-          What You’ll Get From Connexions
+          Powering Business Evolution with 20+ Years of Expertise
         </h2>
         <p className="text-[#BEBEBE] max-w-2xl mx-auto text-sm md:text-base tracking-[-0.51px] font-normal">
-          Embrace a realm of possibilities and take charge of your destiny by
-          honing new skills that again to there help you fulfill your ambitions.
+          Driving enterprise success through integrated IT solutions, strategic
+          innovation, and lifecycle support.
         </p>
       </div>
 

@@ -77,7 +77,7 @@ const Footer = () => {
                     href="/contact-us"
                     className="text-sm sm:text-base text-[#505050] hover:text-primary transition-colors"
                   >
-                    Contact us
+                    Contact Us
                   </a>
                 </li>
               </ul>

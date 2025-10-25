@@ -15,7 +15,7 @@ const Banner = () => {
         </span>
         <Link
           target="_blank"
-          href={"https://www.apple.com/in/shop/buy-iphone/iphone-17"}
+          href={"/contact-us"}
         >
           <span className="font-normal text-xs sm:text-sm tracking-[-0.22px] text-[#A6CE39] flex items-center gap-2 cursor-pointer hover:underline">
             Shop <ChevronRight size={16} />

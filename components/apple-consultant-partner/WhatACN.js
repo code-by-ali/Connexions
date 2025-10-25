@@ -85,11 +85,11 @@ const WhatACN = () => {
                 </div>
                 {/* Description Row */}
                 <Link
-                  href="tel:+919373225250"
+                  href="tel:+918149882686"
                   className="hover:underline decoration-[#A6CE39] underline-offset-2"
                 >
                   <span className="text-sm sm:text-base text-[#A6CE39] font-normal block">
-                    (+91) 93732-25250
+                    (+91) 8149882686
                   </span>
                 </Link>
               </div>

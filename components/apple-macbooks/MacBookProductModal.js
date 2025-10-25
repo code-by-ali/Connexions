@@ -215,6 +215,12 @@ const MacBookProductModal = ({ selectedProduct, onClose, onSelectProduct }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  const contactUsLink = "/contact-us";
+
+  const handleBuyNow = () => {
+    window.open(contactUsLink, "_blank");
+  };
+
   // Close dropdown when clicking outside
   React.useEffect(() => {
     const handleClickOutside = (event) => {
@@ -422,6 +428,12 @@ const MacBookProductModal = ({ selectedProduct, onClose, onSelectProduct }) => {
                       {productData.description}
                     </p>
                   </div>
+                  <button
+                    onClick={handleBuyNow}
+                    className="my-auto bg-[#0071E3] text-white rounded-full px-4 py-2 text-sm font-normal tracking-[-0.22px] cursor-pointer"
+                  >
+                    Buy
+                  </button>
                 </div>
               </div>
 

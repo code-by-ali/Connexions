@@ -51,10 +51,10 @@ const ClientsSection = () => {
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#0F0F0F] tracking-[-1px] mb-3 sm:mb-4 px-2">
-            See for whom we are working
+            Trusted by Industry Leaders Across India
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-[#4E5B6D] px-4 font-medium tracking-[-0.36px]">
-            We have our network all over India.
+            Powering seamless enterprise solutions for clients nationwide.
           </p>
         </div>
 

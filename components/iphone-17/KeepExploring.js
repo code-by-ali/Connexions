@@ -58,7 +58,7 @@ const KeepExploring = () => {
             <div className="flex flex-col gap-2 mt-4 items-start md:items-center text-sm md:text-base tracking-[-0.37px] h-[90px] md:h-auto">
               <p className="text-[#424245] px-4 py-2">Currently Viewing</p>
               <Link
-                href={"https://www.apple.com/in/shop/buy-iphone/iphone-17"}
+                href={"/contact-us"}
                 target="_blank"
                 className="text-[#0066CC] flex items-center"
               >
@@ -153,14 +153,14 @@ const KeepExploring = () => {
             </p>
             <div className="flex flex-col gap-2 mt-4 items-start md:items-center text-sm md:text-base tracking-[-0.37px] h-[90px] md:h-auto">
               <Link
-                href={"https://www.apple.com/in/iphone-air/"}
+                href="/contact-us"
                 target="_blank"
                 className="text-white bg-[#0066CC] px-4 py-2 rounded-full"
               >
                 Learn More
               </Link>
               <Link
-                href={"https://www.apple.com/in/shop/buy-iphone/iphone-air"}
+                href={"/contact-us"}
                 target="_blank"
                 className="text-[#0066CC] flex items-center"
               >

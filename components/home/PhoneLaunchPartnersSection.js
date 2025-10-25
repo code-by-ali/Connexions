@@ -18,6 +18,8 @@ import HomeBannerLogo4 from "@/public/assets/home-banner-logo-4.svg";
 import HomeBannerLogo5 from "@/public/assets/home-banner-logo-5.svg";
 import HomeBannerLogo6 from "@/public/assets/home-banner-logo-6.svg";
 import HomeBannerLogo7 from "@/public/assets/home-banner-logo-7.svg";
+import HomeBannerLogo8 from "@/public/assets/home-banner-logo-8.svg";
+
 import AppleLogoBlack from "@/public/assets/apple-logo-black.png";
 
 // Import Swiper styles
@@ -50,20 +52,23 @@ const PhoneLaunchPartnersSection = () => {
   ];
 
   const partners = [
-    { name: "Google", logo: HomeBannerLogo1 },
-    { name: "Microsoft", logo: HomeBannerLogo2 },
-    { name: "Apple", logo: HomeBannerLogo3 },
-    { name: "Samsung", logo: HomeBannerLogo4 },
-    { name: "Amazon", logo: HomeBannerLogo5 },
-    { name: "Meta", logo: HomeBannerLogo6 },
-    { name: "Netflix", logo: HomeBannerLogo7 },
-    { name: "Spotify", logo: HomeBannerLogo1 },
-    { name: "Adobe", logo: HomeBannerLogo2 },
-    { name: "Tesla", logo: HomeBannerLogo3 },
-    { name: "Google", logo: HomeBannerLogo4 },
-    { name: "Microsoft", logo: HomeBannerLogo5 },
-    { name: "Apple", logo: HomeBannerLogo6 },
-    { name: "Samsung", logo: HomeBannerLogo7 },
+    { name: "Apple Authorized Provider", logo: HomeBannerLogo1 },
+    { name: "Apple Business Partner", logo: HomeBannerLogo2 },
+    { name: "Samsung", logo: HomeBannerLogo3 },
+    { name: "Canon", logo: HomeBannerLogo4 },
+    { name: "Logitech", logo: HomeBannerLogo5 },
+    { name: "Microsoft", logo: HomeBannerLogo6 },
+    { name: "Asus", logo: HomeBannerLogo7 },
+    { name: "Phillips", logo: HomeBannerLogo8 },
+
+    { name: "Apple Authorized Provider", logo: HomeBannerLogo1 },
+    { name: "Apple Business Partner", logo: HomeBannerLogo2 },
+    { name: "Samsung", logo: HomeBannerLogo3 },
+    { name: "Canon", logo: HomeBannerLogo4 },
+    { name: "Logitech", logo: HomeBannerLogo5 },
+    { name: "Microsoft", logo: HomeBannerLogo6 },
+    { name: "Asus", logo: HomeBannerLogo7 },
+    { name: "Phillips", logo: HomeBannerLogo8 },
   ];
 
   return (
@@ -147,12 +152,12 @@ const PhoneLaunchPartnersSection = () => {
           {/* Partners Auto-scrolling Swiper */}
           <Marquee>
             {partners.map((partner, index) => (
-              <div className="flex items-center justify-center w-40 h-16 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
-                <div className="w-32 h-12 object-contain px-4 bg-white border border-[#E6E9EE] rounded-xl flex items-center justify-center">
+              <div className="flex items-center justify-center w-40 h-18 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
+                <div className="w-32 h-14 object-contain px-4 bg-white border border-[#E6E9EE] rounded-xl flex items-center justify-center">
                   <CommonImage
                     src={partner.logo.src || partner.logo}
                     alt={partner.name}
-                    className="w-auto h-12 object-contain rounded-2xl"
+                    className="w-auto h-14 object-contain rounded-2xl"
                   />
                 </div>
               </div>
