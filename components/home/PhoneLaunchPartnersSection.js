@@ -87,10 +87,10 @@ const PhoneLaunchPartnersSection = () => {
                   className="w-10 h-10"
                 />{" "}
                 <span>
-                  Premium <br /> Buisness Partner
+                  Authorized <br /> Service Provider
                 </span>
                 <span>
-                  Authorized <br /> Service Provider
+                  Business <br /> Partner
                 </span>
               </div>
             </div>
