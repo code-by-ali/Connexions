@@ -79,7 +79,7 @@ const PhoneLaunchPartnersSection = () => {
           {/* Left Side - Text Content */}
           <div className="flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 py-2 mb-6 w-fit">
+            {/* <div className="inline-flex items-center gap-2 py-2 mb-6 w-fit">
               <div className="flex gap-3 items-center text-black font-medium text-sm md:text-base">
                 <CommonImage
                   src={AppleLogoBlack.src || AppleLogoBlack}
@@ -93,7 +93,7 @@ const PhoneLaunchPartnersSection = () => {
                   Business <br /> Partner
                 </span>
               </div>
-            </div>
+            </div> */}
 
             {/* Main Heading */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight mb-6">
