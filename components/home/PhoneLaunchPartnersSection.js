@@ -61,7 +61,7 @@ const PhoneLaunchPartnersSection = () => {
     { name: "Asus", logo: HomeBannerLogo7 },
     { name: "Phillips", logo: HomeBannerLogo8 },
 
-    { name: "Apple Authorized Provider", logo: HomeBannerLogo1 },
+    // { name: "Apple Authorized Provider", logo: HomeBannerLogo1 },
     { name: "Apple Business Partner", logo: HomeBannerLogo2 },
     { name: "Samsung", logo: HomeBannerLogo3 },
     { name: "Canon", logo: HomeBannerLogo4 },

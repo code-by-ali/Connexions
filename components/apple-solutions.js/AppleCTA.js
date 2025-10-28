@@ -12,8 +12,8 @@ import TalkToExpertIcon from "@/public/assets/talk-to-expert-icon.svg";
 import CTAIcon1 from "@/public/assets/apple-solutions-cta-icon-1.svg";
 import CTAIcon2 from "@/public/assets/apple-solutions-cta-icon-2.svg";
 import CTAIcon3 from "@/public/assets/apple-solutions-cta-icon-3.svg";
-import CTALogo1 from "@/public/assets/apple-solutions-cta-logo-1.svg";
-import CTALogo2 from "@/public/assets/apple-solutions-cta-logo-2.svg";
+import CTALogo1 from "@/public/assets/home-banner-logo-1.svg";
+import CTALogo2 from "@/public/assets/home-banner-logo-2.svg";
 import Link from "next/link";
 
 const AppleCTA = () => {
