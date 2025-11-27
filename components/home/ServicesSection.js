@@ -121,7 +121,7 @@ const ServicesSection = () => {
               <h3 className="text-lg font-semibold text-[#0F0F0F] mb-2">
                 {service.title}
               </h3>
-              <div className="flex flex-wrap gap-4 mb-3">
+              {/* <div className="flex flex-wrap gap-4 mb-3">
                 {service.tags.map((tag, tIdx) => (
                   <p
                     key={tIdx}
@@ -133,7 +133,7 @@ const ServicesSection = () => {
                     </span>
                   </p>
                 ))}
-              </div>
+              </div> */}
               <p className="text-xs md:text-sm font-normal text-[#565F6B] ">
                 {service.description}
               </p>

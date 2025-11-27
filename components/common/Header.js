@@ -207,8 +207,8 @@ const Header = () => {
           <div className="block lg:hidden">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
-                <Grid2x2 size={14} />
-                <span>BROWSE ALL CATEGORIES</span>
+                {/* <Grid2x2 size={14} />
+                <span>BROWSE ALL CATEGORIES</span> */}
               </div>
               <div>
                 <Link
@@ -333,8 +333,8 @@ const Header = () => {
           {/* Desktop: One Row */}
           <div className="hidden lg:flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Grid2x2 size={14} />
-              <span>BROWSE ALL CATEGORIES</span>
+              {/* <Grid2x2 size={14} />
+              <span>BROWSE ALL CATEGORIES</span> */}
             </div>
             <ul className="flex gap-8 flex-wrap">
               {navItems.map((item) => {
@@ -482,8 +482,8 @@ const Header = () => {
 
           {/* Browse Categories */}
           <div className="flex items-center gap-2 px-2">
-            <Grid2x2 size={14} />
-            <span>BROWSE ALL CATEGORIES</span>
+            {/* <Grid2x2 size={14} />
+            <span>BROWSE ALL CATEGORIES</span> */}
           </div>
 
           {/* Nav Items - Mobile with Active State */}
