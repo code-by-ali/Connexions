@@ -1,5 +1,5 @@
 import React from "react";
-import ContactUsBg from "@/public/assets/contact-us-bg.png";
+import ContactUsBg from "@/public/assets/contact-us-bg.webp";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import CommonImage from "../common/CommonImage";

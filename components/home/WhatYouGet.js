@@ -8,7 +8,7 @@ import SmileyIcon from "@/public/assets/what-you-get-icon-2.svg";
 import CrownIcon from "@/public/assets/what-you-get-icon-3.svg";
 
 import CardImage1 from "@/public/assets/what-you-get-img-1.svg";
-import CardImage2 from "@/public/assets/what-you-get-img-2.svg";
+import CardImage2 from "@/public/assets/what-you-get-img-2.png";
 import Link from "next/link";
 
 const WhatYouGet = () => {

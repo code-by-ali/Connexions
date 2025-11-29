@@ -9,10 +9,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import Iphone17Pro from "@/public/assets/apple-lineup-iphone17pro.svg";
-import Iphone17 from "@/public/assets/apple-lineup-iphone17.svg";
+import Iphone17Pro from "@/public/assets/apple-lineup-iphone17pro.webp";
+import Iphone17 from "@/public/assets/apple-lineup-iphone17.webp";
 import Iphone17Air from "@/public/assets/apple-lineup-iphone17air.svg";
-import AppleWatch from "@/public/assets/apple-lineup-watch.svg";
+import AppleWatch from "@/public/assets/apple-lineup-watch.webp";
 import AppleAirpods from "@/public/assets/apple-lineup-airpods.svg";
 import CommonImage from "../common/CommonImage";
 
