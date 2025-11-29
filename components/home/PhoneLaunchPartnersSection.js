@@ -6,8 +6,8 @@ import { Autoplay } from "swiper/modules";
 import { Smartphone, Chrome } from "lucide-react";
 import HomeBannerImg1 from "@/public/assets/home-banner-img-1.svg";
 import HomeBannerImg2 from "@/public/assets/home-banner-img-2.svg";
-import HomeBannerImg3 from "@/public/assets/home-banner-img-3.svg";
-import HomeBannerImg4 from "@/public/assets/home-banner-img-4.svg";
+import HomeBannerImg3 from "@/public/assets/home-banner-img-3.png";
+import HomeBannerImg4 from "@/public/assets/home-banner-img-4.png";
 import HomeBannerImg5 from "@/public/assets/home-banner-img-5.svg";
 import HomeBannerImg6 from "@/public/assets/home-banner-img-6.svg";
 

@@ -1,8 +1,8 @@
 import React from "react";
-import BannerIpad from "@/public/assets/apple-banner-ipad.svg";
-import BannerIphone from "@/public/assets/apple-banner-iphone.svg";
+import BannerIpad from "@/public/assets/apple-banner-ipad.webp";
+import BannerIphone from "@/public/assets/apple-banner-iphone.webp";
 import BannerMac from "@/public/assets/apple-banner-mac.svg";
-import BannerWatch from "@/public/assets/apple-banner-watch.svg";
+import BannerWatch from "@/public/assets/apple-banner-watch.webp";
 import CommonImage from "../common/CommonImage";
 import Link from "next/link";
 
