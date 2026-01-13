@@ -34,7 +34,7 @@ export default function ContactInfoSection() {
             {/* Contact Info */}
             <div className="space-y-6">
               {/* Phone */}
-              <div className="flex items-center gap-4 bg-[#FBFBFB] p-6 rounded-2xl">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4 bg-[#FBFBFB] p-6 rounded-2xl">
                 <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
@@ -49,7 +49,7 @@ export default function ContactInfoSection() {
               </div>
 
               {/* Email */}
-              <div className="flex items-center gap-4 bg-[#FBFBFB] p-6 rounded-2xl ml-16">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4 bg-[#FBFBFB] p-6 rounded-2xl lg:ml-16">
                 <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
@@ -67,7 +67,7 @@ export default function ContactInfoSection() {
               </div>
 
               {/* Address */}
-              <div className="flex items-center gap-4 bg-[#FBFBFB] p-6 rounded-2xl ml-32">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4 bg-[#FBFBFB] p-6 rounded-2xl lg:ml-32">
                 <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
@@ -83,7 +83,7 @@ export default function ContactInfoSection() {
 
           {/* Right Side - Image */}
           <div className="w-full lg:col-span-2">
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[600px]">
+            <div className="relative rounded-3xl overflow-hidden md:aspect-[4/3] lg:aspect-auto lg:h-[600px]">
               <CommonImage
                 src={RightSectionImg.src || RightSectionImg}
                 alt="Office workspace with laptop"
