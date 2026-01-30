@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import HelpfulFeaturesImg1 from "@/public/assets/iphone-17-helpful-features-img-1.svg";
-import HelpfulFeaturesImg2 from "@/public/assets/iphone-17-helpful-features-img-2.svg";
+import HelpfulFeaturesImg1 from "@/public/assets/iphone-17-helpful-feature-img-1.svg";
+import HelpfulFeaturesImg2 from "@/public/assets/iphone-17-helpful-feature-img-2.svg";
 
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import CommonImage from "../common/CommonImage";

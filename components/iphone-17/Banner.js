@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import React from "react";
-import BannerImg from "@/public/assets/iphone-17-banner-img.svg";
+import BannerImg from "@/public/assets/iphone-17-banner.webp";
 import CommonImage from "../common/CommonImage";
 import Link from "next/link";
 

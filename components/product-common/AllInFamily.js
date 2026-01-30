@@ -23,7 +23,7 @@ const AllInFamily = () => {
         <CommonImage
           src={IphoneGroup.src || IphoneGroup}
           alt="iPhone Group"
-          className="w-full max-w-3xl h-auto"
+          className="w-full max-w-4xl h-auto"
         />
       </div>
 
