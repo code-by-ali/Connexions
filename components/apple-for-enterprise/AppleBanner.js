@@ -1,8 +1,8 @@
 import React from "react";
-import BannerIpad from "@/public/assets/apple-banner-ipad.webp";
-import BannerIphone from "@/public/assets/apple-banner-iphone.webp";
+import BannerIpad from "@/public/assets/apple-banner-ipad.svg";
+import BannerIphone from "@/public/assets/apple-banner-iphone.svg";
 import BannerMac from "@/public/assets/apple-banner-mac.svg";
-import BannerWatch from "@/public/assets/apple-banner-watch.webp";
+import BannerWatch from "@/public/assets/apple-banner-watch.svg";
 import CommonImage from "../common/CommonImage";
 import Link from "next/link";
 
@@ -39,27 +39,28 @@ const AppleBanner = () => {
       </div>
 
       {/* Images positioned responsively */}
-      <CommonImage
-        className="absolute bottom-0 right-0 w-32 sm:w-32 md:w-36 lg:w-auto"
-        src={BannerIpad.src || BannerIpad}
-        alt="ipad-img"
-      />
-      <CommonImage
-        className="absolute top-0 right-0 w-36 sm:w-36 md:w-40 lg:w-auto"
-        src={BannerMac.src || BannerMac}
-        alt="mac-img"
-      />
-      <CommonImage
-        className="absolute top-0 left-[0px] sm:left-[60px] md:left-[20px] w-24 sm:w-32 md:w-32 lg:w-auto"
-        src={BannerWatch.src || BannerWatch}
-        alt="watch-img"
-      />
-      <CommonImage
-        className="absolute bottom-0 left-0 w-40 sm:w-40 md:w-40 lg:w-auto"
-        src={BannerIphone.src || BannerIphone}
-        alt="iphone-img"
-      />
-    </div>
+    {/* Images positioned responsively */}
+         <CommonImage
+           className="absolute bottom-0 right-0 w-32 sm:w-32 md:w-36 lg:w-48 xl:w-auto"
+           src={BannerIpad.src || BannerIpad}
+           alt="ipad-img"
+         />
+         <CommonImage
+           className="absolute top-0 right-0 w-36 sm:w-36 md:w-40 lg:w-48 xl:w-auto"
+           src={BannerMac.src || BannerMac}
+           alt="mac-img"
+         />
+         <CommonImage
+           className="absolute top-0 left-[20px] sm:left-[60px] md:left-[20px] w-32 sm:w-32 md:w-32 lg:w-48 xl:w-auto"
+           src={BannerWatch.src || BannerWatch}
+           alt="watch-img"
+         />
+         <CommonImage
+           className="absolute bottom-0 left-0 w-40 sm:w-40 md:w-40 lg:w-48 xl:w-auto"
+           src={BannerIphone.src || BannerIphone}
+           alt="iphone-img"
+         />
+         </div>
   );
 };
 

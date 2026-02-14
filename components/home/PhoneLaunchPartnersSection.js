@@ -52,7 +52,7 @@ const PhoneLaunchPartnersSection = () => {
   ];
 
   const partners = [
-    { name: "Apple Authorized Provider", logo: HomeBannerLogo1 },
+    // { name: "Apple Authorized Provider", logo: HomeBannerLogo1 },
     { name: "Apple Business Partner", logo: HomeBannerLogo2 },
     { name: "Samsung", logo: HomeBannerLogo3 },
     { name: "Canon", logo: HomeBannerLogo4 },
@@ -62,7 +62,7 @@ const PhoneLaunchPartnersSection = () => {
     { name: "Phillips", logo: HomeBannerLogo8 },
 
     // { name: "Apple Authorized Provider", logo: HomeBannerLogo1 },
-    { name: "Apple Business Partner", logo: HomeBannerLogo2 },
+    // { name: "Apple Business Partner", logo: HomeBannerLogo2 },
     { name: "Samsung", logo: HomeBannerLogo3 },
     { name: "Canon", logo: HomeBannerLogo4 },
     { name: "Logitech", logo: HomeBannerLogo5 },

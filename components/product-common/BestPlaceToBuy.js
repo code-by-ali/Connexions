@@ -139,7 +139,7 @@ const BestPlaceToBuy = () => {
                 </div>
 
                 {/* Image */}
-                <div className="w-full h-48 flex items-center justify-center overflow-hidden rounded-lg mt-4">
+                <div className="w-full  flex items-center justify-center overflow-hidden rounded-lg mt-4">
                   <CommonImage
                     src={feature.img.src || feature.img}
                     className="w-full h-full object-contain"

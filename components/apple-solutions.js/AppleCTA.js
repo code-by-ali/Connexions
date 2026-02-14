@@ -22,7 +22,7 @@ const AppleCTA = () => {
       {/* Announcement Pill */}
       <div className="flex items-center gap-10 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.16px] mb-6">
         <div className="inline-flex flex-col md:flex-row items-center gap-2 py-2 px-4 mb-6 w-fit">
-          <div className="flex items-center justify-center w-40 h-18 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
+          {/* <div className="flex items-center justify-center w-40 h-18 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
             <div className="w-32 h-14 object-contain px-4 bg-white border border-[#E6E9EE] rounded-xl flex items-center justify-center">
               <CommonImage
                 src={CTALogo1.src || CTALogo1}
@@ -30,7 +30,7 @@ const AppleCTA = () => {
                 className="w-auto h-14 object-contain rounded-2xl"
               />
             </div>
-          </div>
+          </div> */}
           <div className="flex items-center justify-center w-40 h-18 bg-[#F2F4F6] rounded-2xl border border-[#E1E4EB] mx-4">
             <div className="w-32 h-14 object-contain px-4 bg-white border border-[#E6E9EE] rounded-xl flex items-center justify-center">
               <CommonImage

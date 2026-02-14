@@ -112,10 +112,10 @@ const AppleIntelligenceFeatures = () => {
           {features.map((feature, index) => (
             <SwiperSlide key={index}>
               <div className="rounded-2xl p-4 h-full flex flex-col">
-                <div className="w-full h-[400px] flex items-center justify-center overflow-hidden rounded-lg mb-4">
+                <div className="w-full h-[450px] flex items-center justify-center overflow-hidden rounded-lg mb-4">
                   <CommonImage
                     src={feature.img.src || feature.img}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto "
                   />
                 </div>
                 <p className="font-bold tracking-[-0.37px] text-sm md:text-base">
